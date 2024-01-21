@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,300;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,800;1,6..12,500;1,6..12,900&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Inicio | Tales IA</title>
+</head>
+<body>
+<header class="fixed-top container">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <!-- Logo y botón de hamburguesa -->
+            <a class="navbar-brand font-size-titulo animated-title visible-title" href="./index.html">
+                <img src="./img/logo.png" class="logo-header" alt="Logo de Tales IA">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Enlaces de navegación -->
+            <div class="collapse navbar-collapse justify-content-center mt-5 pt-4" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/generos.html">Géneros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/nuestra-historia.html">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/educacion.html">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/suscribirse.html">Suscribirse</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <main class="container">
+        <section class="encabezado p-3 rounded shadow">
+            <div class="dialog-box-1 text-center">
+                <h2>¡Hola, jóvenes exploradores!</h2>
+                <img src="./img/img-main.png" class="img-inicio" alt="Imagen de encabezado: una mujer con un libro en las manos">
+            </div>
+            <div class="dialog-box-2">
+                <p class="p-encabezado" id="typed-text"></p>
+            </div>
+        </section>
+
+            <!--Sección: Contenido destacado-->
+        <section class="section-contenido-destacado">
+
+            <div class="dialog-box-3">
+                <h4>¡Mirá qué increíble nuestro contenido destacado!</h4>
+            </div>
+
+            <div class="dialog-box-5">
+                <h4 class="text-dialog">Nuestros cuentos tienen...</h4>
+                <p class="text-dialog">cada cuento de Tales IA es una puerta abierta a un universo nuevo, una invitación a explorar lo inexplorado. Para los ávidos de conocimiento y aventura, estos cuentos son un vehículo perfecto para alimentar la curiosidad y la pasión por la lectura. La fusión de la narrativa mágica con el poder de la tecnología crea experiencias de lectura inolvidables, que no solo entretienen sino también enriquecen</p>
+            </div>
+
+            <div class="dialog-juego">
+                <div class="div-juego-1">
+                    <h3 class="tex-juego">¿Te animas a responder?</h3>
+                    <p class="pregunta tex-juego">¿Quién escribió "Don Quijote de la Mancha"?</p>
+                    <button class="respuesta btn-juego">Miguel de Cervantes</button>
+                    <button class="respuesta btn-juego">William Shakespeare</button>
+                    <button class="respuesta btn-juego">Gabriel García Márquez</button>
+                    <div class="feedback-global"></div>
+                </div>
+            </div>
+
+            <div class="dialog-box-aprendizaje">
+                <div class="div-dato-curioso-1">
+                    <p class="text-dato-curioso">El Primer Best-Seller: Considerado el primer best-seller de la historia, "La Celestina" de Fernando de Rojas, publicada en 1499, fue tan popular en su época que se dice que casi todos los hogares en España tenían una copia, al igual que la Biblia.</p>
+                </div>
+            </div>
+
+            <!--Sección: Cuentos -->
+            <div class="grid-container mt-5 pt-5">
+
+                <article class="grid-item-container" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-uno">
+                    <div class="grid-item">
+                        <h3>La Doble Rendija</h3>
+                        <p class="p-cuento">En un anfractuoso laboratorio de física, cuyas paredes estaban colmadas de libros y ecuaciones, aconteció un suceso que desafiaría las...</p>
+                        <img src="./img/cuento-doble-Rendija.png" class="img-cuento" alt="Portada del cuento">
+                    </div>
+                </article>
+
+                <div class="linea-divisora1">
+                    <button type="button" class="btn .p-modal" data-bs-toggle="modal" data-bs-target="#mi-modal-uno">Seguir leyendo...</button>
+                    <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
+                </div>
+
+                <div class="modal fade" id="mi-modal-uno" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="modalLabel">La Doble Rendija</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Contenedor de páginas -->
+                            <div id="pagina1-modal1" class="pagina">
+                                <p class="p-modal">En un anfractuoso laboratorio de física, cuyas paredes estaban colmadas de libros y ecuaciones, aconteció un suceso que desafiaría las más consolidadas nociones del tiempo y el espacio. La trama de esta historia se teje en torno a cinco individuos, cada uno distinto en su disciplina y carácter, a quienes el azar, o quizás el destino, congregó para presenciar un fenómeno inaudito.
+                                 Primero estaba Emilio Vega, un físico teórico de modales rígidos y mente analítica, cuya indumentaria siempre evocaba la sobriedad de los antiguos maestros de la ciencia. Su enfoque empírico y su escéptica perspectiva eran el contrapeso necesario en toda conjetura audaz.
+                                 Luna García, por su parte, representaba la antítesis de Vega. Joven astrofísica, su semblante y sus ideas irradiaban la misma luminiscencia y misterio que las estrellas que tanto amaba estudiar. Su cabello, largo y rebelde como su espíritu, simbolizaba su constante anhelo por trascender los límites de lo conocido.
+                                </p>
+                            </div>
+                            <div id="pagina2-modal1" class="pagina" style="display:none;">
+                                <p class="p-modal">En la figura de Carlos Torres, ingeniero de robusta estatura y mente pragmática, residía la conexión tangible entre el abstracto reino de las teorías y el concreto mundo de los artefactos y máquinas. Su vestimenta, siempre casual, reflejaba una practicidad que impregnaba cada uno de sus proyectos.
+                                La presencia de Ana Ruiz, bioquímica de férrea voluntad y mirada penetrante, añadía una dimensión adicional al grupo. Su cabello corto y su estilo directo eran espejo de una mente que buscaba, con meticulosidad, descifrar los enigmas de la vida a través de sus compuestos más elementales.
+                                Finalmente, Raúl Fernández, matemático de avanzada edad, cabellos plateados y barba cuidadosamente recortada, aportaba una perspectiva enriquecida por años de indagaciones en los laberintos numéricos. Su buen humor era un oasis en medio de la aridez de las complejas formulaciones.
+                                Estos cinco eruditos, en su cotidiano escrutinio del fenómeno de la doble rendija, se encontraron, sin buscarlo, ante la aparición de un umbral luminoso que desgarraba el tejido de su realidad conocida. Este portal, surgido entre destellos y sombras, invitaba a un universo paralelo, desconocido y tentador.
+                                </p>
+                            </div>
+                            <div id="pagina3-modal1" class="pagina" style="display:none;">
+                                <p class="p-modal">Vega, con su habitual cautela, proponía un estudio meticuloso del fenómeno antes de aventurarse en conjeturas. García, movida por una curiosidad insaciable, veía en el portal una oportunidad para expandir los horizontes del conocimiento humano. Torres, con su acostumbrada practicidad, empezó a idear un mecanismo que permitiese una exploración segura de aquel misterioso pasaje. Ruiz, fascinada por las posibles revelaciones sobre la naturaleza de la vida en otros universos, abogaba por una investigación detallada. Fernández, en su habitual estilo, se sumergía en ecuaciones y teorías, buscando descifrar la esencia matemática del fenómeno.
+                                Así, estos cinco seres, unidos por su sed de saber, se enfrentaron a un desafío que rebasaba los límites de su entendimiento. Su travesía por el portal no solo les revelaría secretos del cosmos, sino que también les enseñaría sobre la esencia de su propia existencia y la inestimable riqueza que yace en la diversidad del pensamiento humano. En su odisea, cada uno aportaría una pieza clave para desentrañar el enigma de aquel universo paralelo, un espejo de infinitas posibilidades y realidades entrelazadas.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <a href="https://www.facebook.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
+                            <a href="https://www.instagram.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
+                            <a href="https://web.whatsapp.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
+                            <a href="./Cuentos IA/Ladoblerendija.pdf" download="La-Doble-Rendija.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
+                            <button class="btn-modal" onclick="cambiarPagina(-1, 'mi-modal-uno')">Anterior</button>
+                            <button class="btn-modal" onclick="cambiarPagina(1, 'mi-modal-uno')">Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <article class="grid-item-container" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-dos">
+                    <div class="grid-item">
+                        <h3>Subatómico</h3>
+                        <p class="p-cuento">En una fría noche de invierno, mientras el viento ululaba a través de las calles desiertas de la ciudad, el científico Eduardo Sánchez se encontraba...</p>
+                        <img src="./img/Subatómico.png" class="img-cuento" alt="Un hombre con anteojos sentado">
+                    </div>
+                </article>
+
+                <div class="linea-divisora2">
+                    <button type="button" class="btn .p-modal" data-bs-toggle="modal" data-bs-target="#mi-modal-dos">Seguir leyendo...</button>
+                    <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
+                </div>
+
+                <div class="modal fade" id="mi-modal-dos" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Subatómico</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Contenedor de páginas -->
+                            <div id="pagina1.modal2" class="pagina">
+                                <p class="p-modal">Desde hacía años, había estado obsesionado con la idea de que dentro de un electrón, la partícula más diminuta y fundamental conocida por la ciencia, podría esconderse un misterio aún por descubrir.                                
+                                Eduardo era un hombre solitario, de cabello desordenado y gafas gruesas que siempre amenazaban con deslizarse por su nariz. Pasaba horas interminables frente a su microscopio electrónico, observando con atención la danza frenética de los electrones en sus experimentos. Había dedicado su vida a la física cuántica, pero sus colegas a menudo lo consideraban excéntrico y sus teorías descabelladas.
+                                </p>
+                            </div>
+                            <div id="pagina2-modal2" class="pagina" style="display:none;">
+                                <p class="p-modal">Una noche, mientras examinaba una muestra de electrones, Eduardo notó algo extraño. Había una partícula que parecía comportarse de manera diferente a las demás. Se movía de manera más errática, como si estuviera tratando de escapar de su órbita. Eduardo ajustó el enfoque de su microscopio y se acercó aún más. Entonces, vio algo que lo dejó atónito.
+                                Dentro de ese electrón, había algo más que simplemente una partícula subatómica. Había un mundo entero, una diminuta civilización que vivía en el interior de la partícula. Pequeñas criaturas, no más grandes que un átomo, iban y venían, construyendo estructuras asombrosas y emitiendo destellos de luz en una danza hipnotizante.                               
+                                Eduardo no podía creer lo que veía. ¿Cómo era posible que dentro de una partícula de electrones existiera un mundo completo? Comenzó a documentar sus hallazgos y a realizar experimentos para comprender mejor este misterio. Pero cada vez que trataba de comunicarse con las diminutas criaturas, parecían ignorarlo por completo, como si fuera un ser invisible en su mundo.
+                                </p>
+                            </div>
+                            <div id="pagina3-modal2" class="pagina" style="display:none;">
+                                <p class="p-modal">Los días se convirtieron en semanas, y Eduardo se sumió aún más en su investigación. Dejó de dormir, de comer, de cuidar de sí mismo. Su laboratorio se llenó de notas y diagramas, y su mente se obsesionó con la idea de descubrir el secreto de este mundo dentro de un electrón.
+                                Finalmente, después de meses de estudio y experimentación, Eduardo hizo un descubrimiento sorprendente. Descubrió que las diminutas criaturas dentro del electrón podían percibir su presencia a través de las vibraciones de las partículas subatómicas que él mismo generaba con sus experimentos. Comenzó a comunicarse con ellos de una manera que solo un científico obsesionado podría: a través de sutiles cambios en la energía y la frecuencia de las partículas.
+                                </p>
+                            </div>
+                            <div id="pagina4-modal2" class="pagina" style="display:none;">
+                                <p class="p-modal">Poco a poco, estableció una especie de lenguaje con las criaturas, aunque era primitivo y limitado. A medida que profundizaba en su comunicación, Eduardo descubrió que estas criaturas poseían un conocimiento asombroso sobre la naturaleza del universo. Le hablaron de teorías cuánticas que desafiaban la comprensión humana, de dimensiones adicionales que existían más allá de nuestra percepción y de la verdadera naturaleza de la realidad.
+                                Eduardo se dio cuenta de que había descubierto un misterio que trascendía cualquier comprensión previa de la física cuántica. Dentro de una partícula de electrones, había un mundo oculto, una civilización de seres diminutos que poseían un conocimiento profundo y misterioso. Y a medida que continuaba su comunicación con ellos, Eduardo sabía que su vida nunca volvería a ser la misma.                            
+                                </p>
+                                </div>
+                            <div id="pagina5-modal2" class="pagina" style="display:none;">
+                                <p class="p-modal">Así, en las profundidades de la noche, el científico Eduardo Sánchez desveló un enigma que desafió las leyes conocidas de la física y abrió un nuevo capítulo en la exploración de los misterios del universo. Su historia se convirtió en una leyenda en el mundo de la ciencia, un cuento tan enigmático y asombroso como las propias partículas subatómicas que estudiaba. Y aunque el mundo en general nunca llegó a conocer la verdad de su descubrimiento, Eduardo Sánchez había encontrado su propia respuesta en el misterio oculto dentro de una partícula de electrón.                            
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="https://www.facebook.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
+                                <a href="https://www.instagram.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
+                                <a href="https://web.whatsapp.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
+                                <a href="./Cuentos IA/Ladoblerendija.pdf" download="La-Doble-Rendija.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
+                                <button class="btn-modal" onclick="cambiarPagina(-1,'mi-modal-dos')">Anterior</button>
+                                <button class="btn-modal" onclick="cambiarPagina(1, 'mi-modal-dos')">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <article class="grid-item-container" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-tres">
+                    <div class="grid-item">
+                        <h3>Era una noche oscura</h3>
+                        <p class="p-cuento">La lluvia golpeaba implacable contra los cristales de la oficina del detective privado Álvaro Sánchez. Era una noche oscura, y los ecos de una ciudad...</p>
+                        <img src="./img/Era una noche oscura.png" class="img-cuento" alt="Un hombre con anteojos sentado">
+                    </div>
+                </article>
+
+                <div class="linea-divisora3">
+                    <button type="button" class="btn .p-modal" data-bs-toggle="modal" data-bs-target="#mi-modal-tres">Seguir leyendo...</button>
+                    <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
+                </div>
+
+                <div class="modal fade" id="mi-modal-tres" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Era una noche oscura</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Contenedor de páginas -->
+                            <div id="pagina1.modal3" class="pagina">
+                                <p class="p-modal">—Necesito su ayuda, señor Sánchez —dijo una voz femenina, rompiendo el silencio. La mujer que había entrado sin hacer ruido vestía un abrigo rojo que contrastaba con la penumbra de la habitación. Tenía los ojos nublados por la preocupación y una elegancia que desentonaba en aquel lugar.
+                                    —Dígame, señora... —Álvaro se detuvo, esperando un nombre.
+                                    —Valeria. Valeria Montes —respondió, sentándose frente a él. Su voz temblaba ligeramente. —Es mi esposo, ha desaparecido.
+                                    Álvaro escuchó atentamente mientras Valeria relataba la extraña desaparición de su marido, un reconocido banquero llamado Roberto Montes. Según ella, Roberto había salido de casa hace tres días para una reunión de negocios y nunca regresó.
+                                </p>
+                            </div>
+                            <div id="pagina2-modal3" class="pagina" style="display:none;">
+                                <p class="p-modal">Álvaro comenzó su investigación en el último lugar donde se vio a Roberto, un lujoso hotel en el centro de la ciudad. Allí, conversó con el conserje, un hombre mayor con ojos astutos.
+                                —Sí, recuerdo al señor Montes —dijo el conserje, limpiando unas gafas con un pañuelo. —Se fue con un hombre. Alguien que no parecía del todo... agradable.
+                                Álvaro frunció el ceño. Aquello complicaba las cosas. Si Roberto estaba involucrado con gente peligrosa, su desaparición podría ser más que un simple asunto de negocios fallidos.                               
+                                </p>
+                            </div>
+                            <div id="pagina3-modal3" class="pagina" style="display:none;">
+                                <p class="p-modal">La siguiente pista llevó a Álvaro a un club nocturno, donde los secretos se vendían al precio de un trago caro. Allí, se encontró con Luna, una cantante de voz aterciopelada y mirada penetrante.
+                                —Roberto era un cliente regular —confesó Luna, mientras jugaba con un collar de perlas. —Pero no venía solo. A menudo estaba acompañado por una mujer. No su esposa.
+                                Álvaro sintió cómo las piezas comenzaban a encajar. Una aventura, un posible chantaje, una desaparición. Todo apuntaba a un juego peligroso donde el amor y el dinero bailaban juntos al borde de un abismo.                                
+                                </p>
+                            </div>
+                            <div id="pagina4-modal3" class="pagina" style="display:none;">
+                                <p class="p-modal">Tras días de investigación, Álvaro descubrió la verdad en un apartamento abandonado. Roberto estaba allí, asustado pero vivo. Había huido, temiendo por su vida después de descubrir que su amante, la mujer del club nocturno, estaba involucrada en una red de corrupción.
+                                —Pensé que podría manejarlo —confesó Roberto, la mirada perdida. —Pero me equivoqué. Estaba atrapado                                
+                                </p>
+                                </div>
+                            <div id="pagina5-modal3" class="pagina" style="display:none;">
+                                <p class="p-modal">Así, en las profundidades de la noche, el científico Eduardo Sánchez desveló un enigma que desafió las leyes conocidas de la física y abrió un nuevo capítulo en la exploración de los misterios del universo. Su historia se convirtió en una leyenda en el mundo de la ciencia, un cuento tan enigmático y asombroso como las propias partículas subatómicas que estudiaba. Y aunque el mundo en general nunca llegó a conocer la verdad de su descubrimiento, Eduardo Sánchez había encontrado su propia respuesta en el misterio oculto dentro de una partícula de electrón.                            
+                                Álvaro dejó a Roberto en manos de la justicia, sabiendo que su vida nunca volvería a ser la misma. Mientras caminaba bajo la lluvia que aún caía, reflexionaba sobre los misterios del corazón humano. En una ciudad de luces y sombras, cada secreto desvelado llevaba a otro más profundo.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="https://www.facebook.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
+                                <a href="https://www.instagram.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
+                                <a href="https://web.whatsapp.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
+                                <a href="./Cuentos IA/Ladoblerendija.pdf" download="La-Doble-Rendija.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
+                                <button class="btn-modal" onclick="cambiarPagina(-1,'mi-modal-tres')">Anterior</button>
+                                <button class="btn-modal" onclick="cambiarPagina(1, 'mi-modal-tres')">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <article class="grid-item-container" id="mi-modal-cuatro" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-cuatro">
+                    <div class="grid-item">
+                        <h3>Cuento</h3>
+                        <p class="p-cuento">Parrafo breve.</p>
+                    </div>
+                </article>
+
+                <div class="linea-divisora4">
+                    <button type="button" class="btn .p-modal" data-bs-toggle="modal" data-bs-target="#mi-modal-cuatro">Seguir leyendo...</button>
+                    <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
+                </div>
+
+                <div class="modal fade" id="mi-modal-cuatro" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">La Doble Rendija</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Aquí puedes continuar leyendo el texto...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="grid-item-container" id="mi-moda-cinco" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-cinco">
+                    <div class="grid-item">
+                        <h3>Cuento</h3>
+                        <p class="p-cuento">Parrafo breve</p>
+                    </div>
+                </article>
+
+                <div class="linea-divisora5">
+                    <button type="button" class="btn .p-modal" data-bs-toggle="modal" data-bs-target="#mi-modal-cinco">Seguir leyendo...</button>
+                    <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
+                </div>
+
+                <div class="modal fade" id="mi-modal-cinco" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalLabel">La Doble Rendija</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Aquí puedes continuar leyendo el texto...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-mas-historias">
+                <a href="./pages/generos.html">Más historias...</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <section class="footer-section">
+            <div class="dialog-box-4">
+                <h4>Seguinos en nuestras redes</h4>
+                <a href="https://www.facebook.com/"   target="_blank"><img src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
+                <a href="https://www.instagram.com/"  target="_blank"><img src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
+                <a href="https://web.whatsapp.com/"   target="_blank"><img src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
+            </div>
+            <div class="footer-item">
+                <a href="mailto:nahuelfrutos@outlook.com">Contacto</a>
+                <a href="./pages/acerca-de.html">Politicas de privacidad</a>
+                <a href="./pages/acerca-de.html">Ayuda</a>
+            </div>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
