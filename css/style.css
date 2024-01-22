@@ -804,8 +804,8 @@ form, label, input{
     body{
         max-width: 90rem;
     }
-    .container {
-        max-width: 90rem;
+    .container-box {
+        max-width: 60rem;
 
     }
     .dialog-box-1{
@@ -814,7 +814,7 @@ form, label, input{
 
     .dialog-box-2{
         max-width: 25rem;
-        margin-right: 2rem;
+        margin-right: 4rem;
         /* margin-top: 3rem; */
     }
 
