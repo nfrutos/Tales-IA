@@ -891,7 +891,7 @@ form, label, input{
 
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (max-width: 48rem) {
+@media (min-width: 5.120rem) and (max-width: 48rem) {
 
     .navbar-custom {
         padding: 5px 10px;
@@ -995,5 +995,4 @@ form, label, input{
         max-width: 19rem;
     }
 }
-
 
