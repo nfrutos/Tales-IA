@@ -795,7 +795,7 @@ form, label, input{
 }
 
 /* Tablets (<=1024px) */
-@media (min-width: 48rem) and (max-width: 90rem) {
+@media (min-width: 49rem) and (max-width: 90rem) {
     body{
         max-width: 64rem;
     }
@@ -891,8 +891,11 @@ form, label, input{
 
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 4rem) and (max-width: 48rem) {
+@media (min-width: 4rem) and (max-width: 49rem) {
 
+    .encabezado{
+        height: 41rem;
+    }
     .navbar-custom {
         padding: 5px 10px;
         background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
@@ -904,18 +907,17 @@ form, label, input{
     }
 
     .container {
-        max-width: 48rem;
+        max-width: 49rem;
 
     }
     .dialog-box-1{
         max-width: 22rem;
-        margin-left: 6rem;
     }
 
     .dialog-box-2{
         max-width: 25rem;
-        margin-right: 6rem;
-        margin-top: 32rem;
+        margin-right: 2rem;
+        /* margin-top: 3rem; */
     }
 
     .section-contenido-destacado{
@@ -930,20 +932,22 @@ form, label, input{
         'dialog-box-aprendizaje'
         'button-mas-historias';
         grid-template-rows: auto;
-        height: 304rem;
+        height: 240rem;
         margin-left: -3rem;
         margin-top: -54rem;
 
     }
 
-    .grid-item-container{
-        max-width: 80%;
-    }
+    /* .grid-item-container{
+        max-width: 49rem;
+        margin-left: 3rem;
+    } */
 
-    .linea-divisora1, .linea-divisora2, 
+    .grid-item-container, .linea-divisora1, .linea-divisora2, 
     .linea-divisora3, .linea-divisora4, 
     .linea-divisora5, .linea-divisora6{
-        max-width: 80%;
+        max-width: 49rem;
+        margin-left: 3rem;
     }
 
     .p-cuento{
@@ -961,15 +965,15 @@ form, label, input{
 
     .dialog-juego{
         max-width: 22rem;
-        margin-left: 9rem;
-        margin-bottom: 7rem;
+        margin-left: 3rem;
+        margin-bottom: 70rem;
         margin-top: 9rem;
     }
 
     .dialog-box-aprendizaje{
-    max-width: 24rem;
-    margin-left: 8rem;
-    margin-top: -5rem;
+        max-width: 24rem;
+        margin-left: 26rem;
+        margin-top: -88rem;
     }
 
     .text-dato-curioso{
@@ -984,20 +988,21 @@ form, label, input{
 
     .dialog-box-5{
         max-width: 30rem;
-        margin-left: 5rem;
-        margin-top: 95rem;
-        margin-bottom: -21rem
+        margin-left: 12rem;
+        margin-top: 56rem;
+        margin-bottom: -21rem;
     }
 
     .button-mas-historias{
         height: 4rem;
-        margin-top: -56rem;
-        margin-left: 13rem;
+        margin-top: -99rem;
+        margin-left: 19rem; 
     }
 
     .dialog-box-3{
-        margin-left: 4rem;
+        margin-left: 17rem;
         margin-top: 22rem;
+        margin-bottom: -6rem;
         max-width: 19rem;
     }
 }
