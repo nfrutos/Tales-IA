@@ -891,7 +891,7 @@ form, label, input{
 
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 4rem) and (max-width: 36rem) {
+@media (min-width: 4rem) and (max-width: 48rem) {
 
     .navbar-custom {
         padding: 5px 10px;
@@ -904,7 +904,7 @@ form, label, input{
     }
 
     .container {
-        max-width: 36rem;
+        max-width: 48rem;
 
     }
     .dialog-box-1{
