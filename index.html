@@ -7,49 +7,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,300;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,800;1,6..12,500;1,6..12,900&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+  
     <link rel="stylesheet" href="./css/style.css">
     <title>Inicio | Tales IA</title>
 </head>
 <body>
-<header class="fixed-top container">
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container">
-            <!-- Logo y botón de hamburguesa -->
-            <a class="navbar-brand font-size-titulo animated-title visible-title" href="./index.html">
-                <img src="./img/logo.png" class="logo-header" alt="Logo de Tales IA">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <!-- Enlaces de navegación -->
-            <div class="collapse navbar-collapse justify-content-center mt-5 pt-4" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/generos.html">Géneros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/nuestra-historia.html">Nuestra Historia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/educacion.html">Educación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/suscribirse.html">Suscribirse</a>
-                    </li>
-                </ul>
+    <!-- Sección: menu -->
+    <header class="fixed-top container">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <!-- Sección: logo y botón de hamburguesa -->
+                <a class="navbar-brand font-size-titulo animated-title visible-title" href="./index.html">
+                    <img src="./img/logo3.png" class="logo-header" alt="Logo de Tales IA">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Sección: enlaces de navegación -->
+                <div class="collapse navbar-collapse justify-content-center mt-5 pt-4" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/generos.html">Géneros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/nuestra-historia.html">Nuestra Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/educacion.html">Educación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/suscribirse.html">Suscribirse</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-
+    <!-- Sección: principal -->
     <main class="container">
-        <section class="encabezado p-3 rounded shadow">
+
+        <section class="encabezado p-3">
             <div class="dialog-box-1 text-center">
                 <h2>¡Hola, jóvenes exploradores!</h2>
                 <img src="./img/img-main.png" class="img-inicio" alt="Imagen de encabezado: una mujer con un libro en las manos">
@@ -59,7 +62,7 @@
             </div>
         </section>
 
-            <!--Sección: Contenido destacado-->
+    <!--Sección: Contenido destacado-->
         <section class="section-contenido-destacado">
 
             <div class="dialog-box-3">
@@ -91,7 +94,7 @@
             <!--Sección: Cuentos -->
             <div class="grid-container mt-5 pt-5">
 
-                <article class="grid-item-container" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-uno">
+                <article class="grid-item-container" data-bs-toggle="modal" data-bs-target="#mi-modal-uno">
                     <div class="grid-item">
                         <h3>La Doble Rendija</h3>
                         <p class="p-cuento">En un anfractuoso laboratorio de física, cuyas paredes estaban colmadas de libros y ecuaciones, aconteció un suceso que desafiaría las...</p>
@@ -145,7 +148,7 @@
                 </div>
                 </div>
 
-                <article class="grid-item-container" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-dos">
+                <article class="grid-item-container" data-bs-toggle="modal" data-bs-target="#mi-modal-dos">
                     <div class="grid-item">
                         <h3>Subatómico</h3>
                         <p class="p-cuento">En una fría noche de invierno, mientras el viento ululaba a través de las calles desiertas de la ciudad, el científico Eduardo Sánchez se encontraba...</p>
@@ -205,7 +208,7 @@
                 </div>
                 </div>
 
-                <article class="grid-item-container" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-tres">
+                <article class="grid-item-container" data-bs-toggle="modal" data-bs-target="#mi-modal-tres">
                     <div class="grid-item">
                         <h3>Era una noche oscura</h3>
                         <p class="p-cuento">La lluvia golpeaba implacable contra los cristales de la oficina del detective privado Álvaro Sánchez. Era una noche oscura, y los ecos de una ciudad...</p>
@@ -269,7 +272,7 @@
                 </div>
                 </div>
 
-                <article class="grid-item-container" id="mi-modal-cuatro" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-cuatro">
+                <article class="grid-item-container" id="mi-modal-cuatro" data-bs-toggle="modal" data-bs-target="#mi-modal-cuatro">
                     <div class="grid-item">
                         <h3>Cuento</h3>
                         <p class="p-cuento">Parrafo breve.</p>
@@ -295,7 +298,7 @@
                     </div>
                 </div>
 
-                <article class="grid-item-container" id="mi-moda-cinco" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#mi-modal-cinco">
+                <article class="grid-item-container" id="mi-moda-cinco" data-bs-toggle="modal" data-bs-target="#mi-modal-cinco">
                     <div class="grid-item">
                         <h3>Cuento</h3>
                         <p class="p-cuento">Parrafo breve</p>
@@ -327,14 +330,14 @@
             </div>
         </section>
     </main>
-    
+    <!-- sección: footer -->
     <footer class="container">
         <section class="footer-section">
             <div class="dialog-box-4">
                 <h4>Seguinos en nuestras redes</h4>
-                <a href="https://www.facebook.com/"   target="_blank"><img src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
-                <a href="https://www.instagram.com/"  target="_blank"><img src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
-                <a href="https://web.whatsapp.com/"   target="_blank"><img src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
+                <a href="https://www.facebook.com/"   target="_blank"><img src="../img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
+                <a href="https://www.instagram.com/"  target="_blank"><img src="../img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
+                <a href="https://web.whatsapp.com/"   target="_blank"><img src="../img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
             </div>
             <div class="footer-item">
                 <a href="mailto:nahuelfrutos@outlook.com">Contacto</a>
@@ -343,6 +346,7 @@
             </div>
         </section>
     </footer>
+        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>

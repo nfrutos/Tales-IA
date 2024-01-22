@@ -2,10 +2,10 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; /* Corregido */
+    box-sizing: border-box;
 }
 
-/* Fuente homogénea para todos los HTML */
+/* Body homogéneo para todos los HTML */
 body {
     font-family: 'Roboto Slab','Times New Roman';
     background-color:  #006f6d
@@ -13,7 +13,12 @@ body {
 
 /*Header homogéneo para todas las pages*/
 header {
-     background-image: linear-gradient(to right, #009688, var(--bs-light));
+     background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+}
+
+.logo-header{
+    border-radius: 50%; 
+    box-shadow: 0px 4px 0px #01565a;    
 }
 
 h5, h3, p {
@@ -53,11 +58,12 @@ h3{
 }
 /* **************************************************************************** */
 
+
 /* Ajustes para el contenedor de la barra */
 .navbar-custom .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Asegura que los elementos estén distribuidos equitativamente */
+    justify-content: space-between;
 }
 
 .navbar-nav .nav-link {
@@ -92,19 +98,17 @@ h3{
 }
 /* **************************************************************************** */
 
-/* Main */
+
+/* Main homogéneo para todos los HTML */
 main {
     background-color: #e9ecef;
     padding-top: 16rem;
 }
 
-.encabezado{
-    background-color: #ffffff
-}
-
 /* **************************************************************************** */
 
-/* Footer */
+
+/* Footer homogéneo para todas los HTML */
 footer{
     background-color: #ffe69c;
 }
@@ -150,23 +154,32 @@ footer img {
     display: inline-block;
     margin-right: 1.5rem;    
 }
-
 /* **************************************************************************** */
 
-/* main - inicio */
+/* main: inicio */
+.encabezado{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 32rem;
+    background-color: #ffffff;
+    margin-top: -2rem;
+}
+
 .section-contenido-destacado{
     display: grid;
     grid-template-areas:
-    'dialog-box-3 dialog-box-3'
-    'grid-item dialog-box-5'
-    'grid-item dialog-juego'
-    'grid-item dialog-box-aprendizaje';
+    'dialog-box-3 dialog-box-3 dialog-box-3'
+    'dialog-box-3 dialog-box-3 dialog-box-3'
+    'grid-item dialog-box-5 dialog-box-5'
+    'grid-item dialog-juego dialog-juego'
+    'grid-item dialog-box-aprendizaje dialog-box-aprendizaje';
     grid-template-rows: auto;
     margin: 0%;
     padding: 0%;
 }
 
 .button-mas-historias{
+    grid-area: button-mas-historias;
     text-decoration: none;
     font-size: 2rem;
     width: 15rem;
@@ -201,6 +214,11 @@ footer img {
     line-height: 2rem;
     background-image: linear-gradient(to right, #bfbdb6, #ffffff);
 }
+
+article{
+    cursor: pointer;
+}
+
 
 .p-encabezado{
     margin: 1rem;
@@ -314,11 +332,11 @@ footer img {
 
 .dialog-box-2 {
     position: absolute;
-    top: 17rem;
+    top: 15rem;
     right: -100%;
-    width: 40rem;
+    width: 37rem;
     min-height: 10rem;
-    padding: 1rem;
+    padding: -1rem;
     margin-right: 10rem;
     background-color: #ffffff;
     border: 0.5rem solid #ffe69c;
@@ -329,15 +347,17 @@ footer img {
 
 .dialog-box-3 {
     grid-area: dialog-box-3;
-    margin-top: 4rem;
-    margin-left: 7rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    max-width: 32rem;
+    max-height: 4rem
 }
 
 .dialog-box-5{
     grid-area: dialog-box-5;
-    justify-content: flex-start;
     overflow: auto;
     margin-bottom: -26.5rem;
+    margin-top: -118rem;
     background-color: rgb(255, 255, 255);
     background-color: #ffffff;
     border: 0.5rem solid #ffe69c;
@@ -413,11 +433,9 @@ footer img {
     margin-top: -76rem;
     margin-left: 1rem;
 }
-
 /* **************************************************************************** */
 
 /*Main - suscribirse*/
-
 .section-contenido-destacado-suscribirse{
     display: grid;
     grid-template-areas: 'box-form';
@@ -435,11 +453,9 @@ form, label, input{
     margin: 0.5rem;
     text-align: justify;
 }
-
 /* **************************************************************************** */
 
-/*Main - géneros*/
-
+/*Main: géneros*/
 .grid-container-generos{
     display: grid;
     grid-template-areas: 
@@ -522,6 +538,7 @@ form, label, input{
     background-color: #ffe69c;
     border: 0.5rem solid #01565a;      
 }
+
 .img-generos{
     max-width: 13.9rem;
     margin-top: 0.67rem
@@ -558,16 +575,15 @@ form, label, input{
     margin-left: 47rem;
     margin-top: -50rem;
 }
+
 .avatar-tales-2{
     width: 8rem;
     margin-left: 20.5rem;
     margin-top: -5rem;
 }
-
 /* **************************************************************************** */
 
-/*Main - nuestra-historia*/
-
+/* Main: nuestra-historia*/
 .box-nuestra-historia{
     border: 0.5rem solid #01565a;
     background-color: #ffffff;
@@ -583,11 +599,9 @@ form, label, input{
     height: 35rem; 
     margin: 1rem;
 }
-
 /* **************************************************************************** */
 
-/*Main - educación*/
-
+/* Main: educación */
 .section-contenido-destacado-educación{
     display: grid;
     grid-template-areas:
@@ -645,11 +659,12 @@ form, label, input{
 
 /*Main - acerca de*/
 
-
 /* **************************************************************************** */
+
 
 /* Animaciones */
 
+/* animación: "rebotar" */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -662,137 +677,323 @@ form, label, input{
   } */
 }
 
+/* animación: se desliza desde la derecha hasta su ubicación final */
 @keyframes slideInFromRight {
     from {
-        right: -100%; /* Inicia fuera de la pantalla a la derecha */
+        right: -100%;
     }
     to {
-        right: 0; /* Termina en su posición final */
+        right: 0;
     }
 }
 
+/* animación: se desliza desde la izquierda hasta su ubicación final */
 @keyframes slideInFromLeft {
     from {
-        left: -100%; /* Inicia fuera de la pantalla a la derecha */
+        left: -100%;
     }
     to {
-        left: 0; /* Termina en su posición final */
+        left: 0;
     }
 }
 
 
-/* Media Querys */
+/* Media Query: index */
 
-/* Media query para pantallas menores o iguales a 1200px (laptops) */
-@media screen and (max-width: 1200px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Una sola columna */
+/* Desktops y dispositivos más grandes (>1440px) */
+@media (min-width: 90rem) {
+    .container {
+        max-width: 91.0625rem;
     }
 
-    .grid-item-container {
-        width: 100%; /* Ocupa todo el ancho disponible */
-    }
-    .dialog-box{
-
-    }
     .dialog-box-2{
-
-    }
-    .img-inicio{
-        display: none;
-        
-
-    }
-}
-
-/* Media query para pantallas menores o iguales a 768px (tabletas) */
-@media screen and (max-width: 768px) {
-    .grid-container {
-        grid-gap: 4rem;
-        padding: 2rem;
+        max-width: 37rem;
+        margin-right: 6rem;
     }
 
-    .grid-item-container {
-
-    }
-
-    .dialog-box{
-
-    }
-    .dialog-box-2{
+    .section-contenido-destacado{
+        display: grid;
+        grid-template-areas:
+        'dialog-box-3 dialog-box-3'
+        'grid-item grid-item'
+        'grid-item grid-item'
+        'grid-item grid-item'
+        'dialog-box-5 dialog-box-5'
+        'dialog-juego dialog-juego'
+        'dialog-box-aprendizaje dialog-box-aprendizaje'
+        'button-mas-historias button-mas-historias';
+        grid-template-rows: auto;
+        height: 145rem;
+        margin-left: 5rem;
 
     }
 
-    .img-inicio{
-        display: none;
-    }
-}
-
-/* Media query para pantallas menores o iguales a 480px (celulares) */
-@media screen and (max-width: 480px) {
-    .logo-header{
-        max-width: 5.5rem;
-    }
-    main{
-        max-width: 33rem;
-        padding-top: 8rem;
-    }
-    h4{
-        font-size: 14px;
-        text-align: center
+    .grid-item-container{
+        max-width: 80%;
     }
 
-    .grid-container {
-        grid-gap: 2rem;
-        padding: 1rem;
+    .linea-divisora1, .linea-divisora2, 
+    .linea-divisora3, .linea-divisora4, 
+    .linea-divisora5, .linea-divisora6{
+        max-width: 80%;
     }
-    .dialog-box{
-        max-width: 17rem;
-        max-height: 15rem;
-        margin-bottom: 24rem;
-        margin-left: 4rem; 
+
+    .p-cuento{
+        padding: 3px;
+        margin: 23px;
+        margin-left: 7rem;
+        font-family: system-ui;
     }
-    .dialog-box-2{
-        width: 28rem;
-        max-height: 23rem;
-        margin-right: 1rem;
-        margin-top: 3.5rem;
+    h3{
+        font-size: 16px;
+        grid-area: texto;
+        margin: 0.5rem;
+        margin-left: 2.5rem;
+    }
+
+    .dialog-juego{
+        max-width: 22rem;
+        margin-left: 55rem;
+        margin-top: -89rem;
+    }
+
+    .dialog-box-aprendizaje{
+        max-width: 24rem;
+        margin-left: 54rem;
+        margin-top: -69rem;
+    }
+
+    .text-dato-curioso{
+        max-width: 15rem;
+        margin-left: 6rem;
+    }
+    .div-dato-curioso-1{
+        background-size: 11rem;
+        background-position-x: -3rem;
+        background-position-y: 6rem;
+    }
+
+    .dialog-box-5{
+        max-width: 29rem;
+        margin-left: 51rem;
+        margin-top: -127rem
+    }
+
+    .button-mas-historias{
+        height: 4rem;
+        margin-top: -8rem;
+        margin-left: 32rem;
     }
 
     .dialog-box-3{
-        width: 12rem;
-        margin: 0;
-        margin-right: 9rem;
-        margin-top: -1rem;
-    }
-    .dialog-box-4{
-        padding: 0.5rem;
+        height: 0rem;
+        margin-left: 4rem;
+        margin-bottom: -3rem;
+        max-width: 23rem;
     }
 
-    .img-inicio{
-        display: none;
-    }
-
-    .footer-item{
-        padding: 0.5rem
-    }
-    h5, h3, p {
-    font-size: 16px;
-    grid-area: texto; /* Tanto el título como el párrafo ocupan el área 'texto' */
-    margin: 6.5rem;
-    margin-right: 1rem;
 }
 
+/* Tablets (<=1024px) */
+@media (max-width: 64rem) {
+    body{
+        max-width: 64rem;
+    }
+    .container {
+        max-width: 64rem;
+    }
+
+    .dialog-box-2{
+        max-width: 46%;
+        margin-right: 2rem;
+        height: 26rem;
+    }
+
+    .section-contenido-destacado{
+        display: grid;
+        grid-template-areas:
+        'dialog-box-3 dialog-box-3'
+        'grid-item grid-item'
+        'grid-item grid-item'
+        'grid-item grid-item'
+        'dialog-box-5 dialog-box-5'
+        'dialog-juego dialog-juego'
+        'dialog-box-aprendizaje dialog-box-aprendizaje'
+        'button-mas-historias button-mas-historias';
+        grid-template-rows: auto;
+        height: 145rem;
+
+    }
+
+    .grid-item-container{
+        max-width: 80%;
+    }
+
+    .linea-divisora1, .linea-divisora2, 
+    .linea-divisora3, .linea-divisora4, 
+    .linea-divisora5, .linea-divisora6{
+        max-width: 80%;
+    }
+
+    .p-cuento{
+        padding: 3px;
+        margin: 30px;
+        margin-left: 7rem;
+        font-family: system-ui;
+    }
     h3{
-    font-family: sans-serif;
-    margin-top: 1rem;
-    text-align: justify;
+        font-size: 16px;
+        grid-area: texto;
+        margin: 0.5rem;
+    }
+
+    .dialog-juego{
+        max-width: 22rem;
+        margin-left: 39rem;
+        margin-top: -89rem;
+    }
+
+    .dialog-box-aprendizaje{
+        max-width: 24rem;
+        margin-left: 38rem;
+        margin-top: -69rem;
+    }
+
+    .text-dato-curioso{
+        max-width: 15rem;
+        margin-left: 6rem;
+    }
+    .div-dato-curioso-1{
+        background-size: 11rem;
+        background-position-x: -3rem;
+        background-position-y: 6rem;
+    }
+
+    .dialog-box-5{
+        max-width: 24rem;
+        margin-left: 38rem;
+        margin-top: -125rem;
+    }
+
+    .button-mas-historias{
+        height: 4rem;
+        margin-top: -8rem;
+        margin-left: 26rem;
+    }
+
+    .dialog-box-3{
+        height: 0rem;
+        margin-left: 4rem;
+        margin-bottom: -3rem;
+        max-width: 23rem;
+    }
 }
 
-    p{  
-    font-size: 13px;
-    font-family: system-ui;
-    margin-top: 3rem;
+
+/* Móviles y dispositivos menores (<=768px) */
+@media (max-width: 48rem) {
+
+    .navbar-custom {
+        padding: 5px 10px;
+        background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px 5px;
+    }
+
+    .container {
+        max-width: 49rem;
+
+    }
+    .dialog-box-1{
+        max-width: 22rem;
+    }
+
+    .dialog-box-2{
+        max-width: 25rem;
+        margin-right: 1.2rem;
+    }
+
+    .section-contenido-destacado{
+        display: grid;
+        grid-template-areas:
+        'dialog-box-5 dialog-box-5 dialog-box-5'
+        'dialog-box-3 dialog-box-3 dialog-box-3'
+        'grid-item grid-item grid-item'
+        'grid-item grid-item grid-item'
+        'grid-item grid-item grid-item'
+        'dialog-juego dialog-box-aprendizaje dialog-box-aprendizaje'
+        'button-mas-historias button-mas-historias button-mas-historias';
+        grid-template-rows: auto;
+        height: 196rem;
+        margin-left: 4rem;
+
+    }
+
+    .grid-item-container{
+        max-width: 80%;
+    }
+
+    .linea-divisora1, .linea-divisora2, 
+    .linea-divisora3, .linea-divisora4, 
+    .linea-divisora5, .linea-divisora6{
+        max-width: 80%;
+    }
+
+    .p-cuento{
+        padding: 3px;
+        margin: 23px;
+        margin-left: 7rem;
+        font-family: system-ui;
+    }
+    h3{
+        font-size: 16px;
+        grid-area: texto;
+        margin: 0.2rem;
+        margin-left: 1rem;
+    }
+
+    .dialog-juego{
+        max-width: 22rem;
+        margin-left: -4rem;
+        margin-top: 0rem;
+    }
+
+    .dialog-box-aprendizaje{
+    max-width: 24rem;
+    margin-left: -30rem;
+    margin-top: 0rem;
+    }
+
+    .text-dato-curioso{
+        max-width: 15rem;
+        margin-left: 6rem;
+    }
+    .div-dato-curioso-1{
+        background-size: 11rem;
+        background-position-x: -3rem;
+        background-position-y: 6rem;
+    }
+
+    .dialog-box-5{
+        max-width: 30rem;
+        margin-left: 4rem;
+        margin-top: 1rem;
+    }
+
+    .button-mas-historias{
+        height: 4rem;
+        margin-top: -39rem;
+        margin-left: 17rem;
+    }
+
+    .dialog-box-3{
+        margin-left: 4rem;
+        margin-top: 22rem;
+        max-width: 19rem;
+    }
 }
 
-}
+
