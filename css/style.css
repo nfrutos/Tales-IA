@@ -704,7 +704,7 @@ form, label, input{
 
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 320px) and (max-width: 49rem) {
+@media (min-width: 520px) and (max-width: 49rem) {
     body {
         width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
