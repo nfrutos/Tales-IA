@@ -700,330 +700,11 @@ form, label, input{
 
 /* Media Query: index */
 
-/* Desktops y dispositivos más grandes (>1440px) */
-@media (min-width: 65rem) and (max-width: 97rem){
-    .container {
-        max-width: 90rem;
-    }
+/* Móviles (320px) */
 
-    .dialog-box-2{
-        max-width: 37rem;
-        margin-right: 6rem;
-    }
-
-    .section-contenido-destacado{
-        display: grid;
-        grid-template-areas:
-        'dialog-box-3 dialog-box-3'
-        'grid-item grid-item'
-        'grid-item grid-item'
-        'grid-item grid-item'
-        'dialog-box-5 dialog-box-5'
-        'dialog-juego dialog-juego'
-        'dialog-box-aprendizaje dialog-box-aprendizaje'
-        'button-mas-historias button-mas-historias';
-        grid-template-rows: auto;
-        height: 145rem;
-        margin-left: 5rem;
-
-    }
-
-    .grid-item-container{
-        max-width: 80%;
-    }
-
-    .linea-divisora1, .linea-divisora2,
-    .linea-divisora3, .linea-divisora4,
-    .linea-divisora5, .linea-divisora6{
-        max-width: 80%;
-    }
-
-    .p-cuento{
-        padding: 3px;
-        margin: 23px;
-        margin-left: 7rem;
-        font-family: system-ui;
-    }
-    h3{
-        font-size: 16px;
-        grid-area: texto;
-        margin: 0.5rem;
-        margin-left: 2.5rem;
-    }
-
-    .dialog-juego{
-        max-width: 22rem;
-        margin-left: 55rem;
-        margin-top: -89rem;
-    }
-
-    .dialog-box-aprendizaje{
-        max-width: 24rem;
-        margin-left: 54rem;
-        margin-top: -69rem;
-    }
-
-    .text-dato-curioso{
-        max-width: 15rem;
-        margin-left: 6rem;
-    }
-    .div-dato-curioso-1{
-        background-size: 11rem;
-        background-position-x: -3rem;
-        background-position-y: 6rem;
-    }
-
-    .dialog-box-5{
-        max-width: 29rem;
-        margin-left: 51rem;
-        margin-top: -127rem
-    }
-
-    .button-mas-historias{
-        height: 4rem;
-        margin-top: -8rem;
-        margin-left: 32rem;
-    }
-
-    .dialog-box-3{
-        height: 0rem;
-        margin-left: 4rem;
-        margin-bottom: -3rem;
-        max-width: 23rem;
-    }
-
-}
-
-/* Tablets (<=1024px) */
-@media (min-width: 50rem) and (max-width: 64rem) {
-
-    .encabezado{
-        height: 41rem;
-    }
-
-    body{
-        max-width: 90rem;
-    }
-    .container-box {
-        max-width: 60rem;
-
-    }
-    .dialog-box-1{
-        max-width: 22rem;
-    }
-
-    .dialog-box-2{
-        max-width: 25rem;
-        margin-right: 4rem;
-        /* margin-top: 3rem; */
-    }
-
-    .section-contenido-destacado{
-        display: grid;
-        grid-template-areas:
-        'dialog-box-5'
-        'dialog-box-3'
-        'grid-item'
-        'grid-item'
-        'grid-item'
-        'dialog-juego'
-        'dialog-box-aprendizaje'
-        'button-mas-historias';
-        grid-template-rows: auto;
-        height: 240rem;
-        margin-left: -3rem;
-        margin-top: -54rem;
-
-    }
-
-    /* .grid-item-container{
-        max-width: 49rem;
-        margin-left: 3rem;
-    } */
-
-    .grid-item-container, .linea-divisora1, .linea-divisora2,
-    .linea-divisora3, .linea-divisora4,
-    .linea-divisora5, .linea-divisora6{
-        max-width: 49rem;
-        margin-left: 3rem;
-    }
-
-    .p-cuento{
-        padding: 3px;
-        margin: 23px;
-        margin-left: 7rem;
-        font-family: system-ui;
-    }
-    h3{
-        font-size: 16px;
-        grid-area: texto;
-        margin: 0.2rem;
-        margin-left: 1rem;
-    }
-
-    .dialog-juego{
-        max-width: 22rem;
-        margin-left: 3rem;
-        margin-bottom: 70rem;
-        margin-top: 9rem;
-    }
-
-    .dialog-box-aprendizaje{
-        max-width: 24rem;
-        margin-left: 26rem;
-        margin-top: -88rem;
-    }
-
-    .text-dato-curioso{
-        max-width: 15rem;
-        margin-left: 6rem;
-    }
-    .div-dato-curioso-1{
-        background-size: 11rem;
-        background-position-x: -3rem;
-        background-position-y: 6rem;
-    }
-
-    .dialog-box-5{
-        max-width: 30rem;
-        margin-left: 12rem;
-        margin-top: 56rem;
-        margin-bottom: -21rem;
-    }
-
-    .button-mas-historias{
-        height: 4rem;
-        margin-top: -99rem;
-        margin-left: 19rem;
-    }
-
-    .dialog-box-3{
-        margin-left: 17rem;
-        margin-top: 22rem;
-        margin-bottom: -6rem;
-        max-width: 19rem;
-    }
-}
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 21rem) and (max-width: 49rem) {
-
-    .encabezado{
-        height: 41rem;
-    }
-    .navbar-custom {
-        padding: 5px 10px;
-        background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
-    }
-
-    .nav-link {
-        display: block;
-        padding: 10px 5px;
-    }
-
-    .container {
-        max-width: 49rem;
-
-    }
-    .dialog-box-1{
-        max-width: 22rem;
-    }
-
-    .dialog-box-2{
-        max-width: 25rem;
-        margin-right: 2rem;
-        /* margin-top: 3rem; */
-    }
-
-    .section-contenido-destacado{
-        display: grid;
-        grid-template-areas:
-        'dialog-box-5'
-        'dialog-box-3'
-        'grid-item'
-        'grid-item'
-        'grid-item'
-        'dialog-juego'
-        'dialog-box-aprendizaje'
-        'button-mas-historias';
-        grid-template-rows: auto;
-        height: 240rem;
-        margin-left: -3rem;
-        margin-top: -54rem;
-
-    }
-
-    /* .grid-item-container{
-        max-width: 49rem;
-        margin-left: 3rem;
-    } */
-
-    .grid-item-container, .linea-divisora1, .linea-divisora2,
-    .linea-divisora3, .linea-divisora4,
-    .linea-divisora5, .linea-divisora6{
-        max-width: 49rem;
-        margin-left: 3rem;
-    }
-
-    .p-cuento{
-        padding: 3px;
-        margin: 23px;
-        margin-left: 7rem;
-        font-family: system-ui;
-    }
-    h3{
-        font-size: 16px;
-        grid-area: texto;
-        margin: 0.2rem;
-        margin-left: 1rem;
-    }
-
-    .dialog-juego{
-        max-width: 22rem;
-        margin-left: 3rem;
-        margin-bottom: 70rem;
-        margin-top: 9rem;
-    }
-
-    .dialog-box-aprendizaje{
-        max-width: 24rem;
-        margin-left: 26rem;
-        margin-top: -88rem;
-    }
-
-    .text-dato-curioso{
-        max-width: 15rem;
-        margin-left: 6rem;
-    }
-    .div-dato-curioso-1{
-        background-size: 11rem;
-        background-position-x: -3rem;
-        background-position-y: 6rem;
-    }
-
-    .dialog-box-5{
-        max-width: 30rem;
-        margin-left: 12rem;
-        margin-top: 56rem;
-        margin-bottom: -21rem;
-    }
-
-    .button-mas-historias{
-        height: 4rem;
-        margin-top: -99rem;
-        margin-left: 19rem;
-    }
-
-    .dialog-box-3{
-        margin-left: 17rem;
-        margin-top: 22rem;
-        margin-bottom: -6rem;
-        max-width: 19rem;
-    }
-}
-
-/* Móviles (320px) */
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 49rem) {
     body {
         width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
@@ -1181,3 +862,213 @@ form, label, input{
         padding: 0rem;
     }
 }
+
+/* Tablets (<=1024px) */
+@media (min-width: 50rem) and (max-width: 64rem) {
+
+    .encabezado{
+        height: 41rem;
+    }
+
+    body{
+        max-width: 90rem;
+    }
+    .container-box {
+        max-width: 60rem;
+
+    }
+    .dialog-box-1{
+        max-width: 22rem;
+    }
+
+    .dialog-box-2{
+        max-width: 25rem;
+        margin-right: 4rem;
+        /* margin-top: 3rem; */
+    }
+
+    .section-contenido-destacado{
+        display: grid;
+        grid-template-areas:
+        'dialog-box-5'
+        'dialog-box-3'
+        'grid-item'
+        'grid-item'
+        'grid-item'
+        'dialog-juego'
+        'dialog-box-aprendizaje'
+        'button-mas-historias';
+        grid-template-rows: auto;
+        height: 240rem;
+        margin-left: -3rem;
+        margin-top: -54rem;
+
+    }
+
+    /* .grid-item-container{
+        max-width: 49rem;
+        margin-left: 3rem;
+    } */
+
+    .grid-item-container, .linea-divisora1, .linea-divisora2,
+    .linea-divisora3, .linea-divisora4,
+    .linea-divisora5, .linea-divisora6{
+        max-width: 49rem;
+        margin-left: 3rem;
+    }
+
+    .p-cuento{
+        padding: 3px;
+        margin: 23px;
+        margin-left: 7rem;
+        font-family: system-ui;
+    }
+    h3{
+        font-size: 16px;
+        grid-area: texto;
+        margin: 0.2rem;
+        margin-left: 1rem;
+    }
+
+    .dialog-juego{
+        max-width: 22rem;
+        margin-left: 3rem;
+        margin-bottom: 70rem;
+        margin-top: 9rem;
+    }
+
+    .dialog-box-aprendizaje{
+        max-width: 24rem;
+        margin-left: 26rem;
+        margin-top: -88rem;
+    }
+
+    .text-dato-curioso{
+        max-width: 15rem;
+        margin-left: 6rem;
+    }
+    .div-dato-curioso-1{
+        background-size: 11rem;
+        background-position-x: -3rem;
+        background-position-y: 6rem;
+    }
+
+    .dialog-box-5{
+        max-width: 30rem;
+        margin-left: 12rem;
+        margin-top: 56rem;
+        margin-bottom: -21rem;
+    }
+
+    .button-mas-historias{
+        height: 4rem;
+        margin-top: -99rem;
+        margin-left: 19rem;
+    }
+
+    .dialog-box-3{
+        margin-left: 17rem;
+        margin-top: 22rem;
+        margin-bottom: -6rem;
+        max-width: 19rem;
+    }
+}
+
+
+/* Desktops y dispositivos más grandes (>1440px) */
+@media (min-width:65rem) and (max-width: 97rem){
+    .container {
+        max-width: 90rem;
+    }
+
+    .dialog-box-2{
+        max-width: 37rem;
+        margin-right: 6rem;
+    }
+
+    .section-contenido-destacado{
+        display: grid;
+        grid-template-areas:
+        'dialog-box-3 dialog-box-3'
+        'grid-item grid-item'
+        'grid-item grid-item'
+        'grid-item grid-item'
+        'dialog-box-5 dialog-box-5'
+        'dialog-juego dialog-juego'
+        'dialog-box-aprendizaje dialog-box-aprendizaje'
+        'button-mas-historias button-mas-historias';
+        grid-template-rows: auto;
+        height: 145rem;
+        margin-left: 5rem;
+
+    }
+
+    .grid-item-container{
+        max-width: 80%;
+    }
+
+    .linea-divisora1, .linea-divisora2,
+    .linea-divisora3, .linea-divisora4,
+    .linea-divisora5, .linea-divisora6{
+        max-width: 80%;
+    }
+
+    .p-cuento{
+        padding: 3px;
+        margin: 23px;
+        margin-left: 7rem;
+        font-family: system-ui;
+    }
+    h3{
+        font-size: 16px;
+        grid-area: texto;
+        margin: 0.5rem;
+        margin-left: 2.5rem;
+    }
+
+    .dialog-juego{
+        max-width: 22rem;
+        margin-left: 55rem;
+        margin-top: -89rem;
+    }
+
+    .dialog-box-aprendizaje{
+        max-width: 24rem;
+        margin-left: 54rem;
+        margin-top: -69rem;
+    }
+
+    .text-dato-curioso{
+        max-width: 15rem;
+        margin-left: 6rem;
+    }
+    .div-dato-curioso-1{
+        background-size: 11rem;
+        background-position-x: -3rem;
+        background-position-y: 6rem;
+    }
+
+    .dialog-box-5{
+        max-width: 29rem;
+        margin-left: 51rem;
+        margin-top: -127rem
+    }
+
+    .button-mas-historias{
+        height: 4rem;
+        margin-top: -8rem;
+        margin-left: 32rem;
+    }
+
+    .dialog-box-3{
+        height: 0rem;
+        margin-left: 4rem;
+        margin-bottom: -3rem;
+        max-width: 23rem;
+    }
+
+}
+
+
+
+
