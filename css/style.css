@@ -351,6 +351,7 @@ article{
     margin-left: 5rem;
     max-width: 32rem;
     max-height: 4rem;
+    height: 5rem;
     border: 0.3rem solid #01565a;
     background-color: #ffffff;
 }
@@ -703,7 +704,7 @@ form, label, input{
 
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 420px) and (max-width: 768px) {
     body {
         width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
@@ -723,7 +724,7 @@ form, label, input{
     }
     .encabezado{
         grid-template-columns: 1fr;
-        height: 23rem;
+        height: 26.5rem;
         width: auto; 
     }
     .dialog-box-1{
@@ -736,7 +737,7 @@ form, label, input{
     }
     .dialog-box-2{
         width: auto;
-        margin-top: 24rem;
+        margin-top: 26rem;
         margin-left: 1rem;
         margin-right: 1rem;
         height: 22rem;
@@ -761,6 +762,7 @@ form, label, input{
     }
     .dialog-juego{
         margin: 0;
+        margin-left: 3rem;
         grid-template-columns: 1fr;
         width: 19rem;
     }
@@ -790,8 +792,9 @@ form, label, input{
     }
     .grid-item{
         grid-template-columns: 1fr;
-        width: 18rem;
-        margin-right: -1rem;
+        width: 17rem;
+        margin-right: 6rem;
+        margin-left: 0rem;
     }
 
     h3{
@@ -807,7 +810,7 @@ form, label, input{
     }
 
     .text-dato-curioso{
-        margin-left: 1.4rem;
+        margin-left: 7.4rem;
         margin-top: 0.2rem;
         text-align: right;
     }
@@ -820,7 +823,7 @@ form, label, input{
         background-color: aliceblue;
         border: 0.5rem solid #ffe69c;
         text-align: center;
-        margin-left: 2rem;
+        margin-left: 5rem;
     }
     .container-box-2{
         margin-top: -42rem;
@@ -830,12 +833,14 @@ form, label, input{
         margin-left: 1rem;
     }
     .div-dato-curioso-1{
+        width: 23rem;
         margin-top: 0rem;
         margin-right: 0rem;
         margin-left: 0rem;
+        background-color: #ffffff;
         background-image: url(../img/avatar-tales.jpg);
-        background-position-x: -4.4rem;
-        background-position-y: 10rem;
+        background-position-x: -6rem;
+        background-position-y: 6.5rem;
         height: 33rem;
         background-size: contain;
         background-repeat: no-repeat;
@@ -979,9 +984,9 @@ form, label, input{
 
 
 /* Desktops y dispositivos más grandes (>1440px) */
-@media (min-width: 1024px) and (max-width: 97rem){
+@media (min-width: 1024px) and (max-width: 90rem){
     .container {
-        max-width: 97rem;
+        max-width: 90rem;
     }
 
     .dialog-box-2{
@@ -1064,7 +1069,6 @@ form, label, input{
     }
 
     .dialog-box-3{
-        height: 0rem;
         margin-left: 4rem;
         margin-bottom: -3rem;
         max-width: 23rem;
@@ -1077,7 +1081,7 @@ form, label, input{
 /* Media Query: géneros */
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 420px) and (max-width: 768px) {
     .logo-header, .navbar-brand{
         max-width: 2rem;
         margin-bottom: 0rem;
@@ -1087,7 +1091,7 @@ form, label, input{
         margin-top: 0rem;
     }
     .box-card{
-        margin-left: 2rem;
+        margin-left: 5rem;
     }
     .navbar, .navbar-custom .navbar-scroll {
         background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
@@ -1122,11 +1126,11 @@ form, label, input{
         margin-top: -15rem;
         margin-bottom: 1rem;
         width: 17rem;
-        margin-left: 1rem;
+        margin-left: 4rem;
     }
     .box-historia-generos-2{
         width: 19rem;
-        margin-left: -0.5rem;
+        margin-left: 3rem;
         margin-top: 0rem;
     }
     .avatar-tales-2{
