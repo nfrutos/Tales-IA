@@ -1023,7 +1023,7 @@ form, label, input{
 }
 
 /* Móviles (320px) */
-@media (max-width: 320px) {
+@media (min-width: 320px) {
     body {
         width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
