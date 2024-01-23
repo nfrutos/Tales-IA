@@ -704,7 +704,7 @@ form, label, input{
 
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 320px) and (max-width: 49rem) {
+@media (min-width: 570px) and (max-width: 49rem) {
     body {
         width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
@@ -724,7 +724,7 @@ form, label, input{
     }
     .encabezado{
         grid-template-columns: 1fr;
-        height: 22rem;
+        height: 35rem;
         width: auto; 
     }
     .dialog-box-1{
@@ -737,7 +737,7 @@ form, label, input{
     }
     .dialog-box-2{
         width: auto;
-        margin-top: 22rem;
+        margin-top: 36rem;
         margin-left: 1rem;
         margin-right: 1rem;
         height: 22rem;
@@ -754,7 +754,7 @@ form, label, input{
     .dialog-box-5{
         width: auto;
         margin: 0;
-        margin-left: -0.5rem;
+        margin-left: -8rem;
         margin-top: 0rem;
     }
     .dialog-juego{
@@ -777,7 +777,7 @@ form, label, input{
         width: auto;
         height: 226rem;
         margin-bottom: 42rem;
-        margin-right: 1rem;
+        margin-left: 8rem;
         margin-top: 16rem;
     }
     .grid-item-container{
