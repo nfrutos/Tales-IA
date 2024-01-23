@@ -704,7 +704,7 @@ form, label, input{
 
 
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 570px) and (max-width: 49rem) {
+@media (min-width: 320px) and (max-width: 49rem) {
     body {
         width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
@@ -754,7 +754,7 @@ form, label, input{
     .dialog-box-5{
         width: auto;
         margin: 0;
-        margin-left: -8rem;
+        margin-left: -0.5rem;
         margin-top: 0rem;
     }
     .dialog-juego{
@@ -777,7 +777,7 @@ form, label, input{
         width: auto;
         height: 226rem;
         margin-bottom: 42rem;
-        margin-left: 8rem;
+        margin-left: 0rem;
         margin-top: 16rem;
     }
     .grid-item-container{
