@@ -350,7 +350,9 @@ article{
     margin-top: 1rem;
     margin-left: 5rem;
     max-width: 32rem;
-    max-height: 4rem
+    max-height: 4rem;
+    border: 0.3rem solid #01565a;
+    background-color: #ffffff;
 }
 
 .dialog-box-5{
@@ -456,7 +458,7 @@ form, label, input{
 /* **************************************************************************** */
 
 /*Main: géneros*/
-.grid-container-generos{
+.section-contenido-destacado-generos{
     display: grid;
     grid-template-areas:
     'box-generos-1 box-generos-2 box-historia-generos'
@@ -466,7 +468,6 @@ form, label, input{
     gap: 5rem;
     width: 100%;
     margin-left: 4rem;
-    margin-bottom: 5rem;
 }
 
 .box-card {
@@ -722,7 +723,7 @@ form, label, input{
     }
     .encabezado{
         grid-template-columns: 1fr;
-        height: 35rem;
+        height: 23rem;
         width: auto; 
     }
     .dialog-box-1{
@@ -735,16 +736,18 @@ form, label, input{
     }
     .dialog-box-2{
         width: auto;
-        margin-top: 36rem;
+        margin-top: 24rem;
         margin-left: 1rem;
         margin-right: 1rem;
         height: 22rem;
     }
     .dialog-box-3{
         width: auto;
-        margin-right: 1rem;
-        margin-top: 9rem;
-        margin-left: 0;
+        margin-right: 0rem;
+        margin-top: 11rem;
+        margin-left: 0rem;
+        margin-bottom: 2rem;
+        height: 5rem;
     }
     .dialog-box-4{
         padding: 0;
@@ -754,6 +757,7 @@ form, label, input{
         margin: 0;
         margin-left: -0.5rem;
         margin-top: 0rem;
+        margin-bottom: 2rem;
     }
     .dialog-juego{
         margin: 0;
@@ -767,10 +771,10 @@ form, label, input{
         'grid-item'
         'grid-item'
         'grid-item'
+        'button-mas-historias'
         'dialog-box-5'
         'dialog-juego'
-        'dialog-box-aprendizaje'
-        'button-mas-historias';
+        'dialog-box-aprendizaje';
         grid-template-rows: auto;
         width: auto;
         height: 226rem;
@@ -792,9 +796,8 @@ form, label, input{
 
     h3{
         font-family: sans-serif;
-        margin-top: -1rem;
-        /* text-align: left; */
-        margin-left: -6rem;
+        margin-top: 0.5rem;
+        margin-left: 0rem;
     }
     .img-cuento {
         max-height: 0;
@@ -827,14 +830,13 @@ form, label, input{
         margin-left: 1rem;
     }
     .div-dato-curioso-1{
-        height: 15rem;
+        margin-top: 0rem;
         margin-right: 0rem;
         margin-left: 0rem;
         background-image: url(../img/avatar-tales.jpg);
         background-position-x: -4.4rem;
         background-position-y: 10rem;
-        height: 31rem;
-        /* background: border-box; */
+        height: 33rem;
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -863,6 +865,9 @@ form, label, input{
 
 /* Tablets (<=1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .navbar, .navbar-custom{
+        background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+    }
 
     .encabezado{
         height: 41rem;
@@ -976,7 +981,7 @@ form, label, input{
 /* Desktops y dispositivos más grandes (>1440px) */
 @media (min-width: 1024px) and (max-width: 97rem){
     .container {
-        max-width: 90rem;
+        max-width: 97rem;
     }
 
     .dialog-box-2{
@@ -1067,6 +1072,50 @@ form, label, input{
 
 }
 
+/* **************************************************************************** */
+
+/* Media Query: géneros */
+
+/* Móviles y dispositivos menores (<=768px) */
+@media (min-width: 320px) and (max-width: 768px) {
+    .navbar, .navbar-custom{
+        background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+    }
+    .section-contenido-destacado-generos{
+        display: grid;
+        grid-template-areas:
+        'box-historia-generos'
+        'box-generos-1'
+        'box-generos-2'
+        'box-generos-3'
+        'box-generos-4'
+        'box-generos-5'
+        'box-generos-6'
+        'box-historia-generos-2';
+        gap: 1rem;
+        height: 200rem;
+        width: auto;
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+        margin-left: 0rem;
+    }
+    .box-historia-generos{
+        margin-top: -7rem;
+        margin-bottom: 1rem;
+        width: 17rem;
+        margin-left: 1rem;
+    }
+    .box-historia-generos-2{
+        width: 18rem;
+        margin-left: -0.5rem;
+        margin-top: 0rem;
+    }
+    .avatar-tales-2{
+        width: 5rem;
+        margin-left: 14rem;
+        margin-top: -6rem;
+    }
+}
 
 
 
