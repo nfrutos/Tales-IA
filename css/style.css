@@ -17,8 +17,8 @@ header {
 }
 
 .logo-header{
-    border-radius: 50%; 
-    box-shadow: 0px 4px 0px #01565a;    
+    border-radius: 50%;
+    box-shadow: 0px 4px 0px #01565a;
 }
 
 h5, h3, p {
@@ -38,7 +38,7 @@ h3{
 /* Ajustes para el contenedor de la barra de navegación al hacer scroll */
 .navbar-scroll {
     height: 7rem;
-    transition: height 1s;    
+    transition: height 1s;
 }
 
 .navbar-scroll .navbar-custom{
@@ -147,12 +147,12 @@ footer img {
 .dialog-box-4 {
     grid-area: dialog-box-4;
     padding: 3rem;
-    
+
 }
 
 .dialog-box-4 a{
     display: inline-block;
-    margin-right: 1.5rem;    
+    margin-right: 1.5rem;
 }
 /* **************************************************************************** */
 
@@ -235,8 +235,8 @@ article{
     margin-right: 1rem;
 }
 
-.linea-divisora1, .linea-divisora2, 
-.linea-divisora3, .linea-divisora4, 
+.linea-divisora1, .linea-divisora2,
+.linea-divisora3, .linea-divisora4,
 .linea-divisora5, .linea-divisora6{
     display: grid;
     grid-template-areas: 'h4 btn-modales';
@@ -253,7 +253,7 @@ article{
     grid-gap: 2rem;
     padding: 4rem;
 }
- 
+
 .grid-item-container{
     display: grid;
     background-color: #ffffff;
@@ -269,7 +269,7 @@ article{
     display: grid;
     grid-area: grid-item;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "imagen texto"; 
+    grid-template-areas: "imagen texto";
 }
 
 .iconos-grid-item{
@@ -292,7 +292,7 @@ article{
 
 .btn-modales{
     grid-area: btn-modales;
-    margin-left: 25rem;    
+    margin-left: 25rem;
 }
 
 .h4{
@@ -308,7 +308,7 @@ article{
     height: 15rem;
 }
 
-.p-cuento, .p-modal{  
+.p-cuento, .p-modal{
     font-family: system-ui;
     margin-top: 3rem;
     line-height: 2rem;
@@ -418,7 +418,7 @@ article{
     background-repeat: no-repeat;
 }
 
-.text-dato-curioso{ 
+.text-dato-curioso{
     width: 15rem;
     margin-left: 11rem;
     margin-top: 1rem;
@@ -458,7 +458,7 @@ form, label, input{
 /*Main: géneros*/
 .grid-container-generos{
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     'box-generos-1 box-generos-2 box-historia-generos'
     'box-generos-3 box-generos-4 box-historia-generos'
     'box-generos-5 box-generos-6 box-historia-generos'
@@ -506,37 +506,37 @@ form, label, input{
 .box-generos-1{
     grid-area: box-generos-1;
     background-color: #ffe69c;
-    border: 0.5rem solid #01565a;      
+    border: 0.5rem solid #01565a;
 }
 
 .box-generos-2{
     grid-area: box-generos-2;
     background-color: #ffe69c;
-    border: 0.5rem solid #01565a;      
+    border: 0.5rem solid #01565a;
 }
 
 .box-generos-3{
     grid-area: box-generos-3;
     background-color: #ffe69c;
-    border: 0.5rem solid #01565a;      
+    border: 0.5rem solid #01565a;
 }
 
 .box-generos-4{
     grid-area: box-generos-4;
     background-color: #ffe69c;
-    border: 0.5rem solid #01565a;      
+    border: 0.5rem solid #01565a;
 }
 
 .box-generos-5{
     grid-area: box-generos-5;
     background-color: #ffe69c;
-    border: 0.5rem solid #01565a;      
+    border: 0.5rem solid #01565a;
 }
 
 .box-generos-6{
     grid-area: box-generos-6;
     background-color: #ffe69c;
-    border: 0.5rem solid #01565a;      
+    border: 0.5rem solid #01565a;
 }
 
 .img-generos{
@@ -563,7 +563,7 @@ form, label, input{
     width: 50%;
     height: 15rem;
     margin-left: 7rem;
-    border: 0.5rem solid #ffe69c;  
+    border: 0.5rem solid #ffe69c;
 }
 
 .box-historia-generos-2{
@@ -596,7 +596,7 @@ form, label, input{
     border: 0.5rem solid #ffe69c;
     background-color: #ffffff;
     width: 40rem;
-    height: 35rem; 
+    height: 35rem;
     margin: 1rem;
 }
 /* **************************************************************************** */
@@ -701,7 +701,7 @@ form, label, input{
 /* Media Query: index */
 
 /* Desktops y dispositivos más grandes (>1440px) */
-@media (min-width: 90rem) and (max-width: 150rem){
+@media (min-width: 65rem) and (max-width: 97rem){
     .container {
         max-width: 90rem;
     }
@@ -732,8 +732,8 @@ form, label, input{
         max-width: 80%;
     }
 
-    .linea-divisora1, .linea-divisora2, 
-    .linea-divisora3, .linea-divisora4, 
+    .linea-divisora1, .linea-divisora2,
+    .linea-divisora3, .linea-divisora4,
     .linea-divisora5, .linea-divisora6{
         max-width: 80%;
     }
@@ -795,12 +795,12 @@ form, label, input{
 }
 
 /* Tablets (<=1024px) */
-@media (min-width: 49rem) and (max-width: 90rem) {
+@media (min-width: 50rem) and (max-width: 64rem) {
 
     .encabezado{
         height: 41rem;
     }
-    
+
     body{
         max-width: 90rem;
     }
@@ -841,8 +841,8 @@ form, label, input{
         margin-left: 3rem;
     } */
 
-    .grid-item-container, .linea-divisora1, .linea-divisora2, 
-    .linea-divisora3, .linea-divisora4, 
+    .grid-item-container, .linea-divisora1, .linea-divisora2,
+    .linea-divisora3, .linea-divisora4,
     .linea-divisora5, .linea-divisora6{
         max-width: 49rem;
         margin-left: 3rem;
@@ -894,7 +894,7 @@ form, label, input{
     .button-mas-historias{
         height: 4rem;
         margin-top: -99rem;
-        margin-left: 19rem; 
+        margin-left: 19rem;
     }
 
     .dialog-box-3{
@@ -905,9 +905,8 @@ form, label, input{
     }
 }
 
-
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 4rem) and (max-width: 49rem) {
+@media (min-width: 21rem) and (max-width: 49rem) {
 
     .encabezado{
         height: 41rem;
@@ -959,8 +958,8 @@ form, label, input{
         margin-left: 3rem;
     } */
 
-    .grid-item-container, .linea-divisora1, .linea-divisora2, 
-    .linea-divisora3, .linea-divisora4, 
+    .grid-item-container, .linea-divisora1, .linea-divisora2,
+    .linea-divisora3, .linea-divisora4,
     .linea-divisora5, .linea-divisora6{
         max-width: 49rem;
         margin-left: 3rem;
@@ -1012,7 +1011,7 @@ form, label, input{
     .button-mas-historias{
         height: 4rem;
         margin-top: -99rem;
-        margin-left: 19rem; 
+        margin-left: 19rem;
     }
 
     .dialog-box-3{
@@ -1023,3 +1022,162 @@ form, label, input{
     }
 }
 
+/* Móviles (320px) */
+@media (max-width: 320px) {
+    body {
+        width: 100%;
+        overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    }
+    .container, .container-box {
+        max-width: 100%; /* Ajusta el contenedor al ancho del dispositivo */
+    }
+    .dialog-box-aprendizaje {
+        grid-template-columns: 1fr;
+        width: 17rem;
+        height: 33rem;
+        margin: 10px 0;
+        margin-left: 1rem;
+    }
+    .btn-juego{
+        width: auto;
+    }
+    .encabezado{
+        grid-template-columns: 1fr;
+        height: 22rem;
+        width: auto; 
+    }
+    .dialog-box-1{
+        width: auto;
+        padding: 0;
+        margin-right: 0rem;
+        /* margin-bottom: 42rem;
+        margin-top: 5rem;
+        margin-left: 2rem; */
+    }
+    .dialog-box-2{
+        width: auto;
+        margin-top: 22rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        height: 22rem;
+    }
+    .dialog-box-3{
+        width: auto;
+        margin-right: 1rem;
+        margin-top: 9rem;
+        margin-left: 0;
+    }
+    .dialog-box-4{
+        padding: 0;
+    }
+    .dialog-box-5{
+        width: auto;
+        margin: 0;
+        margin-left: -0.5rem;
+        margin-top: 0rem;
+    }
+    .dialog-juego{
+        margin: 0;
+        grid-template-columns: 1fr;
+        width: 19rem;
+    }
+    .section-contenido-destacado{
+        display: grid;
+        grid-template-areas:
+        'dialog-box-3'
+        'grid-item'
+        'grid-item'
+        'grid-item'
+        'dialog-box-5'
+        'dialog-juego'
+        'dialog-box-aprendizaje'
+        'button-mas-historias';
+        grid-template-rows: auto;
+        width: auto;
+        height: 226rem;
+        margin-bottom: 42rem;
+        margin-right: 1rem;
+        margin-top: 16rem;
+    }
+    .grid-item-container{
+        display: grid;
+        background-color: #ffffff;
+        width: auto;
+        height: 15rem;
+    }
+    .grid-item{
+        grid-template-columns: 1fr;
+        width: 18rem;
+        margin-right: -1rem;
+    }
+
+    h3{
+        font-family: sans-serif;
+        margin-top: -1rem;
+        /* text-align: left; */
+        margin-left: -6rem;
+    }
+    .img-cuento {
+        max-height: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .text-dato-curioso{
+        margin-left: 1.4rem;
+        margin-top: 0.2rem;
+        text-align: right;
+    }
+    .button-mas-historias{
+        grid-area: button-mas-historias;
+        text-decoration: none;
+        font-size: 2rem;
+        width: 15rem;
+        margin-bottom: 4rem;
+        background-color: aliceblue;
+        border: 0.5rem solid #ffe69c;
+        text-align: center;
+        margin-left: 2rem;
+    }
+    .container-box-2{
+        margin-top: -42rem;
+    }
+    .grid-container{
+        padding: 0;
+        margin-left: 1rem;
+    }
+    .div-dato-curioso-1{
+        height: 15rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        background-image: url(../img/avatar-tales.jpg);
+        background-position-x: -4.4rem;
+        background-position-y: 10rem;
+        height: 31rem;
+        /* background: border-box; */
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .img-cuento, .img-inicio {
+        width: 100%; /* Ajusta las imágenes al ancho del contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+    }
+    .p-cuento, .p-modal{
+        margin: 21px; /* Ajusta los márgenes del texto */
+    }
+    .linea-divisora1, .linea-divisora2, .linea-divisora3, .linea-divisora4, .linea-divisora5 {
+        grid-template-areas: "btn-modales h4"; /* Ajusta la disposición de los elementos */
+        width: auto; /* Ajusta el ancho al contenedor */
+        margin: 10px 0; /* Ajusta los márgenes */
+    }
+    .btn-modales, .h4 {
+        font-size: smaller; /* Reduce el tamaño de la fuente para que se ajuste mejor */
+    }
+    .button-mas-historias a {
+        font-size: medium; /* Ajusta el tamaño de la fuente del botón para más historias */
+    }
+    .footer-item{
+        padding: 0rem;
+    }
+}
