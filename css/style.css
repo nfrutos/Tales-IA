@@ -1078,8 +1078,27 @@ form, label, input{
 
 /* Móviles y dispositivos menores (<=768px) */
 @media (min-width: 320px) and (max-width: 768px) {
-    .navbar, .navbar-custom{
+    .logo-header, .navbar-brand{
+        max-width: 2rem;
+        margin-bottom: 0rem;
+    }
+    .navbar-toggler{
+        max-width: 4rem;
+        margin-top: 0rem;
+    }
+    .box-card{
+        margin-left: 2rem;
+    }
+    .navbar, .navbar-custom .navbar-scroll {
         background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+        margin-top: 2rem;
+    }
+    .dialog-box-4 h4{
+        font-size: 0.8rem;
+    }
+
+    footer a{
+        font-size: 0.5rem;
     }
     .section-contenido-destacado-generos{
         display: grid;
@@ -1100,22 +1119,19 @@ form, label, input{
         margin-left: 0rem;
     }
     .box-historia-generos{
-        margin-top: -7rem;
+        margin-top: -15rem;
         margin-bottom: 1rem;
         width: 17rem;
         margin-left: 1rem;
     }
     .box-historia-generos-2{
-        width: 18rem;
+        width: 19rem;
         margin-left: -0.5rem;
         margin-top: 0rem;
     }
     .avatar-tales-2{
         width: 5rem;
-        margin-left: 14rem;
-        margin-top: -6rem;
+        margin-left: 14.3rem;
+        margin-top: -3.5rem;
     }
 }
-
-
-
