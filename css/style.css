@@ -700,15 +700,12 @@ form, label, input{
 }
 
 
-
-
-
 /* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 420px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
 
 /* Media Query: general */   
     body {
-        width: 100%;
+        max-width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
     }
     .container, .container-box {
@@ -719,7 +716,7 @@ form, label, input{
         position: absolute;
         list-style: none;
         padding: 0;
-        margin-left: 20rem;
+        margin-left: 16rem;
         margin-top: 2rem;
         background-color: #ffffff;
     }
@@ -729,6 +726,8 @@ form, label, input{
     .navbar-span-Frutos{
         border: 1px solid  #006f6d;
     }
+/* **************************************************************************** */
+
 /* Media Query: géneros */
     .box-card{
         margin-left: 5rem;
@@ -760,24 +759,25 @@ form, label, input{
         width: auto;
         margin-top: 5rem;
         margin-bottom: 0rem;
-        margin-left: 0rem;
+        margin-left: -3rem;
     }
     .box-historia-generos{
         margin-top: -4rem;
         margin-bottom: 1rem;
         width: 17rem;
-        margin-left: 4rem;
+        margin-left: 3rem;
     }
     .box-historia-generos-2{
         width: 19rem;
-        margin-left: 3rem;
+        margin-left: 2.6rem;
         margin-top: 0rem;
     }
     .avatar-tales-2{
         width: 5rem;
-        margin-left: 14.3rem;
+        margin-left: 14rem;
         margin-top: -56rem;
     }
+/* **************************************************************************** */
 
 /* Media Query: index */
 
@@ -812,10 +812,10 @@ form, label, input{
         height: 22rem;
     }
     .dialog-box-3{
-        width: auto;
+        width: 17rem;
         margin-right: 0rem;
         margin-top: 11rem;
-        margin-left: 0rem;
+        margin-left: 1rem;
         margin-bottom: 2rem;
         height: 5rem;
     }
@@ -825,15 +825,16 @@ form, label, input{
     .dialog-box-5{
         width: auto;
         margin: 0;
-        margin-left: -0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
         margin-top: 0rem;
         margin-bottom: 2rem;
     }
     .dialog-juego{
         margin: 0;
-        margin-left: 3rem;
+        margin-left: 1.5rem;
         grid-template-columns: 1fr;
-        width: 19rem;
+        width: 16rem;
     }
     .section-contenido-destacado{
         display: grid;
@@ -856,7 +857,7 @@ form, label, input{
     .grid-item-container{
         display: grid;
         background-color: #ffffff;
-        width: auto;
+        width: 16rem;
         height: 15rem;
     }
     .grid-item{
@@ -877,8 +878,8 @@ form, label, input{
         transition: max-height 0.5s ease-out;
     }
     .text-dato-curioso{
-        margin-left: 7.4rem;
-        margin-top: 0.2rem;
+        margin-left: 1.4rem;
+        /* margin-top: 0.2rem; */
         text-align: right;
     }
     .button-mas-historias{
@@ -890,7 +891,7 @@ form, label, input{
         background-color: aliceblue;
         border: 0.5rem solid #ffe69c;
         text-align: center;
-        margin-left: 5rem;
+        margin-left: 2rem;
     }
     .container-box-2{
         margin-top: -42rem;
@@ -900,14 +901,14 @@ form, label, input{
         margin-left: 1rem;
     }
     .div-dato-curioso-1{
-        width: 23rem;
+        width: 17rem;
         margin-top: 0rem;
         margin-right: 0rem;
         margin-left: 0rem;
         background-color: #ffffff;
         background-image: url(../img/avatar-tales.jpg);
-        background-position-x: -6rem;
-        background-position-y: 6.5rem;
+        background-position-x: -4rem;
+        background-position-y: 10.5rem;
         height: 33rem;
         background-size: contain;
         background-repeat: no-repeat;
@@ -920,9 +921,9 @@ form, label, input{
         margin: 21px; /* Ajusta los márgenes del texto */
     }
     .linea-divisora1, .linea-divisora2, .linea-divisora3, .linea-divisora4, .linea-divisora5 {
-        grid-template-areas: "btn-modales h4"; /* Ajusta la disposición de los elementos */
-        width: auto; /* Ajusta el ancho al contenedor */
-        margin: 10px 0; /* Ajusta los márgenes */
+        grid-template-areas: "btn-modales h4";
+        width: 18rem;
+        margin: 10px 0;
     }
     .btn-modales, .h4 {
         font-size: smaller; /* Reduce el tamaño de la fuente para que se ajuste mejor */
