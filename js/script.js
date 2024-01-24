@@ -90,3 +90,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, {passive: true}); 
 });
+
+//para el menu "hamburguesa" PD: aún no está implementado
+function toggleMenuCircular() {
+  document.querySelector('.menu-circular').classList.toggle('activo');
+}
+

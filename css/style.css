@@ -156,7 +156,7 @@ footer img {
 }
 /* **************************************************************************** */
 
-/* main: inicio */
+/* main: inicio/index */
 .encabezado{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -700,18 +700,87 @@ form, label, input{
 }
 
 
-/* Media Query: index */
+
 
 
 /* Móviles y dispositivos menores (<=768px) */
 @media (min-width: 420px) and (max-width: 768px) {
+
+/* Media Query: general */   
     body {
         width: 100%;
         overflow-x: hidden; /* Evita el desbordamiento horizontal */
     }
     .container, .container-box {
-        max-width: 100%; /* Ajusta el contenedor al ancho del dispositivo */
+        max-width: 100%;
     }
+    .navbar-button-Frutos{
+        /* display: none; */
+        position: absolute;
+        list-style: none;
+        padding: 0;
+        margin-left: 20rem;
+        margin-top: 2rem;
+        background-color: #ffffff;
+    }
+    .navbar-button-Frutos.activo {
+        display: block;
+    }
+    .navbar-span-Frutos{
+        border: 1px solid  #006f6d;
+    }
+/* Media Query: géneros */
+    .box-card{
+        margin-left: 5rem;
+    }
+    .navbar, .navbar-custom .navbar-scroll {
+        background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+        margin-top: 2rem;
+    }
+    .dialog-box-4 h4{
+        font-size: 0.8rem;
+    }
+
+    footer a{
+        font-size: 0.5rem;
+    }
+    .section-contenido-destacado-generos{
+        display: grid;
+        grid-template-areas:
+        'box-historia-generos'
+        'box-historia-generos-2'
+        'box-generos-1'
+        'box-generos-2'
+        'box-generos-3'
+        'box-generos-4'
+        'box-generos-5'
+        'box-generos-6';
+        gap: 1rem;
+        height: 200rem;
+        width: auto;
+        margin-top: 5rem;
+        margin-bottom: 0rem;
+        margin-left: 0rem;
+    }
+    .box-historia-generos{
+        margin-top: -4rem;
+        margin-bottom: 1rem;
+        width: 17rem;
+        margin-left: 4rem;
+    }
+    .box-historia-generos-2{
+        width: 19rem;
+        margin-left: 3rem;
+        margin-top: 0rem;
+    }
+    .avatar-tales-2{
+        width: 5rem;
+        margin-left: 14.3rem;
+        margin-top: -56rem;
+    }
+
+/* Media Query: index */
+
     .dialog-box-aprendizaje {
         grid-template-columns: 1fr;
         width: 17rem;
@@ -796,7 +865,6 @@ form, label, input{
         margin-right: 6rem;
         margin-left: 0rem;
     }
-
     h3{
         font-family: sans-serif;
         margin-top: 0.5rem;
@@ -808,7 +876,6 @@ form, label, input{
         overflow: hidden;
         transition: max-height 0.5s ease-out;
     }
-
     .text-dato-curioso{
         margin-left: 7.4rem;
         margin-top: 0.2rem;
@@ -860,12 +927,13 @@ form, label, input{
     .btn-modales, .h4 {
         font-size: smaller; /* Reduce el tamaño de la fuente para que se ajuste mejor */
     }
-    .button-mas-historias a {
+    .button-mas-historias a{
         font-size: medium; /* Ajusta el tamaño de la fuente del botón para más historias */
     }
     .footer-item{
         padding: 0rem;
     }
+/* **************************************************************************** */
 }
 
 /* Tablets (<=1024px) */
@@ -983,8 +1051,8 @@ form, label, input{
 }
 
 
-/* Desktops y dispositivos más grandes (>1440px) */
-@media (min-width: 1024px) and (max-width: 90rem){
+/* Desktops y dispositivos más grandes (>1550px) */
+@media (min-width: 1024px) and (max-width: 97rem){
     .container {
         max-width: 90rem;
     }
@@ -1078,64 +1146,4 @@ form, label, input{
 
 /* **************************************************************************** */
 
-/* Media Query: géneros */
 
-/* Móviles y dispositivos menores (<=768px) */
-@media (min-width: 420px) and (max-width: 768px) {
-    .logo-header, .navbar-brand{
-        max-width: 2rem;
-        margin-bottom: 0rem;
-    }
-    .navbar-toggler{
-        max-width: 4rem;
-        margin-top: 0rem;
-    }
-    .box-card{
-        margin-left: 5rem;
-    }
-    .navbar, .navbar-custom .navbar-scroll {
-        background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
-        margin-top: 2rem;
-    }
-    .dialog-box-4 h4{
-        font-size: 0.8rem;
-    }
-
-    footer a{
-        font-size: 0.5rem;
-    }
-    .section-contenido-destacado-generos{
-        display: grid;
-        grid-template-areas:
-        'box-historia-generos'
-        'box-generos-1'
-        'box-generos-2'
-        'box-generos-3'
-        'box-generos-4'
-        'box-generos-5'
-        'box-generos-6'
-        'box-historia-generos-2';
-        gap: 1rem;
-        height: 200rem;
-        width: auto;
-        margin-top: 5rem;
-        margin-bottom: 0rem;
-        margin-left: 0rem;
-    }
-    .box-historia-generos{
-        margin-top: -15rem;
-        margin-bottom: 1rem;
-        width: 17rem;
-        margin-left: 4rem;
-    }
-    .box-historia-generos-2{
-        width: 19rem;
-        margin-left: 3rem;
-        margin-top: 0rem;
-    }
-    .avatar-tales-2{
-        width: 5rem;
-        margin-left: 14.3rem;
-        margin-top: -3.5rem;
-    }
-}
