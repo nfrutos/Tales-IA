@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Oculta la imagen de los cuentos en dispositvos mobiles
+// Oculta la imagen de los cuentos en dispositvos mobiles PD: falta implementarlo bien
 document.addEventListener("DOMContentLoaded", function() {
     var gridItem = document.querySelector('.grid-item');
 
