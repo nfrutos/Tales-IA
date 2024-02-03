@@ -156,6 +156,7 @@ header {
 /* Footer homogéneo para todas los HTML */
 footer {
   background-color: #ffe69c;
+  max-width: 26.25rem;
 }
 footer .footer-section {
   display: grid;
@@ -635,26 +636,42 @@ form, label, input {
   text-align: center;
 }
 
-/* Media quierie Header*/
+/* Media quierie Header y footer */
 @media (min-width: 320px) and (max-width: 768px) {
-  header {
-    max-width: 20rem;
+  header .container, nav .container {
+    width: 100%; /* Ajusta el contenedor al 100% del ancho */
+    padding: 0; /* Elimina el padding si es necesario */
   }
-  .navbar-brand .logo-header {
-    margin-top: 1rem;
+  .navbar-nav {
+    margin-top: 0; /* Ajusta según sea necesario para la vista móvil */
+  }
+  .navbar-custom .navbar-collapse {
+    background-color: #fff; /* Cambia el color de fondo para mejorar la visibilidad */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Opcional: añade sombra para destacar el menú */
+  }
+  .navbar-toggler {
+    /* Personaliza el botón de hamburguesa si es necesario */
+  }
+  .logo-header {
+    height: 40px; /* Ajusta el tamaño del logo para dispositivos móviles */
+    width: auto;
+  }
+  footer {
+    max-width: 26rem;
+    margin-right: -6rem;
   }
 }
 /* Media Querie mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
   .main-index {
     height: 300rem;
-    max-width: 20rem;
-    margin-left: 5.8rem;
+    max-width: 26rem;
+    margin-right: -6rem;
   }
   .encabezado {
     grid-template-columns: 1fr;
-    max-width: 16rem;
-    margin-left: 1.5rem;
+    max-width: 20rem;
+    margin-left: 3.5rem;
     max-height: 25rem;
   }
   .encabezado .img-inicio {
@@ -666,11 +683,11 @@ form, label, input {
   }
   .grid-container {
     grid-area: grid-container;
-    margin-left: -7.5rem;
+    margin-left: -3.9rem;
   }
   .dialog-box-1 {
     max-width: 18rem;
-    margin-left: -1.5rem;
+    margin-left: 0.5rem;
   }
   .grid-item {
     display: block;
@@ -690,14 +707,14 @@ form, label, input {
   }
   .dialog-box-2 {
     max-width: 17rem;
-    margin-right: -4.5rem;
+    margin-right: -2rem;
     max-height: 20rem;
     margin-top: 25rem;
   }
   .dialog-box-3 {
     max-width: 19rem;
-    margin-left: -0.2rem;
-    max-height: 6rem;
+    margin-left: 3.8rem;
+    max-height: 4rem;
     margin-top: 17rem;
     margin-bottom: -17rem;
   }
@@ -723,7 +740,7 @@ form, label, input {
     max-width: 17rem;
     margin-top: 22rem;
     margin-bottom: -13rem;
-    margin-left: 1rem;
+    margin-left: 5rem;
   }
   .div-dato-curioso-1 .text-dato-curioso {
     width: 11rem;
@@ -743,11 +760,8 @@ form, label, input {
     margin-left: 4rem;
   }
   .button-mas-historias {
-    margin-left: 2rem;
+    margin-left: 6rem;
     margin-top: 1rem;
-  }
-  .container-footer-n {
-    margin-left: 5.8rem;
   }
   .modal-responsive {
     display: block;
