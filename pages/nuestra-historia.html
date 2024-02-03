@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,300;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,800;1,6..12,500;1,6..12,900&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Nuestra Historia | Tales IA</title>
 </head> 
@@ -49,26 +50,23 @@
     </header>
 
     <!-- Sección: contenido principal -->
-    <main class="container">
+    <main class="main-nuestra-historia container">
 
-        <section class="section-contenido-destacado">
-
+        <section>
             <!--Encabezado-->
-            <div class="box-nuestra-historia">
+            <div class="box-nuestra-historia" data-aos="zoom-in-left" data-aos-duration="1500">
                 <h2 class="text-generos">¡Bienvenido a nuestro mágico mundo de historias creadas por inteligencia artificial!</h2>
                 <p class="p-generos">En Tales IA, encontrarán cuentos, novelas, poesías, etc, fascinantes creados por inteligencia artificial, perfectos para alimentar vuestra curiosidad y amor por la lectura.</p>
             </div>
+            <video class="video-nuestra-historia"  autoplay loop muted data-aos="zoom-in-up" data-aos-duration="1000">
+                <source src="./../video/boy-nuestra-historia.mp4" type="video/mp4">
+            </video>
             <!--Sección: historia de Tales IA-->
-            <div class="box-nuestra-historia-2">
+            <div class="box-nuestra-historia-2" data-aos="zoom-in-right" data-aos-duration="1500">
                 <h2 class="text-generos">Nuestra Historia</h2>
-                <p class="p-generos">La idea de "Tales IA" nació de la convergencia de tres elementos clave: el avance de la tecnología de inteligencia artificial, el reconocimiento de la importancia de la lectura en el desarrollo infantil, y la necesidad de adaptar la literatura a la era digital.
-                    Primero, el desarrollo y la mejora continua de las tecnologías de IA en la creación de contenido ofrecieron nuevas posibilidades en el ámbito de la literatura. La capacidad de la IA para generar textos coherentes y creativos abrió la puerta a explorar cómo podría usarse para crear historias atractivas.
-                    En segundo lugar, la creciente preocupación por fomentar la lectura entre los niños en un mundo cada vez más dominado por las pantallas llevó a la búsqueda de soluciones innovadoras. Se reconoció que para captar la atención de los niños y competir con otras formas de entretenimiento digital, la literatura necesitaba renovarse y presentarse de una manera más atractiva y accesible.
-                    Finalmente, la idea se consolidó al observar la brecha existente entre la literatura tradicional y las preferencias y hábitos de la generación actual de niños. Se identificó la oportunidad de crear una plataforma que no solo ofrezca historias interesantes y educativas, sino que también incorpore elementos de interactividad, personalización y diversidad cultural.   
-                    Así, "Tales IA" surgió como un proyecto que busca reinventar la experiencia de la lectura para niños, utilizando la IA para crear una biblioteca dinámica de cuentos que son a la vez educativos y emocionantes, y que están en sintonía con los intereses y el entorno tecnológico de los niños de hoy. La meta es hacer que la lectura sea una actividad tan atractiva y relevante para los niños como cualquier otra forma de entretenimiento digital.
-                </p>
+                <p class="p-generos">
+                    "Tales IA" es un proyecto que combina el avance de la inteligencia artificial (IA) en la creación de contenidos, la importancia de la lectura en el desarrollo infantil y la necesidad de adaptar la literatura a la era digital. Utiliza IA para generar textos que renueven la literatura infantil, haciéndola más atractiva y accesible para competir con otras formas de entretenimiento digital. El proyecto busca fomentar la lectura entre los niños, ofreciendo historias educativas e interesantes con elementos de interactividad, personalización y diversidad cultural. Su objetivo es hacer que la lectura sea tan atractiva para los niños como el entretenimiento digital, creando una biblioteca dinámica de cuentos que se alinee con los intereses y el entorno tecnológico de los niños de hoy.                </p>
             </div>
-
         </section>   
 
     </main>
@@ -90,6 +88,10 @@
         </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

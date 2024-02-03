@@ -1,0 +1,36 @@
+/* Main: nuestra-historia*/
+.main-nuestra-historia{
+    display: grid;
+    grid-template-areas: 
+    'video-nuestra-historia box-nuestra-historia'
+    'video-nuestra-historia box-nuestra-historia'
+    'video-nuestra-historia box-nuestra-historia-2';
+    height: 90rem;
+    section{
+        display: grid;
+        .box-nuestra-historia{
+            // position: relative;
+            grid-area: box-nuestra-historia;
+            border: 0.5rem solid #01565a;
+            background-color: #ffffff;
+            width: 30rem;
+            height: 18rem;
+            margin-left: 46rem; 
+            margin-top: 17rem;
+        }
+        .video-nuestra-historia{
+            grid-area: video-nuestra-historia;
+            width: 40rem;
+            margin-top: -7rem;
+            margin-left: 20rem;
+        }
+        .box-nuestra-historia-2{
+            grid-area: box-nuestra-historia-2;
+            border: 0.5rem solid #ffe69c;
+            background-color: #ffffff;
+            width: 33rem;
+            height: 29rem;
+            margin-top: 17rem;
+        }       
+    }
+}

@@ -7,12 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,300;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,800;1,6..12,500;1,6..12,900&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  
     <link rel="stylesheet" href="./css/style.css">
     <title>Inicio | Tales IA</title>
 </head>
 <body>
-
+    
     <!-- Sección: menu -->
     <header class="fixed-top container">
         <nav class="navbar navbar-expand-lg navbar-custom">
@@ -50,15 +49,16 @@
     </header>
 
     <!-- Sección: principal -->
-    <main class="container container-box">
+    <main class="main-index container container-box">
 
         <section class="encabezado p-3">
             <div class="dialog-box-1 text-center">
-                <h2>¡Hola, jóvenes exploradores!</h2>
+                <h1>¡Hola, jóvenes exploradores!</h1>
                 <img src="./img/img-main.png" class="img-inicio" alt="Imagen de encabezado: una mujer con un libro en las manos">
             </div>
             <div class="dialog-box-2">
-                <p class="p-encabezado" id="typed-text"></p>
+                <h2>¡Bienvenidos!</h2>
+                <p class="p-dialog" id="typed-text"></p>
             </div>
         </section>
 
@@ -66,18 +66,18 @@
         <section class="section-contenido-destacado">
 
             <div class="dialog-box-3">
-                <h3>¡Mirá qué increíble nuestro contenido destacado!</h3>
+                <h3>¡Mirá qué increíble nuestro contenido! &#x1F913;</h3>
             </div>
 
             <div class="dialog-box-5">
-                <h4 class="text-dialog">Nuestros cuentos tienen...</h4>
-                <p class="text-dialog">cada cuento de Tales IA es una puerta abierta a un universo nuevo, una invitación a explorar lo inexplorado. Para los ávidos de conocimiento y aventura, estos cuentos son un vehículo perfecto para alimentar la curiosidad y la pasión por la lectura. La fusión de la narrativa mágica con el poder de la tecnología crea experiencias de lectura inolvidables, que no solo entretienen sino también enriquecen</p>
+                <h2>Nuestros cuentos tienen...&#x1F447;</h2>
+                <p class="p-dialog">cada cuento de Tales IA es una puerta abierta a un universo nuevo, una invitación a explorar lo inexplorado. Para los ávidos de conocimiento y aventura, estos cuentos son un vehículo perfecto para alimentar la curiosidad y la pasión por la lectura. La fusión de la narrativa mágica con el poder de la tecnología crea experiencias de lectura inolvidables, que no solo entretienen sino también enriquecen</p>
             </div>
 
             <div class="dialog-juego">
                 <div class="div-juego-1">
-                    <h3 class="tex-juego">¿Te animas a responder?</h3>
-                    <p class="pregunta tex-juego">¿Quién escribió "Don Quijote de la Mancha"?</p>
+                    <h2>¿Te animas a responder?</h2>
+                    <p>¿Quién escribió "Don Quijote de la Mancha"?</p>
                     <button class="respuesta btn-juego">Miguel de Cervantes</button>
                     <button class="respuesta btn-juego">William Shakespeare</button>
                     <button class="respuesta btn-juego">Gabriel García Márquez</button>
@@ -101,36 +101,35 @@
                         <img src="./img/cuento-doble-Rendija.png" class="img-cuento" alt="Portada del cuento">
                     </div>
                 </article>
-
                 <div class="linea-divisora1">
                     <button type="button" class="btn .p-modal" data-bs-toggle="modal" data-bs-target="#mi-modal-uno">Seguir leyendo...</button>
                     <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
                 </div>
 
-                <div class="modal fade" id="mi-modal-uno" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-responsive modal fade" id="mi-modal-uno" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3 class="modal-title" id="modalLabel">La Doble Rendija</h3>
+                            <h3 id="modalLabel">La Doble Rendija</h3>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <!-- Contenedor de páginas -->
                             <div id="pagina1-modal1" class="pagina">
-                                <p class="p-modal">En un anfractuoso laboratorio de física, cuyas paredes estaban colmadas de libros y ecuaciones, aconteció un suceso que desafiaría las más consolidadas nociones del tiempo y el espacio. La trama de esta historia se teje en torno a cinco individuos, cada uno distinto en su disciplina y carácter, a quienes el azar, o quizás el destino, congregó para presenciar un fenómeno inaudito.
+                                <p class="p-cuento">En un anfractuoso laboratorio de física, cuyas paredes estaban colmadas de libros y ecuaciones, aconteció un suceso que desafiaría las más consolidadas nociones del tiempo y el espacio. La trama de esta historia se teje en torno a cinco individuos, cada uno distinto en su disciplina y carácter, a quienes el azar, o quizás el destino, congregó para presenciar un fenómeno inaudito.
                                  Primero estaba Emilio Vega, un físico teórico de modales rígidos y mente analítica, cuya indumentaria siempre evocaba la sobriedad de los antiguos maestros de la ciencia. Su enfoque empírico y su escéptica perspectiva eran el contrapeso necesario en toda conjetura audaz.
                                  Luna García, por su parte, representaba la antítesis de Vega. Joven astrofísica, su semblante y sus ideas irradiaban la misma luminiscencia y misterio que las estrellas que tanto amaba estudiar. Su cabello, largo y rebelde como su espíritu, simbolizaba su constante anhelo por trascender los límites de lo conocido.
                                 </p>
                             </div>
                             <div id="pagina2-modal1" class="pagina" style="display:none;">
-                                <p class="p-modal">En la figura de Carlos Torres, ingeniero de robusta estatura y mente pragmática, residía la conexión tangible entre el abstracto reino de las teorías y el concreto mundo de los artefactos y máquinas. Su vestimenta, siempre casual, reflejaba una practicidad que impregnaba cada uno de sus proyectos.
+                                <p class="p-cuento">En la figura de Carlos Torres, ingeniero de robusta estatura y mente pragmática, residía la conexión tangible entre el abstracto reino de las teorías y el concreto mundo de los artefactos y máquinas. Su vestimenta, siempre casual, reflejaba una practicidad que impregnaba cada uno de sus proyectos.
                                 La presencia de Ana Ruiz, bioquímica de férrea voluntad y mirada penetrante, añadía una dimensión adicional al grupo. Su cabello corto y su estilo directo eran espejo de una mente que buscaba, con meticulosidad, descifrar los enigmas de la vida a través de sus compuestos más elementales.
                                 Finalmente, Raúl Fernández, matemático de avanzada edad, cabellos plateados y barba cuidadosamente recortada, aportaba una perspectiva enriquecida por años de indagaciones en los laberintos numéricos. Su buen humor era un oasis en medio de la aridez de las complejas formulaciones.
                                 Estos cinco eruditos, en su cotidiano escrutinio del fenómeno de la doble rendija, se encontraron, sin buscarlo, ante la aparición de un umbral luminoso que desgarraba el tejido de su realidad conocida. Este portal, surgido entre destellos y sombras, invitaba a un universo paralelo, desconocido y tentador.
                                 </p>
                             </div>
                             <div id="pagina3-modal1" class="pagina" style="display:none;">
-                                <p class="p-modal">Vega, con su habitual cautela, proponía un estudio meticuloso del fenómeno antes de aventurarse en conjeturas. García, movida por una curiosidad insaciable, veía en el portal una oportunidad para expandir los horizontes del conocimiento humano. Torres, con su acostumbrada practicidad, empezó a idear un mecanismo que permitiese una exploración segura de aquel misterioso pasaje. Ruiz, fascinada por las posibles revelaciones sobre la naturaleza de la vida en otros universos, abogaba por una investigación detallada. Fernández, en su habitual estilo, se sumergía en ecuaciones y teorías, buscando descifrar la esencia matemática del fenómeno.
+                                <p class="p-cuento">Vega, con su habitual cautela, proponía un estudio meticuloso del fenómeno antes de aventurarse en conjeturas. García, movida por una curiosidad insaciable, veía en el portal una oportunidad para expandir los horizontes del conocimiento humano. Torres, con su acostumbrada practicidad, empezó a idear un mecanismo que permitiese una exploración segura de aquel misterioso pasaje. Ruiz, fascinada por las posibles revelaciones sobre la naturaleza de la vida en otros universos, abogaba por una investigación detallada. Fernández, en su habitual estilo, se sumergía en ecuaciones y teorías, buscando descifrar la esencia matemática del fenómeno.
                                 Así, estos cinco seres, unidos por su sed de saber, se enfrentaron a un desafío que rebasaba los límites de su entendimiento. Su travesía por el portal no solo les revelaría secretos del cosmos, sino que también les enseñaría sobre la esencia de su propia existencia y la inestimable riqueza que yace en la diversidad del pensamiento humano. En su odisea, cada uno aportaría una pieza clave para desentrañar el enigma de aquel universo paralelo, un espejo de infinitas posibilidades y realidades entrelazadas.
                                 </p>
                             </div>
@@ -140,7 +139,7 @@
                             <a href="https://www.facebook.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
                             <a href="https://www.instagram.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
                             <a href="https://web.whatsapp.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
-                            <a href="./Cuentos IA/Ladoblerendija.pdf" download="La-Doble-Rendija.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
+                            <a href="./Cuentos IA/La Doble Rendija.pdf" download="La-Doble-Rendija.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
                             <button class="btn-modal" onclick="cambiarPagina(-1, 'mi-modal-uno')">Anterior</button>
                             <button class="btn-modal" onclick="cambiarPagina(1, 'mi-modal-uno')">Siguiente</button>
                         </div>
@@ -161,7 +160,7 @@
                     <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
                 </div>
 
-                <div class="modal fade" id="mi-modal-dos" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-responsive modal fade" id="mi-modal-dos" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -199,7 +198,7 @@
                                 <a href="https://www.facebook.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
                                 <a href="https://www.instagram.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
                                 <a href="https://web.whatsapp.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
-                                <a href="./Cuentos IA/Ladoblerendija.pdf" download="La-Doble-Rendija.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
+                                <a href="./Cuentos IA/Subatómico.pdf" download="Subatómico.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
                                 <button class="btn-modal" onclick="cambiarPagina(-1,'mi-modal-dos')">Anterior</button>
                                 <button class="btn-modal" onclick="cambiarPagina(1, 'mi-modal-dos')">Siguiente</button>
                             </div>
@@ -221,7 +220,7 @@
                     <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
                 </div>
 
-                <div class="modal fade" id="mi-modal-tres" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-responsive modal fade" id="mi-modal-tres" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -263,7 +262,7 @@
                                 <a href="https://www.facebook.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/Facebook-Brand-Asset-Pack/icons8-facebook-nuevo.svg" alt="Logo de Facebook"></a>
                                 <a href="https://www.instagram.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg" alt="Logo de Instagram"></a>
                                 <a href="https://web.whatsapp.com/"><img  class="iconos-redes-item" src="/img/Iconos Redes Sociales Meta/WhatsApp-Brand-Resource-Center (1)/01_Glyph/01_Digital/02_SVG/Green/Digital_Glyph_Green.svg" alt="Logo de WhatsApp"></a>
-                                <a href="./Cuentos IA/Ladoblerendija.pdf" download="La-Doble-Rendija.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
+                                <a href="./Cuentos IA/Era una noche oscura.pdf" download="Era-una-noche-oscura.pdf"><img class="iconos-redes-item" src="./img/icono-descargar.png" alt="Icono de descarga"></a>
                                 <button class="btn-modal" onclick="cambiarPagina(-1,'mi-modal-tres')">Anterior</button>
                                 <button class="btn-modal" onclick="cambiarPagina(1, 'mi-modal-tres')">Siguiente</button>
                             </div>
@@ -284,7 +283,7 @@
                     <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
                 </div>
 
-                <div class="modal fade" id="mi-modal-cuatro" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-responsive modal fade" id="mi-modal-cuatro" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -310,7 +309,7 @@
                     <h4 class="h4">Autor: Tales IA 1/1/2024</h4>
                 </div>
 
-                <div class="modal fade" id="mi-modal-cinco" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-responsive modal fade" id="mi-modal-cinco" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -331,7 +330,7 @@
         </section>
     </main>
     <!-- sección: footer -->
-    <footer class="container container-box-2">
+    <footer class="container-footer-n container">
         <section class="footer-section">
             <div class="dialog-box-4">
                 <h4>Seguinos en nuestras redes</h4>
@@ -346,7 +345,6 @@
             </div>
         </section>
     </footer>
-        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
 </body>

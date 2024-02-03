@@ -1,0 +1,53 @@
+/* Main: educación */
+.section-contenido-destacado-educación {
+  display: grid;
+  grid-template-areas:
+    'box-educacion-3 box-educacion-1'
+    'box-educacion-3 box-educacion-2';
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  margin: 0%;
+  padding: 0%;
+  gap: 1rem;
+
+  .box-educacion-1 {
+    grid-area: box-educacion-1;
+    background-color: #ffffff;
+    border: 0.5rem solid #01565a;
+    margin-left: 10rem;
+    width: 30rem;
+    height: 24rem;
+  }
+
+  .box-educacion-2 {
+    grid-area: box-educacion-2;
+    background-color: #ffffff;
+    border: 0.5rem solid #ffe69c;
+    margin-left: 10rem;
+    width: 35rem;
+    height: 46rem;
+  }
+
+  .box-educacion-3 {
+    grid-area: box-educacion-3;
+    background-color: #ffffff;
+    border: 0.5rem solid #01565a;
+    width: 20rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+
+    ul li {
+      border: 0.3rem solid #ffe69c;
+      margin: 0.3rem;
+      list-style-type: none;
+      margin-right: 1rem;
+      max-width: 15rem;
+    }
+  }
+
+  .mini-avatar {
+    width: 20rem;
+    margin-left: 12rem;
+    margin-top: -130rem;
+  }
+}

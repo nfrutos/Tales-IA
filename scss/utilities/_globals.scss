@@ -1,0 +1,69 @@
+/* Estilos globles*/
+
+/* Body homogéneo para todos los HTML */
+body {
+    font-family: 'Roboto Slab','Times New Roman';
+    background-color:  #006f6d
+}
+
+/* Fuentes homogéneas para todos los HTML */
+
+
+/* Main homogéneo para todos los HTML */
+main {
+    background-color: #e9ecef;
+    padding-top: 16rem;
+}
+
+/* Fuentes para index/inicio */
+
+%custom-font-index {
+  font-family: sans-serif;
+  line-height: 2rem;
+  margin: 1rem;
+  color: #8b8b8b
+}
+
+h2{
+    @extend %custom-font-index;
+}
+
+h3 {
+  @extend %custom-font-index;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.663)
+}
+
+p {
+  @extend %custom-font-index;
+  font-size: 14px;
+  margin-top: -2rem;
+}
+
+%custom-font-dialog{
+    font-size: 1rem;
+    margin: 1rem;
+    color: #8b8b8b;
+}
+
+.p-dialog {
+    @extend %custom-font-dialog;
+}
+
+/* Fuentes para géneros */
+
+%custom-font-generos {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin: 0.4rem;
+    text-align: left;
+    color: rgb(139, 139, 139);
+}
+
+.p-generos{
+  @extend %custom-font-generos;
+}
+
+
+
+

@@ -1,0 +1,84 @@
+/* Header homogéneo para todas las pages */
+header {
+  background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+}
+
+.logo-header {
+  border-radius: 50%;
+  box-shadow: 0px 4px 0px #01565a;
+
+  // Anidado dentro de .navbar-brand y .navbar-scroll
+  .navbar-brand &,
+  .navbar-scroll & {
+    max-height: 5rem;
+    transition: max-height 0.6s ease;
+  }
+
+  // Anidado solo dentro de .navbar-brand
+  .navbar-brand & {
+    margin-top: 2rem;
+  }
+}
+
+/* Ajustes para el contenedor de la barra de navegación al hacer scroll */
+.navbar-scroll {
+  height: 7rem;
+  transition: height 1s;
+
+  .navbar-custom {
+    margin-top: -1rem;
+    padding: 0;
+    height: 5rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    transition: font-size 0.6s ease;
+  }
+}
+
+/* Ajustes para el contenedor de la barra */
+.navbar-custom {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    transition: font-size 0.6s ease;
+
+    // Pseudo-elemento para hover
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #ffffff;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      width: 100%;
+    }
+  }
+}
+
+.navbar-brand {
+  .logo-header {
+    max-height: 5rem;
+    margin-top: 3rem;
+    width: auto;
+    transition: max-height 0.6s ease;
+  }
+}

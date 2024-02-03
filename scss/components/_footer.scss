@@ -1,0 +1,46 @@
+/* Footer homogéneo para todas los HTML */
+footer {
+  background-color: #ffe69c;
+
+  .footer-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "footer-item dialog-box-4";
+  }
+
+  .footer-item {
+    grid-area: footer-item;
+    padding: 3rem;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    display: flow;
+
+    // Específico para .dialog-box-4
+    .dialog-box-4 & {
+      display: inline-block;
+      margin-right: 1.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 0.8rem;
+  }
+
+  img {
+    height: auto;
+    width: 1rem;
+  }
+}
+
+.dialog-box-4 {
+  grid-area: dialog-box-4;
+  padding: 3rem;
+}
