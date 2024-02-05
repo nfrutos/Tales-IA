@@ -1,83 +1,136 @@
-.section-contenido-destacado-generos {
-  display: grid;
-  grid-template-areas:
-    'box-generos-1 box-generos-2 box-historia-generos'
-    'box-generos-3 box-generos-4 box-historia-generos'
-    'box-generos-5 box-generos-6 box-historia-generos'
-    'box-historia-generos-2 box-historia-generos-2 box-historia-generos-2';
-  gap: 1rem;
-  width: 100%;
-  margin-left: 4rem;
+/* Sección géneros*/
+.main-generos{
+  height: auto;
+  .section-contenido-destacado-generos {
+    display: grid;
+    grid-template-areas:
+      'box-generos-1 box-generos-2 box-historia-generos'
+      'box-generos-3 box-generos-4 box-historia-generos'
+      'box-generos-5 box-generos-6 box-historia-generos'
+      'box-historia-generos-2 box-historia-generos-2 box-historia-generos-2';
+    gap: 1rem;
+    margin-left: 4rem;
+    height: auto;
 
-  .box-card {
-    background-color: transparent;
-    width: 14.9rem;
-    height: 20.75rem;
-    perspective: 62.5rem;
+    .box-card {
+      background-color: transparent;
+      width: 14.9rem;
+      height: 20.75rem;
+      perspective: 62.5rem;
 
-    &:hover .box-generos-interior {
+      &:hover .box-generos-interior {
+        transform: rotateY(180deg);
+        cursor: pointer;
+      }
+      .img-generos {
+        max-width: 13.9rem;
+        margin-top: 1.9rem;
+      }
+    }
+
+    .box-generos-interior {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .box-generos-frente, .box-generos-dorso {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .box-generos-dorso {
+      background-color: #ffffff;
       transform: rotateY(180deg);
-      cursor: pointer;
+      border: 0.5rem solid #ffe69c;
     }
-  }
 
-  .box-generos-interior {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
+    @for $i from 1 through 6 {
+      .box-generos-#{$i} {
+        grid-area: box-generos-#{$i};
+        background-color: #ffe69c;
+        border: 0.5rem solid #01565a;
+      }
+    }
 
-  .box-generos-frente, .box-generos-dorso {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
+    .box-historia-generos {
+      position: absolute;
+      grid-area: box-historia-generos;
+      background-color: #ffffff;
+      width: 34rem;
+      height: 17rem;
+      margin-left: 56rem;
+      border: 0.5rem solid #ffe69c;
+    }
 
-  .box-generos-dorso {
-    background-color: #ffffff;
-    transform: rotateY(180deg);
-    border: 0.5rem solid #ffe69c;
-  }
-
-  @for $i from 1 through 6 {
-    .box-generos-#{$i} {
-      grid-area: box-generos-#{$i};
-      background-color: #ffe69c;
+    .box-historia-generos-2 {
+      position: absolute;
+      grid-area: box-historia-generos-2;
+      background-color: #ffffff;
       border: 0.5rem solid #01565a;
+      width: 25rem;
+      height: 16rem;
+      margin-left: 56rem;
+      margin-top: 19rem;
+    }
+
+    .avatar-tales-2 {
+      width: 8rem;
+      margin-left: 20.5rem;
+      margin-top: -5rem;
     }
   }
-
-  .img-generos {
-    max-width: 13.9rem;
-    margin-top: 1.9rem;
+  #menu-generos {
+    display: none;
+    transform: translateX(100%); 
+    transition: transform 1s ease; 
+    position: fixed;
+    top: 16rem; 
+    margin-left: 30rem;
+    height: 28rem;
+    width: 30rem;
+    background-color: #fff;
+    border-left: 5px solid #01565a;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 100;
   }
 
-  .box-historia-generos {
-    grid-area: box-historia-generos;
-    background-color: #ffffff;
-    width: 34rem;
-    height: 17rem;
-    margin-left: 1rem;
-    border: 0.5rem solid #ffe69c;
+  #menu-generos nav {
+    display: flex;
+    flex-direction: column;
   }
 
-  .box-historia-generos-2 {
-    grid-area: box-historia-generos-2;
-    background-color: #ffffff;
-    border: 0.5rem solid #01565a;
-    width: 25rem;
-    height: 16rem;
-    margin-left: 47rem;
-    margin-top: -40rem;
+  #menu-generos nav a {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    color: #000;
+    text-decoration: none;
   }
 
-  .avatar-tales-2 {
-    width: 8rem;
-    margin-left: 20.5rem;
-    margin-top: -5rem;
+  #menu-generos nav a:hover {
+    background-color: #ffe69c;
   }
+  #overlay {
+    position: fixed; /* O absolute, dependiendo de tu layout */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease; 
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    z-index: 99; /* Asegúrate de que esté justo debajo del menú */
+    display: none; /* Oculto por defecto */
+  }
+
+
 }
+
+
+

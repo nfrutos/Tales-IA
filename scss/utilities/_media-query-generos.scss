@@ -1,0 +1,60 @@
+/*Media query géneros*/
+
+ @media (min-width: 320px) and (max-width: 768px) {
+    .main-generos{
+        max-width: 26rem;
+        margin-right: -6rem;
+    }
+    .section-contenido-destacado-generos {
+      display: grid !important; // Mantenemos grid
+      grid-template-columns: 1fr !important; // Cambiamos a una sola columna
+      grid-template-areas:
+        'box-historia-generos'
+        'box-historia-generos'
+        'box-historia-generos-2'
+        'box-historia-generos-2' 
+        'box-generos-1'
+        'box-generos-2'
+        'box-generos-3'
+        'box-generos-4'
+        'box-generos-5'
+        'box-generos-6'!important; // Ajustamos las áreas para una columna
+      gap: 1rem !important;
+      width: 100%; // Ajustamos el ancho
+      margin: 0 auto; // Centramos el contenedor
+      margin-left: 0rem !important;
+      height: auto !important;
+      margin-top: 44rem;
+        .box-historia-generos {
+            width: 100% !important;
+            margin-left: 2rem !important;
+            margin-top: -51rem;
+            height: 13rem !important;
+            h2{
+                font-size: 1rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+
+        .box-historia-generos-2 {
+            width: 100% !important;
+            margin-left: 2rem !important;
+            margin-top: -33rem !important;
+           
+            p{
+                font-size: 0.8rem;
+            }
+        }
+         .avatar-tales-2 {
+            width: 8rem;
+            margin-left: 15rem !important;
+            margin-top: -5rem;
+        }
+        .box-card {
+            margin-bottom: 1rem !important;
+            margin-left: 6rem;
+        }
+    }
+}

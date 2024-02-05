@@ -76,23 +76,74 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Oculta la imagen de los cuentos en dispositvos mobiles PD: falta implementarlo bien
-document.addEventListener("DOMContentLoaded", function() {
-    var gridItem = document.querySelector('.grid-item');
 
-    gridItem.addEventListener('touchstart', function() {
-        var img = this.querySelector('.img-cuento');
-        // Verifica el estado actual y cambia entre mostrar/ocultar
-        if (img.style.maxHeight === "0px" || img.style.maxHeight === "") {
-            img.style.maxHeight = "500px"; // Ajusta este valor al tamaño de tu imagen o al deseado
-        } else {
-            img.style.maxHeight = "0"; // Oculta la imagen al tocar de nuevo
+
+document.querySelectorAll('.box-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        const genero = this.querySelector('.text-generos').textContent;
+        const videoFondo = document.getElementById('video-fondo');
+
+        // Restablece el video para cada clic en una card
+        videoFondo.pause();
+        videoFondo.style.display = 'none';
+        videoFondo.currentTime = 0; // Opcional, reinicia el video al principio
+
+        let enlaces = `<a href="/">Inicio</a>`; // Default links
+
+        switch (genero) {
+            case 'Ciencia Ficción':
+                videoFondo.src = 'video/tunnel.mp4';
+                videoFondo.style.display = 'block'; // Hacer el video visible
+                videoFondo.play(); // Iniciar la reproducción del video
+                enlaces = `
+                <a href="/ciencia-ficcion/novelas">Novelas</a>
+                <a href="/ciencia-ficcion/cuentos">Cuentos</a>
+                <a href="/ciencia-ficcion/autores">Autores</a>
+                `;
+                break;
+            case 'Aventura':
+                // Si solo 'Ciencia Ficción' tiene un video, no hay necesidad de hacer algo aquí
+                enlaces = `
+                <a href="/aventura/exploraciones">Exploraciones</a>
+                <a href="/aventura/tesoros">Tesoros</a>
+                <a href="/aventura/autores">Autores</a>
+                `;
+                break;
+            case 'Romance':
+                break; 
+            case 'Poesía':
+                break;
+            case 'Policiales':
+                break;   
+            case 'Terror':
+                break;
         }
-    }, {passive: true}); 
+
+        // Configuración del menú de navegación y overlay
+        const menuGeneros = document.getElementById('menu-generos');
+        menuGeneros.innerHTML = `<h2>${genero}</h2><nav>${enlaces}</nav>`;
+        menuGeneros.style.display = 'block';
+        menuGeneros.style.transform = 'translateX(0)';
+        document.getElementById('overlay').style.display = 'block';
+
+        // Configuración del botón "Cerrar"
+        const closeButton = document.createElement('button');
+        closeButton.classList.add('btn-modal');
+        closeButton.textContent = 'Cerrar';
+        closeButton.onclick = function() {
+            // Lógica para ocultar menú, overlay y detener el video
+            document.querySelector('.section-contenido-destacado-generos').classList.remove('column-layout');
+            document.querySelectorAll('.box-card').forEach(c => c.classList.remove('card-out'));
+            menuGeneros.style.transform = 'translateX(100%)';
+            setTimeout(() => menuGeneros.style.display = 'none', 500);
+            videoFondo.pause(); // Pausa la reproducción del video
+            videoFondo.style.display = 'none'; // Oculta el video
+            document.getElementById('overlay').style.display = 'none';
+        };
+        menuGeneros.appendChild(closeButton);
+    });
 });
 
-//para el menu "hamburguesa" PD: aún no está implementado
-function toggleMenuCircular() {
-  document.querySelector('.menu-circular').classList.toggle('activo');
-}
+
+
 
