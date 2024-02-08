@@ -102,7 +102,7 @@ document.querySelectorAll('.box-card').forEach(function(card) {
                 `;
                 break;
             case 'Aventura':
-                // Si solo 'Ciencia Ficción' tiene un video, no hay necesidad de hacer algo aquí
+
                 enlaces = `
                 <a href="/aventura/exploraciones">Exploraciones</a>
                 <a href="/aventura/tesoros">Tesoros</a>
