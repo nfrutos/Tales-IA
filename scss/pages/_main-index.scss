@@ -19,7 +19,7 @@
       }
     }
 
-  .dialog-box-2 {
+    .dialog-box-2 {
       position: absolute;
       top: 15rem;
       width: 47rem;
@@ -27,6 +27,7 @@
       padding: -1rem;
       margin-right: 5rem;
       border: 0.5rem solid #ffe69c;
+      background-color: #ffffff;
       box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
       animation: slideInFromRight 1.8s ease-in-out forwards;
       overflow: auto;
@@ -231,8 +232,6 @@
   width: 6rem;
   background-color: white;
 }
-
-
 
 
 

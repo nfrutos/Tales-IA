@@ -1,6 +1,5 @@
 /* Sección géneros*/
 .main-generos{
-  height: auto;
   .section-contenido-destacado-generos {
     display: grid;
     grid-template-areas:
@@ -118,18 +117,16 @@
     background-color: #ffe69c;
   }
   #overlay {
-    position: fixed; /* O absolute, dependiendo de tu layout */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     transition: transform 1s ease; 
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    z-index: 99; /* Asegúrate de que esté justo debajo del menú */
-    display: none; /* Oculto por defecto */
-  }
-
-
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+ }
 }
 
 
