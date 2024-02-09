@@ -18,43 +18,65 @@
 /* Media quierie Header y footer */
 @media (min-width: 320px) and (max-width: 768px){
     header .container, nav .container {
-        width: 100%; /* Ajusta el contenedor al 100% del ancho */
-        padding: 0; /* Elimina el padding si es necesario */
+        width: 100%;
+        padding: 0;
     }
 
     .navbar-nav {
-        margin-top: 0; /* Ajusta según sea necesario para la vista móvil */
+        margin-top: 0;
+        text-align: center;
+        min-width: 34rem
+
+    }
+    .shakeUp {
+        animation: shakeUp 1.8s cubic-bezier(.36,.07,.19,.97) both;
     }
 
+    .shakeDown {
+        animation: shakeDown 1.6s cubic-bezier(.36,.07,.19,.97) both;
+    }
     .navbar-custom .navbar-collapse {
         background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
     }
-
+    .container-fluid {
+        flex-direction: column;
+        margin-top: 0rem;
+    }
     /* Fondo del Navbar */
     .navbar-dark.bg-dark {
-        background-color: #ffffff !important; /* Fondo casi negro */
+        background-color: #ffffff;
     }
 
     /* Personalización del Toggler */
     .navbar-toggler {
-        border-color: #01565a;
+        border: 0.22rem solid #ffffff;
+        margin-top: 4rem;
     }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
-
-    /* Animaciones para los links del menú */
     .nav-link {
         transition: color 0.3s ease-in-out;
+        margin: 0.5rem;
+        background-color: #ffffff;
+        border: 5px solid #ffe69c;
+        border-radius: 10px;
+        width: 12rem;
+    }
+    .navbar-scroll{
+        height: 19rem;
     }
     .nav-link:hover, .nav-link:focus {
         color: #01565a;
     }
-
-
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0;
+        
+    }
     .logo-header {
-        height: 40px; /* Ajusta el tamaño del logo para dispositivos móviles */
-        width: auto;
+        height: 5rem;
+        margin-left: 1rem;
+        width: rem;
     }
     footer{
         min-width: 20rem;

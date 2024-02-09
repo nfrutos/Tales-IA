@@ -144,6 +144,24 @@ document.querySelectorAll('.box-card').forEach(function(card) {
     });
 });
 
-
-
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarToggler = document.querySelector('.navbar-toggler');
+  navbarToggler.addEventListener('click', function() {
+    // Obtiene todos los enlaces del menú desplegable
+    var menuLinks = document.querySelectorAll('.nav-link');
+    
+    // Aplica las clases de animación de forma alternada
+    menuLinks.forEach(function(link, index) {
+      // Remueve clases previas para permitir que la animación se ejecute nuevamente
+      link.classList.remove('shakeUp', 'shakeDown');
+      
+      // Aplica la clase de animación alternando entre shakeUp y shakeDown
+      if(index % 2 === 0) {
+        link.classList.add('shakeUp');
+      } else {
+        link.classList.add('shakeDown');
+      }
+    });
+  });
+});
 

@@ -3,6 +3,11 @@ header {
   background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
 }
 
+.container-fluid{
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
 .logo-header {
   border-radius: 50%;
   box-shadow: 0px 4px 0px #01565a;
@@ -22,13 +27,13 @@ header {
 
 /* Ajustes para el contenedor de la barra de navegación al hacer scroll */
 .navbar-scroll {
-  height: 7rem;
+  height: 12rem;
   transition: height 1s;
 
   .navbar-custom {
-    margin-top: -1rem;
+    margin-top: 4rem;
     padding: 0;
-    height: 5rem;
+    height: 1rem;
   }
 
   .navbar-nav .nav-link {
@@ -77,7 +82,7 @@ header {
 .navbar-brand {
   .logo-header {
     max-height: 5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: auto;
     transition: max-height 0.6s ease;
   }

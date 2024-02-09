@@ -32,3 +32,40 @@
         left: 0;
     }
 }
+
+/* animación: para el menú desplegable se "agité" al activarse */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shakeRight {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes shakeLeft {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(10px); }
+  20%, 40%, 60%, 80% { transform: translateX(-10px); }
+}
+
+@keyframes shakeUp {
+  0%, 100% { transform: translateY(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateY(-5px); }
+  20%, 40%, 60%, 80% { transform: translateY(5px); }
+}
+
+@keyframes shakeDown {
+  0%, 100% { transform: translateY(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateY(5px); }
+  20%, 40%, 60%, 80% { transform: translateY(-5px); }
+}

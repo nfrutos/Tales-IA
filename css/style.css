@@ -15,7 +15,7 @@ body {
 
 /* Main homogéneo para todos los HTML */
 main {
-  background-color: #e9ecef;
+  background-color: #fffafa;
   padding-top: 16rem;
 }
 
@@ -57,6 +57,11 @@ header {
   background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
 }
 
+.container-fluid {
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
 .logo-header {
   border-radius: 50%;
   box-shadow: 0px 4px 0px #01565a;
@@ -71,13 +76,13 @@ header {
 
 /* Ajustes para el contenedor de la barra de navegación al hacer scroll */
 .navbar-scroll {
-  height: 7rem;
+  height: 12rem;
   transition: height 1s;
 }
 .navbar-scroll .navbar-custom {
-  margin-top: -1rem;
+  margin-top: 4rem;
   padding: 0;
-  height: 5rem;
+  height: 1rem;
 }
 .navbar-scroll .navbar-nav .nav-link {
   font-size: 0.8rem;
@@ -116,7 +121,7 @@ header {
 
 .navbar-brand .logo-header {
   max-height: 5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: auto;
   transition: max-height 0.6s ease;
 }
@@ -166,7 +171,6 @@ footer img {
   grid-template-columns: 50% 50%;
   height: 32rem;
   background-color: #ffffff;
-  margin-top: -2rem;
 }
 .main-index .encabezado .dialog-box-1 {
   position: relative;
@@ -182,7 +186,7 @@ footer img {
 }
 .main-index .encabezado .dialog-box-2 {
   position: absolute;
-  top: 15rem;
+  top: 17rem;
   width: 47rem;
   min-height: 10rem;
   padding: -1rem;
@@ -376,12 +380,25 @@ footer img {
 }
 
 /* Sección géneros*/
+.main-generos {
+  margin-top: 8rem;
+  height: 140rem;
+}
 .main-generos .section-contenido-destacado-generos {
   display: grid;
-  grid-template-areas: "box-generos-1 box-generos-2 box-historia-generos" "box-generos-3 box-generos-4 box-historia-generos" "box-generos-5 box-generos-6 box-historia-generos" "box-historia-generos-2 box-historia-generos-2 box-historia-generos-2";
-  gap: 1rem;
+  grid-template-areas: "box-historia-generos box-historia-generos box-historia-generos-2" "box-historia-generos box-historia-generos box-historia-generos-2" "box-historia-generos box-historia-generos box-historia-generos-2" "box-historia-generos box-historia-generos box-historia-generos-2" "box-historia-generos box-historia-generos box-historia-generos-2" "box-encabezado-generos box-encabezado-generos box-encabezado-generos" "box-generos-1 box-generos-2 box-generos-2" "box-generos-3 box-generos-4 box-generos-4" "box-generos-5 box-generos-6 box-generos-6";
+  gap: 6rem;
   margin-left: 4rem;
   height: auto;
+}
+.main-generos .section-contenido-destacado-generos .box-encabezado-generos {
+  text-align: center;
+  grid-area: box-encabezado-generos;
+  background-color: #ffffff;
+  border: 0.5rem solid #01565a;
+  width: 30rem;
+  margin-left: 4rem;
+  animation: shakeRight 4s;
 }
 .main-generos .section-contenido-destacado-generos .box-card {
   background-color: transparent;
@@ -447,12 +464,12 @@ footer img {
   border: 0.5rem solid #01565a;
 }
 .main-generos .section-contenido-destacado-generos .box-historia-generos {
-  position: absolute;
+  position: relative;
   grid-area: box-historia-generos;
   background-color: #ffffff;
   width: 34rem;
   height: 17rem;
-  margin-left: 56rem;
+  margin-left: 7rem;
   border: 0.5rem solid #ffe69c;
 }
 .main-generos .section-contenido-destacado-generos .box-historia-generos-2 {
@@ -463,7 +480,6 @@ footer img {
   width: 25rem;
   height: 16rem;
   margin-left: 56rem;
-  margin-top: 19rem;
 }
 .main-generos .section-contenido-destacado-generos .avatar-tales-2 {
   width: 8rem;
@@ -728,19 +744,22 @@ form, label, input {
 /*Media query géneros*/
 @media (min-width: 320px) and (max-width: 768px) {
   .main-generos {
-    max-width: 26rem;
+    min-width: 20rem;
     margin-right: -6rem;
   }
   .main-generos .section-contenido-destacado-generos {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "box-historia-generos" "box-historia-generos" "box-historia-generos-2" "box-historia-generos-2" "box-generos-1" "box-generos-2" "box-generos-3" "box-generos-4" "box-generos-5" "box-generos-6";
+    grid-template-areas: "box-historia-generos-2" "box-historia-generos-2" "box-historia-generos" "box-historia-generos" "box-encabezado-generos" "box-generos-1" "box-generos-2" "box-generos-3" "box-generos-4" "box-generos-5" "box-generos-6";
     gap: 1rem;
-    width: 100%;
+    min-width: 20rem;
     margin: 0 auto;
     margin-left: 0rem;
     height: auto;
     margin-top: 44rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-encabezado-generos {
+    margin-left: 1rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos {
     width: 100%;
@@ -771,41 +790,69 @@ form, label, input {
     margin-bottom: 1rem;
     margin-left: 6rem;
   }
+  .main-generos #menu-generos {
+    margin-left: 3rem;
+    max-width: 20rem;
+  }
 }
 /* Media Querie mobile*/
 /* Media quierie Header y footer */
 @media (min-width: 320px) and (max-width: 768px) {
   header .container, nav .container {
-    width: 100%; /* Ajusta el contenedor al 100% del ancho */
-    padding: 0; /* Elimina el padding si es necesario */
+    width: 100%;
+    padding: 0;
   }
   .navbar-nav {
-    margin-top: 0; /* Ajusta según sea necesario para la vista móvil */
+    margin-top: 0;
+    text-align: center;
+    min-width: 34rem;
+  }
+  .shakeUp {
+    animation: shakeUp 1.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+  .shakeDown {
+    animation: shakeDown 1.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
   .navbar-custom .navbar-collapse {
     background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
   }
+  .container-fluid {
+    flex-direction: column;
+    margin-top: 0rem;
+  }
   /* Fondo del Navbar */
   .navbar-dark.bg-dark {
-    background-color: #ffffff !important; /* Fondo casi negro */
+    background-color: #ffffff;
   }
   /* Personalización del Toggler */
   .navbar-toggler {
-    border-color: #01565a;
+    border: 0.22rem solid #ffffff;
+    margin-top: 4rem;
   }
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
-  /* Animaciones para los links del menú */
   .nav-link {
     transition: color 0.3s ease-in-out;
+    margin: 0.5rem;
+    background-color: #ffffff;
+    border: 5px solid #ffe69c;
+    border-radius: 10px;
+    width: 12rem;
+  }
+  .navbar-scroll {
+    height: 19rem;
   }
   .nav-link:hover, .nav-link:focus {
     color: #01565a;
   }
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0;
+  }
   .logo-header {
-    height: 40px; /* Ajusta el tamaño del logo para dispositivos móviles */
-    width: auto;
+    height: 5rem;
+    margin-left: 1rem;
+    width: rem;
   }
   footer {
     min-width: 20rem;
@@ -872,6 +919,62 @@ form, label, input {
   }
   to {
     left: 0;
+  }
+}
+/* animación: para el menú desplegable se "agité" al activarse */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+@keyframes shakeRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+@keyframes shakeLeft {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes shakeUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(5px);
+  }
+}
+@keyframes shakeDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(-5px);
   }
 }
 
