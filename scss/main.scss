@@ -25,7 +25,8 @@
     .navbar-nav {
         margin-top: 0;
         text-align: center;
-        min-width: 34rem
+        min-width: 34rem !important;
+        margin-right: -4rem;
 
     }
     .shakeUp {
@@ -49,9 +50,26 @@
 
     /* Personalización del Toggler */
     .navbar-toggler {
-        border: 0.22rem solid #ffffff;
-        margin-top: 4rem;
+        border: none;
+        background-color: transparent;
+        animation: bounce 2s infinite;
+        box-shadow: 1px 5px 0px 0px rgba(0, 0, 0, 0.2);
     }
+    .navbar-toggler .fas {
+        transition: transform 0.3s ease-in-out; /* Suaviza la transición si usas rotación */
+    }
+
+
+    .navbar-toggler .fas, .navbar-toggler .navbar-toggler-icon {
+        color: #01565a;
+        font-size: 1rem;
+    }
+    .rotate {
+        transform: rotate(-180deg);
+        transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+    }
+
+
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
@@ -74,9 +92,15 @@
         
     }
     .logo-header {
-        height: 5rem;
+        height: 10rem;
         margin-left: 1rem;
         width: rem;
+    }
+    .navbar-scroll {        
+        .logo-header{
+            max-width: 9rem;
+            height: auto;
+        }
     }
     footer{
         min-width: 20rem;
@@ -88,7 +112,7 @@
     
     %custom-font-index {
     font-family: sans-serif;
-    line-height: 1rem;
+    line-height: 2rem;
     margin: 0.5rem;
     }
 
@@ -107,11 +131,10 @@
     font-size: 12px;
     margin-top: 1rem;
     padding: 0;
-    margin-left: 9rem;
     }
 
     %custom-font-dialog{
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin: 1rem;
         color: #8b8b8b;
     }

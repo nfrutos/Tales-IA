@@ -16,7 +16,6 @@ header {
   .navbar-brand &,
   .navbar-scroll & {
     max-height: 5rem;
-    transition: max-height 0.6s ease;
   }
 
   // Anidado solo dentro de .navbar-brand
@@ -28,7 +27,11 @@ header {
 /* Ajustes para el contenedor de la barra de navegación al hacer scroll */
 .navbar-scroll {
   height: 12rem;
-  transition: height 1s;
+  
+  .logo-header{
+    max-width: 5rem;
+    height: auto;
+  }
 
   .navbar-custom {
     margin-top: 4rem;
@@ -41,7 +44,9 @@ header {
     transition: font-size 0.6s ease;
   }
 }
-
+  .navbar-collapse {
+    margin-left: -4rem;
+  }
 /* Ajustes para el contenedor de la barra */
 .navbar-custom {
   .container {
@@ -81,9 +86,9 @@ header {
 
 .navbar-brand {
   .logo-header {
-    max-height: 5rem;
+    max-height: 10rem;
     margin-top: 2rem;
-    width: auto;
+    width: 10rem;
     transition: max-height 0.6s ease;
   }
 }

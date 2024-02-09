@@ -5,22 +5,29 @@
     grid-template-columns: 50% 50%;
     height: 32rem;
     background-color: #ffffff;
+    margin-top: 4rem;
     .dialog-box-1 {
       position: relative;
-      top: 0rem;
+      top: 15rem;
       padding: 3rem;
       width: 30rem;
       margin-right: 44rem;
       text-align: center;
       animation: slideInFromLeft 1.3s ease-in-out forwards;
       .img-inicio {
+        position: absolute;
         width: 16rem;
+        margin-left: 8.9rem;
+        margin-top: -8rem;
+      }
+      .img-inicio-2{
+        width: 27rem;
       }
     }
 
     .dialog-box-2 {
       position: absolute;
-      top: 17rem;
+      top: 24rem;
       width: 47rem;
       min-height: 10rem;
       padding: -1rem;
@@ -35,19 +42,28 @@
   .section-contenido-destacado {
     display: grid;
     grid-template-areas:
-      'grid-item dialog-box-3'
-      'grid-item dialog-box-3'
-      'grid-item dialog-box-5'
-      'grid-item dialog-juego'
-      'grid-item dialog-box-aprendizaje'
-      'grid-item dialog-box-aprendizaje';
+      'dialog-box-5'
+      'dialog-box-5'
+      'dialog-box-3'
+      'dialog-box-3'
+      'dialog-box-3'
+      'dialog-juego'
+      'dialog-box-aprendizaje '
+      'dialog-box-aprendizaje'
+      'grid-item'
+      'grid-item'
+      'grid-item'
+      'grid-item'
+      'grid-item'
+      'grid-item'
+      'button-mas-historias';
     grid-template-rows: auto;
-    margin-top: 4rem;
-    padding: 0%;
+    grid-template-columns: 1fr;
+    margin-top: -22rem;
     .dialog-box-3 {
       grid-area: dialog-box-3;
-      margin-top: 1rem;
-      margin-left: -45rem;
+      margin-top: 46rem;
+      margin-left: 35.6rem;
       max-width: 24rem;
       max-height: 4rem;
       height: 5rem;
@@ -58,8 +74,8 @@
     .dialog-box-5 {
       grid-area: dialog-box-5;
       overflow: auto;
-      margin-bottom: -26.5rem;
-      margin-top: -120rem;
+      margin-top: 55rem;
+      margin-left: 5rem;
       background-color: rgb(255, 255, 255);
       border: 0.5rem solid #ffe69c;
       width: 45rem;
@@ -70,12 +86,13 @@
       grid-area: dialog-juego;
       background-color: #ffffff;
       border: 0.5rem solid #01565a;
-      width: 66%;
-      margin: 9rem;
+      width: 31rem;
       height: 26rem;
-      margin-top: -90rem;
-      margin-left: 9rem;
+      margin: -40rem 14rem 1rem;
       text-align: center;
+      &:hover{
+        animation: shake 1.5s;
+      }
       .div-juego-1{
         display: grid;
         gap: 0.8rem;
@@ -95,8 +112,8 @@
       background-color: #ffffff;
       height: 27rem;
       width: 29rem;
-      margin-top: -58rem;
-      margin-left: 10rem;
+      margin-top: -41rem;
+      margin-left: 51rem;
     }
     .div-dato-curioso-1 {
       display: flex;
@@ -125,7 +142,8 @@
       background-color: aliceblue;
       border: 0.5rem solid #ffe69c;
       text-align: center;
-      margin-left: -55rem;
+      margin-left: 41rem;
+      margin-top: 1rem;
 
       a {
         text-decoration: none;
@@ -136,64 +154,65 @@
         opacity: 0.75;
       }
     }
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 50%;
-    grid-gap: 2rem;
-    padding: 4rem;
-    .grid-item-container {
-      display: grid;
-      background-color: #ffffff;
-      width: 40rem;
-      height: 15rem;
-
-      &:hover {
-        animation: bounce 1s;
-      }
-    }
-    .grid-item {
-      display: grid;
-      grid-area: grid-item;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-      'img-cuento texto'
-      'img-cuento texto';
-      .img-cuento {
-        grid-area: img-cuento;
-        width: 100%;
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 40rem;
+        margin-left: 41rem;
+      .grid-item-container {
+        display: grid;
+        background-color: #ffffff;
+        width: 40rem;
         height: 15rem;
+        margin-top: 4rem;
+        margin-left: -14rem;
+        &:hover {
+          animation: bounce 1s;
+        }
       }
-    }
-    .linea-divisora1, .linea-divisora2,
-    .linea-divisora3, .linea-divisora4,
-    .linea-divisora5, .linea-divisora6 {
-      display: grid;
-      grid-template-areas: 'h4 btn-modales';
-      position: sticky;
-      border-bottom: 1px solid #ccc;
-      width: 41rem;
-      margin-top: 2rem;
-      .h4 {
-        grid-area: h4;
-        font-size: 0.9rem;
+      .grid-item {
+        display: grid;
+        grid-area: grid-item;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'img-cuento texto'
+        'img-cuento texto';
+        .img-cuento {
+          grid-area: img-cuento;
+          width: 100%;
+          height: 15rem;
+        }
+      }
+      .linea-divisora1, .linea-divisora2,
+      .linea-divisora3, .linea-divisora4,
+      .linea-divisora5, .linea-divisora6 {
+        display: grid;
+        grid-template-areas: 'h4 btn-modales';
+        position: sticky;
+        border-bottom: 1px solid #ccc;
+        width: 40rem;
         margin-top: 1rem;
-        margin-left: 2rem;
+        margin-left: -15rem;
+        .h4 {
+          grid-area: h4;
+          font-size: 0.9rem;
+          margin-top: 1rem;
+          margin-left: 2rem;
+        }
       }
-    }
-    .modal{
-      .modal-dialog{
-        .modal-conten{
-          .modal-header {
-            background-color: rgb(255, 255, 255);
-            margin-bottom: 1rem;
+      .modal{
+        .modal-dialog{
+          .modal-conten{
+            .modal-header {
+              background-color: rgb(255, 255, 255);
+              margin-bottom: 1rem;
+            }
           }
         }
       }
-    }
-    article {
-      cursor: pointer;
+      article {
+        cursor: pointer;
+      }
     }
   }
 }

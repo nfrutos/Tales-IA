@@ -2,9 +2,10 @@
 .main-nuestra-historia{
     display: grid;
     grid-template-areas: 
-    'video-nuestra-historia box-nuestra-historia'
+    'box-nuestra-historia box-nuestra-historia-2'
     'video-nuestra-historia box-nuestra-historia'
     'video-nuestra-historia box-nuestra-historia-2';
+    margin-top: 10rem;
     height: 90rem;
     section{
         display: grid;
@@ -16,12 +17,12 @@
             width: 30rem;
             height: 18rem;
             margin-left: 46rem; 
-            margin-top: 17rem;
+            margin-top: -8rem;
         }
         .video-nuestra-historia{
             grid-area: video-nuestra-historia;
             width: 40rem;
-            margin-top: -7rem;
+            margin-top: 24rem;
             margin-left: 20rem;
         }
         .box-nuestra-historia-2{
@@ -30,7 +31,7 @@
             background-color: #ffffff;
             width: 33rem;
             height: 29rem;
-            margin-top: 17rem;
+            margin-top: -8rem;
         }       
     }
 }

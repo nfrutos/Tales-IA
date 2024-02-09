@@ -19,13 +19,14 @@
     margin-left: 4rem;
     height: auto;
     .box-encabezado-generos{
+      position: absolute;
       text-align: center;
       grid-area: box-encabezado-generos;
       background-color: #ffffff;
-      border: 0.5rem solid #01565a;
-      width: 30rem;
-      margin-left: 4rem;
-      animation: shakeRight 4s;
+      border: 0.3rem solid #01565a;
+      width: 28rem;
+      margin-left: 31rem;
+      margin-top: 58rem;
     }
 
 
@@ -33,6 +34,7 @@
       background-color: transparent;
       width: 14.9rem;
       height: 20.75rem;
+      margin-left: 15rem;
       perspective: 62.5rem;
 
       &:hover .box-generos-interior {
@@ -82,6 +84,7 @@
       width: 34rem;
       height: 17rem;
       margin-left: 7rem;
+      margin-top: 17rem;
       border: 0.5rem solid #ffe69c;
     }
 
@@ -92,6 +95,7 @@
       border: 0.5rem solid #01565a;
       width: 25rem;
       height: 16rem;
+      margin-top: 17rem;
       margin-left: 56rem;
     }
 

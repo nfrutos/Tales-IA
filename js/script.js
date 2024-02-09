@@ -81,20 +81,11 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelectorAll('.box-card').forEach(function(card) {
     card.addEventListener('click', function() {
         const genero = this.querySelector('.text-generos').textContent;
-        const videoFondo = document.getElementById('video-fondo');
-
-        // Restablece el video para cada clic en una card
-        videoFondo.pause();
-        videoFondo.style.display = 'none';
-        videoFondo.currentTime = 0; // Opcional, reinicia el video al principio
 
         let enlaces = `<a href="/">Inicio</a>`; // Default links
 
         switch (genero) {
             case 'Ciencia Ficción':
-                videoFondo.src = 'video/tunnel.mp4';
-                videoFondo.style.display = 'block'; // Hacer el video visible
-                videoFondo.play(); // Iniciar la reproducción del video
                 enlaces = `
                 <a href="/ciencia-ficcion/novelas">Novelas</a>
                 <a href="/ciencia-ficcion/cuentos">Cuentos</a>
@@ -136,8 +127,6 @@ document.querySelectorAll('.box-card').forEach(function(card) {
             document.querySelectorAll('.box-card').forEach(c => c.classList.remove('card-out'));
             menuGeneros.style.transform = 'translateX(100%)';
             setTimeout(() => menuGeneros.style.display = 'none', 500);
-            videoFondo.pause(); // Pausa la reproducción del video
-            videoFondo.style.display = 'none'; // Oculta el video
             document.getElementById('overlay').style.display = 'none';
         };
         menuGeneros.appendChild(closeButton);
@@ -164,4 +153,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var navbarToggler = document.querySelector('.navbar-toggler');
+
+  navbarToggler.addEventListener('click', function () {
+    if (!this.classList.contains('stopped-animation')) {
+      this.classList.add('stopped-animation');
+    } else {
+      this.classList.remove('stopped-animation'); // Opcional: Remover si deseas que la animación continúe después de cerrar
+    }
+  });
+});
+
+
 

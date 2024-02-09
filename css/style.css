@@ -16,7 +16,6 @@ body {
 /* Main homogéneo para todos los HTML */
 main {
   background-color: #fffafa;
-  padding-top: 16rem;
 }
 
 /* Fuentes para index/inicio */
@@ -68,7 +67,6 @@ header {
 }
 .navbar-brand .logo-header, .navbar-scroll .logo-header {
   max-height: 5rem;
-  transition: max-height 0.6s ease;
 }
 .navbar-brand .logo-header {
   margin-top: 2rem;
@@ -77,7 +75,10 @@ header {
 /* Ajustes para el contenedor de la barra de navegación al hacer scroll */
 .navbar-scroll {
   height: 12rem;
-  transition: height 1s;
+}
+.navbar-scroll .logo-header {
+  max-width: 5rem;
+  height: auto;
 }
 .navbar-scroll .navbar-custom {
   margin-top: 4rem;
@@ -87,6 +88,10 @@ header {
 .navbar-scroll .navbar-nav .nav-link {
   font-size: 0.8rem;
   transition: font-size 0.6s ease;
+}
+
+.navbar-collapse {
+  margin-left: -4rem;
 }
 
 /* Ajustes para el contenedor de la barra */
@@ -120,9 +125,9 @@ header {
 }
 
 .navbar-brand .logo-header {
-  max-height: 5rem;
+  max-height: 10rem;
   margin-top: 2rem;
-  width: auto;
+  width: 10rem;
   transition: max-height 0.6s ease;
 }
 
@@ -171,10 +176,11 @@ footer img {
   grid-template-columns: 50% 50%;
   height: 32rem;
   background-color: #ffffff;
+  margin-top: 4rem;
 }
 .main-index .encabezado .dialog-box-1 {
   position: relative;
-  top: 0rem;
+  top: 15rem;
   padding: 3rem;
   width: 30rem;
   margin-right: 44rem;
@@ -182,11 +188,17 @@ footer img {
   animation: slideInFromLeft 1.3s ease-in-out forwards;
 }
 .main-index .encabezado .dialog-box-1 .img-inicio {
+  position: absolute;
   width: 16rem;
+  margin-left: 8.9rem;
+  margin-top: -8rem;
+}
+.main-index .encabezado .dialog-box-1 .img-inicio-2 {
+  width: 27rem;
 }
 .main-index .encabezado .dialog-box-2 {
   position: absolute;
-  top: 17rem;
+  top: 24rem;
   width: 47rem;
   min-height: 10rem;
   padding: -1rem;
@@ -199,15 +211,15 @@ footer img {
 }
 .main-index .section-contenido-destacado {
   display: grid;
-  grid-template-areas: "grid-item dialog-box-3" "grid-item dialog-box-3" "grid-item dialog-box-5" "grid-item dialog-juego" "grid-item dialog-box-aprendizaje" "grid-item dialog-box-aprendizaje";
+  grid-template-areas: "dialog-box-5" "dialog-box-5" "dialog-box-3" "dialog-box-3" "dialog-box-3" "dialog-juego" "dialog-box-aprendizaje " "dialog-box-aprendizaje" "grid-item" "grid-item" "grid-item" "grid-item" "grid-item" "grid-item" "button-mas-historias";
   grid-template-rows: auto;
-  margin-top: 4rem;
-  padding: 0%;
+  grid-template-columns: 1fr;
+  margin-top: -22rem;
 }
 .main-index .section-contenido-destacado .dialog-box-3 {
   grid-area: dialog-box-3;
-  margin-top: 1rem;
-  margin-left: -45rem;
+  margin-top: 46rem;
+  margin-left: 35.6rem;
   max-width: 24rem;
   max-height: 4rem;
   height: 5rem;
@@ -217,8 +229,8 @@ footer img {
 .main-index .section-contenido-destacado .dialog-box-5 {
   grid-area: dialog-box-5;
   overflow: auto;
-  margin-bottom: -26.5rem;
-  margin-top: -120rem;
+  margin-top: 55rem;
+  margin-left: 5rem;
   background-color: rgb(255, 255, 255);
   border: 0.5rem solid #ffe69c;
   width: 45rem;
@@ -228,12 +240,13 @@ footer img {
   grid-area: dialog-juego;
   background-color: #ffffff;
   border: 0.5rem solid #01565a;
-  width: 66%;
-  margin: 9rem;
+  width: 31rem;
   height: 26rem;
-  margin-top: -90rem;
-  margin-left: 9rem;
+  margin: -40rem 14rem 1rem;
   text-align: center;
+}
+.main-index .section-contenido-destacado .dialog-juego:hover {
+  animation: shake 1.5s;
 }
 .main-index .section-contenido-destacado .dialog-juego .div-juego-1 {
   display: grid;
@@ -253,8 +266,8 @@ footer img {
   background-color: #ffffff;
   height: 27rem;
   width: 29rem;
-  margin-top: -58rem;
-  margin-left: 10rem;
+  margin-top: -41rem;
+  margin-left: 51rem;
 }
 .main-index .section-contenido-destacado .div-dato-curioso-1 {
   display: flex;
@@ -282,7 +295,8 @@ footer img {
   background-color: aliceblue;
   border: 0.5rem solid #ffe69c;
   text-align: center;
-  margin-left: -55rem;
+  margin-left: 41rem;
+  margin-top: 1rem;
 }
 .main-index .section-contenido-destacado .button-mas-historias a {
   text-decoration: none;
@@ -291,56 +305,58 @@ footer img {
 .main-index .section-contenido-destacado .button-mas-historias:hover {
   opacity: 0.75;
 }
-.main-index .grid-container {
+.main-index .section-contenido-destacado .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  width: 50%;
-  grid-gap: 2rem;
-  padding: 4rem;
+  width: 40rem;
+  margin-left: 41rem;
 }
-.main-index .grid-container .grid-item-container {
+.main-index .section-contenido-destacado .grid-container .grid-item-container {
   display: grid;
   background-color: #ffffff;
   width: 40rem;
   height: 15rem;
+  margin-top: 4rem;
+  margin-left: -14rem;
 }
-.main-index .grid-container .grid-item-container:hover {
+.main-index .section-contenido-destacado .grid-container .grid-item-container:hover {
   animation: bounce 1s;
 }
-.main-index .grid-container .grid-item {
+.main-index .section-contenido-destacado .grid-container .grid-item {
   display: grid;
   grid-area: grid-item;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "img-cuento texto" "img-cuento texto";
 }
-.main-index .grid-container .grid-item .img-cuento {
+.main-index .section-contenido-destacado .grid-container .grid-item .img-cuento {
   grid-area: img-cuento;
   width: 100%;
   height: 15rem;
 }
-.main-index .grid-container .linea-divisora1, .main-index .grid-container .linea-divisora2,
-.main-index .grid-container .linea-divisora3, .main-index .grid-container .linea-divisora4,
-.main-index .grid-container .linea-divisora5, .main-index .grid-container .linea-divisora6 {
+.main-index .section-contenido-destacado .grid-container .linea-divisora1, .main-index .section-contenido-destacado .grid-container .linea-divisora2,
+.main-index .section-contenido-destacado .grid-container .linea-divisora3, .main-index .section-contenido-destacado .grid-container .linea-divisora4,
+.main-index .section-contenido-destacado .grid-container .linea-divisora5, .main-index .section-contenido-destacado .grid-container .linea-divisora6 {
   display: grid;
   grid-template-areas: "h4 btn-modales";
   position: sticky;
   border-bottom: 1px solid #ccc;
-  width: 41rem;
-  margin-top: 2rem;
+  width: 40rem;
+  margin-top: 1rem;
+  margin-left: -15rem;
 }
-.main-index .grid-container .linea-divisora1 .h4, .main-index .grid-container .linea-divisora2 .h4,
-.main-index .grid-container .linea-divisora3 .h4, .main-index .grid-container .linea-divisora4 .h4,
-.main-index .grid-container .linea-divisora5 .h4, .main-index .grid-container .linea-divisora6 .h4 {
+.main-index .section-contenido-destacado .grid-container .linea-divisora1 .h4, .main-index .section-contenido-destacado .grid-container .linea-divisora2 .h4,
+.main-index .section-contenido-destacado .grid-container .linea-divisora3 .h4, .main-index .section-contenido-destacado .grid-container .linea-divisora4 .h4,
+.main-index .section-contenido-destacado .grid-container .linea-divisora5 .h4, .main-index .section-contenido-destacado .grid-container .linea-divisora6 .h4 {
   grid-area: h4;
   font-size: 0.9rem;
   margin-top: 1rem;
   margin-left: 2rem;
 }
-.main-index .grid-container .modal .modal-dialog .modal-conten .modal-header {
+.main-index .section-contenido-destacado .grid-container .modal .modal-dialog .modal-conten .modal-header {
   background-color: rgb(255, 255, 255);
   margin-bottom: 1rem;
 }
-.main-index .grid-container article {
+.main-index .section-contenido-destacado .grid-container article {
   cursor: pointer;
 }
 
@@ -392,18 +408,20 @@ footer img {
   height: auto;
 }
 .main-generos .section-contenido-destacado-generos .box-encabezado-generos {
+  position: absolute;
   text-align: center;
   grid-area: box-encabezado-generos;
   background-color: #ffffff;
-  border: 0.5rem solid #01565a;
-  width: 30rem;
-  margin-left: 4rem;
-  animation: shakeRight 4s;
+  border: 0.3rem solid #01565a;
+  width: 28rem;
+  margin-left: 31rem;
+  margin-top: 58rem;
 }
 .main-generos .section-contenido-destacado-generos .box-card {
   background-color: transparent;
   width: 14.9rem;
   height: 20.75rem;
+  margin-left: 15rem;
   perspective: 62.5rem;
 }
 .main-generos .section-contenido-destacado-generos .box-card:hover .box-generos-interior {
@@ -470,6 +488,7 @@ footer img {
   width: 34rem;
   height: 17rem;
   margin-left: 7rem;
+  margin-top: 17rem;
   border: 0.5rem solid #ffe69c;
 }
 .main-generos .section-contenido-destacado-generos .box-historia-generos-2 {
@@ -479,6 +498,7 @@ footer img {
   border: 0.5rem solid #01565a;
   width: 25rem;
   height: 16rem;
+  margin-top: 17rem;
   margin-left: 56rem;
 }
 .main-generos .section-contenido-destacado-generos .avatar-tales-2 {
@@ -530,7 +550,8 @@ footer img {
 /* Main: nuestra-historia*/
 .main-nuestra-historia {
   display: grid;
-  grid-template-areas: "video-nuestra-historia box-nuestra-historia" "video-nuestra-historia box-nuestra-historia" "video-nuestra-historia box-nuestra-historia-2";
+  grid-template-areas: "box-nuestra-historia box-nuestra-historia-2" "video-nuestra-historia box-nuestra-historia" "video-nuestra-historia box-nuestra-historia-2";
+  margin-top: 10rem;
   height: 90rem;
 }
 .main-nuestra-historia section {
@@ -543,12 +564,12 @@ footer img {
   width: 30rem;
   height: 18rem;
   margin-left: 46rem;
-  margin-top: 17rem;
+  margin-top: -8rem;
 }
 .main-nuestra-historia section .video-nuestra-historia {
   grid-area: video-nuestra-historia;
   width: 40rem;
-  margin-top: -7rem;
+  margin-top: 24rem;
   margin-left: 20rem;
 }
 .main-nuestra-historia section .box-nuestra-historia-2 {
@@ -557,7 +578,7 @@ footer img {
   background-color: #ffffff;
   width: 33rem;
   height: 29rem;
-  margin-top: 17rem;
+  margin-top: -8rem;
 }
 
 /* Main: educación */
@@ -640,9 +661,9 @@ form, label, input {
 /* Media query index/inicio*/
 @media (min-width: 320px) and (max-width: 768px) {
   .main-index {
-    height: 300rem;
+    height: 320rem;
     min-width: 20rem;
-    margin-right: -6rem;
+    margin-right: -10rem;
   }
   .main-index .encabezado {
     grid-template-columns: 1fr;
@@ -652,20 +673,26 @@ form, label, input {
   }
   .main-index .encabezado .dialog-box-1 {
     max-width: 18rem;
-    margin-left: 0.5rem;
+    margin-left: -6rem;
   }
   .main-index .encabezado .dialog-box-1 .img-inicio {
-    max-width: 9rem;
+    position: absolute;
+    width: 10rem;
+    margin-left: 11rem;
+    margin-top: -6rem;
+  }
+  .main-index .encabezado .dialog-box-1 .img-inicio-2 {
+    width: 20rem;
   }
   .main-index .encabezado .dialog-box-2 {
-    max-width: 17rem;
-    margin-right: 4rem;
+    max-width: 25rem;
+    margin-right: -3rem;
     max-height: 20rem;
-    margin-top: 25rem;
+    margin-top: 15rem;
   }
   .main-index .section-contenido-destacado {
     grid-template-areas: "dialog-box-5" "dialog-juego" "dialog-box-aprendizaje" "dialog-box-3" "grid-item" "grid-container" "button-mas-historias";
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
   .main-index .section-contenido-destacado .div-dato-curioso-1 {
     background-image: url(../img/avatar-tales.jpg);
@@ -677,7 +704,7 @@ form, label, input {
   .main-index .section-contenido-destacado .dialog-box-3 {
     max-width: 19rem;
     margin-left: 3.8rem;
-    max-height: 4rem;
+    max-height: 5rem;
     margin-top: 17rem;
     margin-bottom: -17rem;
   }
@@ -686,18 +713,20 @@ form, label, input {
   }
   .main-index .section-contenido-destacado .dialog-juego {
     max-width: 20rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
   }
   .main-index .section-contenido-destacado .dialog-juego .div-juego-1 {
     max-width: 20rem;
   }
   .main-index .section-contenido-destacado .dialog-juego .div-juego-1 .respuesta {
-    max-width: 18rem;
+    max-width: 12rem;
   }
   .main-index .section-contenido-destacado .dialog-box-aprendizaje {
     max-width: 17rem;
-    margin-top: 22rem;
+    margin-top: 8rem;
     margin-bottom: -13rem;
-    margin-left: 5rem;
+    margin-left: 3.5rem;
   }
   .main-index .section-contenido-destacado .div-dato-curioso-1 .text-dato-curioso {
     width: 11rem;
@@ -709,29 +738,33 @@ form, label, input {
     margin-left: 6rem;
     margin-top: 1rem;
   }
-  .main-index .grid-container {
+  .main-index .section-contenido-destacado .grid-container {
     grid-area: grid-container;
     margin-left: -3.9rem;
   }
-  .main-index .grid-container .grid-item-container {
+  .main-index .section-contenido-destacado .grid-container .grid-item-container {
     max-width: 16rem;
     max-height: 11.8rem;
     margin-left: 5rem;
     margin-top: 14rem;
   }
-  .main-index .grid-container .grid-item {
+  .main-index .section-contenido-destacado .grid-container .grid-item {
     display: block;
     max-width: 20rem;
   }
-  .main-index .grid-container .grid-item .img-cuento {
+  .main-index .section-contenido-destacado .grid-container .grid-item .img-cuento {
     float: left;
     max-width: 8rem;
     height: 8rem;
     margin-top: -8.2rem;
   }
-  .main-index .grid-container .linea-divisora1, .main-index .grid-container .linea-divisora2,
-  .main-index .grid-container .linea-divisora3, .main-index .grid-container .linea-divisora4,
-  .main-index .grid-container .linea-divisora5, .main-index .grid-container .linea-divisora6 {
+  .main-index .section-contenido-destacado .grid-container .grid-item .p-cuento {
+    line-height: 1rem;
+    margin-left: 9rem;
+  }
+  .main-index .section-contenido-destacado .grid-container .linea-divisora1, .main-index .section-contenido-destacado .grid-container .linea-divisora2,
+  .main-index .section-contenido-destacado .grid-container .linea-divisora3, .main-index .section-contenido-destacado .grid-container .linea-divisora4,
+  .main-index .section-contenido-destacado .grid-container .linea-divisora5, .main-index .section-contenido-destacado .grid-container .linea-divisora6 {
     display: grid;
     grid-template-areas: "h4 btn-modales";
     position: sticky;
@@ -746,25 +779,27 @@ form, label, input {
   .main-generos {
     min-width: 20rem;
     margin-right: -6rem;
+    margin-top: -66rem;
+    height: 150rem;
   }
   .main-generos .section-contenido-destacado-generos {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "box-historia-generos-2" "box-historia-generos-2" "box-historia-generos" "box-historia-generos" "box-encabezado-generos" "box-generos-1" "box-generos-2" "box-generos-3" "box-generos-4" "box-generos-5" "box-generos-6";
+    grid-template-areas: "box-historia-generos-2 box-historia-generos-2" "box-historia-generos-2 box-historia-generos-2" "box-historia-generos box-historia-generos" "box-historia-generos box-historia-generos" "box-encabezado-generos box-encabezado-generos" "box-generos-1 box-generos-2" "box-generos-3 box-generos-4" "box-generos-5 box-generos-6";
     gap: 1rem;
     min-width: 20rem;
     margin: 0 auto;
     margin-left: 0rem;
     height: auto;
-    margin-top: 44rem;
+    margin-top: 80rem;
   }
   .main-generos .section-contenido-destacado-generos .box-encabezado-generos {
     margin-left: 1rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos {
-    width: 100%;
-    margin-left: 0rem;
-    margin-top: -51rem;
+    width: 90%;
+    margin-left: 1rem;
+    margin-top: 5rem;
     height: 13rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos h2 {
@@ -775,20 +810,24 @@ form, label, input {
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos-2 {
     width: 100%;
-    margin-left: 0rem;
-    margin-top: -33rem;
+    margin-left: 2.5rem;
+    margin-top: 21rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos-2 p {
     font-size: 0.8rem;
   }
   .main-generos .section-contenido-destacado-generos .avatar-tales-2 {
     width: 8rem;
-    margin-left: 15rem;
+    margin-left: 20rem;
     margin-top: -5rem;
   }
   .main-generos .section-contenido-destacado-generos .box-card {
-    margin-bottom: 1rem;
-    margin-left: 6rem;
+    margin-bottom: -36rem;
+    margin-left: 0.1rem;
+    margin-top: 41rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-card .img-generos {
+    margin-top: 2.9rem;
   }
   .main-generos #menu-generos {
     margin-left: 3rem;
@@ -805,7 +844,8 @@ form, label, input {
   .navbar-nav {
     margin-top: 0;
     text-align: center;
-    min-width: 34rem;
+    min-width: 34rem !important;
+    margin-right: -4rem;
   }
   .shakeUp {
     animation: shakeUp 1.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -826,8 +866,21 @@ form, label, input {
   }
   /* Personalización del Toggler */
   .navbar-toggler {
-    border: 0.22rem solid #ffffff;
-    margin-top: 4rem;
+    border: none;
+    background-color: transparent;
+    animation: bounce 2s infinite;
+    box-shadow: 1px 5px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+  .navbar-toggler .fas {
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición si usas rotación */
+  }
+  .navbar-toggler .fas, .navbar-toggler .navbar-toggler-icon {
+    color: #01565a;
+    font-size: 1rem;
+  }
+  .rotate {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición */
   }
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -850,9 +903,13 @@ form, label, input {
     box-shadow: 0 0 0;
   }
   .logo-header {
-    height: 5rem;
+    height: 10rem;
     margin-left: 1rem;
     width: rem;
+  }
+  .navbar-scroll .logo-header {
+    max-width: 9rem;
+    height: auto;
   }
   footer {
     min-width: 20rem;
@@ -863,7 +920,7 @@ form, label, input {
 @media (min-width: 320px) and (max-width: 768px) {
   h2, h3, p {
     font-family: sans-serif;
-    line-height: 1rem;
+    line-height: 2rem;
     margin: 0.5rem;
   }
   h3 {
@@ -874,10 +931,9 @@ form, label, input {
     font-size: 12px;
     margin-top: 1rem;
     padding: 0;
-    margin-left: 9rem;
   }
   .p-dialog {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 1rem;
     color: #8b8b8b;
   }
@@ -896,12 +952,12 @@ form, label, input {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(-60px);
+  40% {
+    transform: translateY(-5px);
   }
-  /* 50% {
-    transform: translateY(-60px);
-  } */
+  60% {
+    transform: translateY(-3px);
+  }
 }
 /* animación: se desliza desde la derecha hasta su ubicación final */
 @keyframes slideInFromRight {
@@ -921,7 +977,7 @@ form, label, input {
     left: 0;
   }
 }
-/* animación: para el menú desplegable se "agité" al activarse */
+/* animación: se "agitá" al activarse */
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);
