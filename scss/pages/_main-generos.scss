@@ -24,9 +24,9 @@
       grid-area: box-encabezado-generos;
       background-color: #ffffff;
       border: 0.3rem solid #01565a;
-      width: 28rem;
-      margin-left: 31rem;
-      margin-top: 58rem;
+      width: 29rem;
+      margin-left: 30rem;
+      margin-top: 85rem;
     }
 
 
@@ -67,6 +67,9 @@
       background-color: #ffffff;
       transform: rotateY(180deg);
       border: 0.5rem solid #ffe69c;
+      p{
+        font-size: 0.8rem;
+      }
     }
 
     @for $i from 1 through 6 {

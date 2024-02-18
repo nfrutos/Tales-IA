@@ -1,25 +1,37 @@
 /*Main - suscribirse*/
 .section-contenido-destacado-suscribirse {
-    height: 80rem;
+  display: grid;
+  grid-template-areas: 
+  'box-dialog-suscribirse'
+  'box-dialog-suscribirse-2'
+  'box-form';
+  height: 100rem;
+  justify-items: center;
   .box-form {
+    grid-area:box-form ;
     border: 0.5rem solid #01565a;
     width: 50rem;
     height: 14rem;
-    margin-left: 15rem;
-    margin-top: 39rem;
+    margin-top: 6rem;
   }
   .box-dialog-suscribirse{
+    grid-area: box-dialog-suscribirse; 
     background-color: white;
     border: 0.5rem solid #ffe69c;
     width: 30rem;
-    margin-left: 25rem;
+    height: 5rem;
+    margin-top: 24rem;
   }
   .box-dialog-suscribirse-2{
+    grid-area:box-dialog-suscribirse-2 ;  
     background-color: white;
     border: 0.5rem solid #ffe69c;
     width: 40rem;
-    margin-top: -50rem;
-    margin-left: 20rem;
+    margin-top: 1rem;
+    height: 35rem;
+    .text-resaltado{
+      @include resaltado;
+    }
   }
 }
 

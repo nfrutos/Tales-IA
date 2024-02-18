@@ -3,26 +3,30 @@ window.addEventListener('scroll', function() {
     header.classList.toggle('navbar-scroll', window.scrollY > 0);
 });
 
-// "Escribe" el texto
-document.addEventListener('DOMContentLoaded', (event) => {
-    const dialogBox = document.querySelector('.dialog-box-2');
-
-    dialogBox.addEventListener('animationend', () => {
-        typeWriter();
-    });
-
-    const text = "En Tales IA, se embarcarán en un viaje hacia mundos imaginarios y experiencias narrativas únicas, donde cada cuento es una obra maestra generada por inteligencia artificial. Estos relatos están diseñados meticulosamente para capturar y estimular la imaginación, ofreciendo una variedad de géneros y estilos que se adaptan a todos los gustos. Desde aventuras emocionantes hasta historias profundas y reflexivas, Tales IA es el destino perfecto para aquellos que buscan alimentar su curiosidad y pasión por la lectura. Cada historia es una puerta a un universo desconocido, esperando ser explorado por mentes ávidas de conocimiento y aventura. Aquí, la magia de la narrativa se une con el poder de la tecnología para crear experiencias de lectura inolvidables y enriquecedoras.";
-    const typingSpeed = 35; // ajusta la velocidad de "escritura"
-    let i = 0;
-
-    function typeWriter() {
-        if (i < text.length) {
-            document.getElementById("typed-text").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, typingSpeed);
+document.addEventListener('DOMContentLoaded', () => {
+    // Función para iniciar la escritura en un elemento específico
+    function startTyping(elementId) {
+        const element = document.getElementById(elementId);
+        if (element) { // Verifica si el elemento existe
+            const text = element.getAttribute('data-text');
+            typeWriter(element, text);
         }
     }
+
+    // Función de escritura
+    function typeWriter(element, text, i = 0) {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(() => typeWriter(element, text, i), 35); // Ajusta la velocidad de escritura aquí
+        }
+    }
+    startTyping('typed-text-1');
+    startTyping('typed-text-2');
 });
+
+
+
 
 // Llamar a cambiarPagina con el ID del modal activo
 // Por ejemplo: cambiarPagina(1, 'mi-modal-uno');
@@ -165,6 +169,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const text = '¿Repasamos un poco de historia juntos?';
+  const container = document.getElementById('animatedCaida');
+
+  // Procesar el texto para insertarlo con spans alrededor de cada letra
+  const html = text.split(' ').map(word => 
+    `<span class="word">${[...word].map(letter => 
+      `<span class="text-caida">${letter}</span>`
+    ).join('')}</span> `
+  ).join('');
+
+  container.innerHTML = html;
+
+  // Aplicar animación con retraso a cada letra
+  document.querySelectorAll('.text-caida').forEach((span, index) => {
+    // Este retraso asegura que las letras no caigan todas al mismo tiempo
+    span.style.animationDelay = `${index * 0.1}s`;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var myCarousel = document.querySelector('#carouselExampleIndicators');
+  var carousel = new bootstrap.Carousel(myCarousel);
+});
+
+
 
 
 

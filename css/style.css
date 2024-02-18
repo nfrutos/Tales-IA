@@ -15,15 +15,16 @@ body {
 
 /* Main homogéneo para todos los HTML */
 main {
-  background-color: #fffafa;
+  background-color: #ffffff;
 }
 
 /* Fuentes para index/inicio */
-p, h3, h2 {
+p, h3, h2, h1 {
   font-family: sans-serif;
   line-height: 2rem;
   margin: 1rem;
   color: #8b8b8b;
+  font-weight: 600;
 }
 
 h3 {
@@ -104,7 +105,8 @@ header {
 .navbar-nav .nav-link {
   position: relative;
   display: inline-block;
-  color: #000;
+  color: #8b8b8b;
+  font-weight: 900;
   text-decoration: none;
   transition: font-size 0.6s ease;
 }
@@ -132,45 +134,50 @@ header {
 }
 
 /* Footer homogéneo para todas los HTML */
-footer {
-  background-color: #ffe69c;
-}
-footer .footer-section {
+.footer-section {
+  background-color: #01565a;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "footer-item dialog-box-4";
 }
-footer .footer-item {
+.footer-section h4 {
+  margin-left: 1rem;
+  font-size: 2rem;
+  margin-top: 4rem;
+  color: aliceblue;
+}
+.footer-section .dialog-box-4 {
+  display: flex;
+  grid-area: dialog-box-4;
+  padding: 0rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+.footer-section .dialog-box-4 img {
+  position: relative;
+  margin-top: 9rem;
+  margin-left: -25rem;
+  margin-right: 29rem;
+  height: auto;
+  width: 2.5rem;
+  z-index: 1;
+}
+.footer-section .footer-item {
   grid-area: footer-item;
   padding: 3rem;
 }
-footer li {
-  list-style-type: none;
-}
-footer a {
+.footer-section .footer-item a {
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  color: aliceblue;
   margin-top: 0.5rem;
   display: flow;
 }
-.dialog-box-4 footer a {
-  display: inline-block;
-  margin-right: 1.5rem;
-}
-footer h2 {
-  font-size: 0.8rem;
-}
-footer img {
-  height: auto;
-  width: 1rem;
-}
-
-.dialog-box-4 {
-  grid-area: dialog-box-4;
-  padding: 3rem;
-}
 
 /* main: inicio/index */
+.main-index {
+  height: 195rem;
+}
 .main-index .encabezado {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -190,11 +197,12 @@ footer img {
 .main-index .encabezado .dialog-box-1 .img-inicio {
   position: absolute;
   width: 16rem;
-  margin-left: 8.9rem;
-  margin-top: -8rem;
+  margin-left: 5rem;
+  margin-top: -9rem;
 }
 .main-index .encabezado .dialog-box-1 .img-inicio-2 {
   width: 27rem;
+  margin-top: -2rem;
 }
 .main-index .encabezado .dialog-box-2 {
   position: absolute;
@@ -211,26 +219,27 @@ footer img {
 }
 .main-index .section-contenido-destacado {
   display: grid;
-  grid-template-areas: "dialog-box-5" "dialog-box-5" "dialog-box-3" "dialog-box-3" "dialog-box-3" "dialog-juego" "dialog-box-aprendizaje " "dialog-box-aprendizaje" "grid-item" "grid-item" "grid-item" "grid-item" "grid-item" "grid-item" "button-mas-historias";
+  grid-template-areas: "dialog-box-5" "dialog-box-5" "dialog-juego" "dialog-box-aprendizaje " "dialog-box-aprendizaje" "dialog-box-3" "grid-item" "button-mas-historias";
   grid-template-rows: auto;
   grid-template-columns: 1fr;
-  margin-top: -22rem;
 }
 .main-index .section-contenido-destacado .dialog-box-3 {
   grid-area: dialog-box-3;
-  margin-top: 46rem;
-  margin-left: 35.6rem;
-  max-width: 24rem;
+  margin-top: -40rem;
+  margin-left: 36rem;
+  max-width: 25rem;
   max-height: 4rem;
   height: 5rem;
   border: 0.3rem solid #01565a;
   background-color: #ffffff;
+  z-index: 1;
 }
 .main-index .section-contenido-destacado .dialog-box-5 {
   grid-area: dialog-box-5;
   overflow: auto;
-  margin-top: 55rem;
-  margin-left: 5rem;
+  margin-top: 35rem;
+  margin-bottom: 1rem;
+  margin-left: 49rem;
   background-color: rgb(255, 255, 255);
   border: 0.5rem solid #ffe69c;
   width: 45rem;
@@ -242,7 +251,7 @@ footer img {
   border: 0.5rem solid #01565a;
   width: 31rem;
   height: 26rem;
-  margin: -40rem 14rem 1rem;
+  margin: -38rem 8rem 1rem;
   text-align: center;
 }
 .main-index .section-contenido-destacado .dialog-juego:hover {
@@ -261,41 +270,36 @@ footer img {
   margin: 1rem;
   margin-left: 4rem;
 }
-.main-index .section-contenido-destacado .dialog-box-aprendizaje {
+.main-index .section-contenido-destacado .banner-1 img {
+  max-width: 100%;
+}
+.main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje {
   grid-area: dialog-box-aprendizaje;
   background-color: #ffffff;
-  height: 27rem;
-  width: 29rem;
-  margin-top: -41rem;
-  margin-left: 51rem;
+  max-width: 90%;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
 }
-.main-index .section-contenido-destacado .div-dato-curioso-1 {
+.main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje .div-dato-curioso-1 {
   display: flex;
   flex-direction: column;
   border: 0.2rem solid #01565a;
-  margin: 1rem;
-  height: 25rem;
-  text-align: center;
-  background-image: url(../img/avatar-tales.jpg);
-  background-position-x: -4.8rem;
-  background-size: contain;
-  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 8rem;
+  margin-top: -9rem;
 }
-.main-index .section-contenido-destacado .div-dato-curioso-1 .text-dato-curioso {
-  width: 15rem;
-  margin-left: 11rem;
+.main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje .div-dato-curioso-1 p {
   margin-top: 1rem;
-  text-align: end;
+  text-align: center;
 }
 .main-index .section-contenido-destacado .button-mas-historias {
   grid-area: button-mas-historias;
   text-decoration: none;
   width: 15rem;
-  margin-bottom: 4rem;
   background-color: aliceblue;
   border: 0.5rem solid #ffe69c;
   text-align: center;
-  margin-left: 41rem;
+  margin-left: 40rem;
   margin-top: 1rem;
 }
 .main-index .section-contenido-destacado .button-mas-historias a {
@@ -305,62 +309,48 @@ footer img {
 .main-index .section-contenido-destacado .button-mas-historias:hover {
   opacity: 0.75;
 }
-.main-index .section-contenido-destacado .grid-container {
+.main-index .section-contenido-destacado .grid-item-container {
   display: grid;
-  grid-template-columns: 1fr;
-  width: 40rem;
-  margin-left: 41rem;
+  background-color: #ffe69c;
+  width: 50rem;
+  height: 30rem;
+  margin-top: 15rem;
+  margin-left: 24rem;
 }
-.main-index .section-contenido-destacado .grid-container .grid-item-container {
-  display: grid;
+.main-index .section-contenido-destacado .grid-item-container .grid-item {
   background-color: #ffffff;
-  width: 40rem;
-  height: 15rem;
-  margin-top: 4rem;
-  margin-left: -14rem;
-}
-.main-index .section-contenido-destacado .grid-container .grid-item-container:hover {
-  animation: bounce 1s;
-}
-.main-index .section-contenido-destacado .grid-container .grid-item {
   display: grid;
   grid-area: grid-item;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "img-cuento texto" "img-cuento texto";
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: -5rem;
+  box-shadow: 4px 3px 12px 7px #01565a;
 }
-.main-index .section-contenido-destacado .grid-container .grid-item .img-cuento {
+.main-index .section-contenido-destacado .grid-item-container .grid-item img {
   grid-area: img-cuento;
-  width: 100%;
-  height: 15rem;
+  max-width: 100%;
+  height: 100%;
 }
-.main-index .section-contenido-destacado .grid-container .linea-divisora1, .main-index .section-contenido-destacado .grid-container .linea-divisora2,
-.main-index .section-contenido-destacado .grid-container .linea-divisora3, .main-index .section-contenido-destacado .grid-container .linea-divisora4,
-.main-index .section-contenido-destacado .grid-container .linea-divisora5, .main-index .section-contenido-destacado .grid-container .linea-divisora6 {
-  display: grid;
-  grid-template-areas: "h4 btn-modales";
-  position: sticky;
-  border-bottom: 1px solid #ccc;
-  width: 40rem;
-  margin-top: 1rem;
-  margin-left: -15rem;
-}
-.main-index .section-contenido-destacado .grid-container .linea-divisora1 .h4, .main-index .section-contenido-destacado .grid-container .linea-divisora2 .h4,
-.main-index .section-contenido-destacado .grid-container .linea-divisora3 .h4, .main-index .section-contenido-destacado .grid-container .linea-divisora4 .h4,
-.main-index .section-contenido-destacado .grid-container .linea-divisora5 .h4, .main-index .section-contenido-destacado .grid-container .linea-divisora6 .h4 {
-  grid-area: h4;
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  margin-left: 2rem;
-}
-.main-index .section-contenido-destacado .grid-container .modal .modal-dialog .modal-conten .modal-header {
+.main-index .section-contenido-destacado .modal .modal-dialog .modal-conten .modal-header {
   background-color: rgb(255, 255, 255);
   margin-bottom: 1rem;
 }
-.main-index .section-contenido-destacado .grid-container article {
+.main-index .section-contenido-destacado article {
   cursor: pointer;
 }
-
-.iconos-grid-item {
+.main-index .section-contenido-destacado .carousel {
+  background-color: #ffe69c;
+}
+.main-index .section-contenido-destacado .carousel .carousel-control-next-icon,
+.main-index .section-contenido-destacado .carousel .carousel-control-prev-icon {
+  background-color: #01565a;
+}
+.main-index .section-contenido-destacado .carousel .carousel-inner {
+  max-height: 56rem;
+}
+.main-index .section-contenido-destacado .iconos-grid-item {
   display: grid;
   grid-area: enlaces-lineas-div;
   width: 2rem;
@@ -368,27 +358,23 @@ footer img {
   margin-top: -0.6rem;
   margin-bottom: -2.8rem;
 }
-
-.tabla-modal-body {
+.main-index .section-contenido-destacado .iconos-redes-item {
+  width: 1rem;
+  margin-right: 1rem;
+}
+.main-index .tabla-modal-body {
   background-color: #ffffff;
   box-shadow: 40px 2px 50px rgba(0, 0, 0, 0.2);
   width: 33rem;
   height: 15rem;
   border-radius: 0.8rem;
 }
-
-.iconos-redes-item {
-  width: 1rem;
-  margin-right: 1rem;
-}
-
-.modal-body {
+.main-index .modal-body {
   text-align: justify;
   line-height: 2rem;
   top: 1rem;
 }
-
-.btn-modal {
+.main-index .btn-modal {
   border: 2px solid #01565a;
   border-radius: 10px;
   width: 6rem;
@@ -413,9 +399,9 @@ footer img {
   grid-area: box-encabezado-generos;
   background-color: #ffffff;
   border: 0.3rem solid #01565a;
-  width: 28rem;
-  margin-left: 31rem;
-  margin-top: 58rem;
+  width: 29rem;
+  margin-left: 30rem;
+  margin-top: 85rem;
 }
 .main-generos .section-contenido-destacado-generos .box-card {
   background-color: transparent;
@@ -450,6 +436,9 @@ footer img {
   background-color: #ffffff;
   transform: rotateY(180deg);
   border: 0.5rem solid #ffe69c;
+}
+.main-generos .section-contenido-destacado-generos .box-generos-dorso p {
+  font-size: 0.8rem;
 }
 .main-generos .section-contenido-destacado-generos .box-generos-1 {
   grid-area: box-generos-1;
@@ -550,9 +539,9 @@ footer img {
 /* Main: nuestra-historia*/
 .main-nuestra-historia {
   display: grid;
-  grid-template-areas: "box-nuestra-historia box-nuestra-historia-2" "video-nuestra-historia box-nuestra-historia" "video-nuestra-historia box-nuestra-historia-2";
-  margin-top: 10rem;
-  height: 90rem;
+  grid-template-areas: "box-nuestra-historia box-nuestra-historia" "video-nuestra-historia video-nuestra-historia" "box-nuestra-historia-2 box-nuestra-historia-3";
+  grid-template-columns: repeat(3, 1fr);
+  height: auto;
 }
 .main-nuestra-historia section {
   display: grid;
@@ -561,96 +550,359 @@ footer img {
   grid-area: box-nuestra-historia;
   border: 0.5rem solid #01565a;
   background-color: #ffffff;
-  width: 30rem;
-  height: 18rem;
-  margin-left: 46rem;
-  margin-top: -8rem;
+  width: 43rem;
+  height: 8rem;
+  margin-top: 22rem;
+  margin-left: 25rem;
 }
 .main-nuestra-historia section .video-nuestra-historia {
   grid-area: video-nuestra-historia;
   width: 40rem;
-  margin-top: 24rem;
-  margin-left: 20rem;
+  border: 0.5rem solid #ffe69c;
+  box-shadow: 0px 4px 10px 17px #ffe69c;
+  margin-top: 38rem;
+  margin-left: 5rem;
 }
 .main-nuestra-historia section .box-nuestra-historia-2 {
   grid-area: box-nuestra-historia-2;
   border: 0.5rem solid #ffe69c;
   background-color: #ffffff;
-  width: 33rem;
-  height: 29rem;
-  margin-top: -8rem;
+  width: 40rem;
+  height: 27rem;
+  margin-top: 66rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+  z-index: 1;
+}
+.main-nuestra-historia section .box-nuestra-historia-2 .img-libros {
+  position: absolute;
+  width: 10rem;
+  height: auto;
+  margin-top: 12.5rem;
+  margin-left: 30rem;
+  z-index: -1;
+}
+.main-nuestra-historia section .box-nuestra-historia-3 {
+  grid-area: box-nuestra-historia-3;
+  border: 0.5rem solid #ffe69c;
+  width: 38rem;
+  height: 15rem;
+  margin-top: 37.5rem;
+  margin-left: 52rem;
 }
 
 /* Main: educación */
-.section-contenido-destacado-educación {
+.main-educacion {
+  height: 280rem;
+}
+.main-educacion .section-contenido-destacado-educación {
   display: grid;
-  grid-template-areas: "box-educacion-3 box-educacion-1" "box-educacion-3 box-educacion-2";
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  margin: 0%;
-  padding: 0%;
-  gap: 1rem;
+  grid-template-areas: "box-educacion-2" "box-educacion-1" "box-educacion-3";
+  justify-content: center;
 }
-.section-contenido-destacado-educación .box-educacion-1 {
-  grid-area: box-educacion-1;
-  background-color: #ffffff;
-  border: 0.5rem solid #01565a;
-  margin-left: 10rem;
-  width: 30rem;
-  height: 24rem;
-}
-.section-contenido-destacado-educación .box-educacion-2 {
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 {
   grid-area: box-educacion-2;
-  background-color: #ffffff;
-  border: 0.5rem solid #ffe69c;
+  margin-top: 25rem;
   margin-left: 10rem;
-  width: 35rem;
-  height: 46rem;
 }
-.section-contenido-destacado-educación .box-educacion-3 {
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 div {
+  border: 0.2rem solid #ffe69c;
+  width: 40rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 div h2 {
+  font-size: 2rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .text-caida {
+  display: inline-block;
+  opacity: 0;
+  animation: caida 0.5s forwards;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1 {
+  margin-top: 10rem;
+  max-width: 45rem;
+  height: 31rem;
+  border: 0.3rem solid #01565a;
+  box-shadow: -20px 20px 0px rgb(255, 230, 156);
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1 p {
+  text-align: start;
+  width: 18rem;
+  margin: 1.1rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1 img {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: -40rem;
+  margin-left: 22rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 {
+  margin-top: 10rem;
+  max-width: 45rem;
+  height: 31rem;
+  border: 0.3rem solid #01565a;
+  box-shadow: -20px 20px 0px rgb(255, 230, 156);
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 p {
+  text-align: start;
+  width: 18rem;
+  margin: 1.1rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 img {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: -40rem;
+  margin-left: 22rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 {
+  margin-top: 10rem;
+  max-width: 45rem;
+  height: 31rem;
+  border: 0.3rem solid #01565a;
+  box-shadow: -20px 20px 0px rgb(255, 230, 156);
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 p {
+  text-align: start;
+  width: 18rem;
+  margin: 1.1rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 img {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: -40rem;
+  margin-left: 22rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 {
+  margin-top: 10rem;
+  max-width: 45rem;
+  height: 31rem;
+  border: 0.3rem solid #01565a;
+  box-shadow: -20px 20px 0px rgb(255, 230, 156);
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 p {
+  text-align: start;
+  width: 18rem;
+  margin: 1.1rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 img {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: -40rem;
+  margin-left: 22rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 p, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 p {
+  text-align: end;
+  margin-left: 20rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 img, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 img {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: -18rem;
+  margin-left: -7rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 img {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: -21rem;
+  margin-left: 22rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 img {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: -19rem;
+  margin-left: -7rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 {
+  display: grid;
   grid-area: box-educacion-3;
   background-color: #ffffff;
   border: 0.5rem solid #01565a;
-  width: 20rem;
+  width: 52rem;
+  height: 58rem;
+  margin-top: 15rem;
   margin-left: 5rem;
-  margin-bottom: 5rem;
+  grid-template-areas: "box-porque-leer-1 box-porque-leer-2" "box-porque-leer-3 box-porque-leer-4" "box-porque-leer-5 box-porque-leer-6";
 }
-.section-contenido-destacado-educación .box-educacion-3 ul li {
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1 {
+  display: grid;
+  max-width: 23rem;
+  max-height: 14rem;
+  margin: 1rem;
+  margin-top: 6.5rem;
   border: 0.3rem solid #ffe69c;
-  margin: 0.3rem;
-  list-style-type: none;
-  margin-right: 1rem;
-  max-width: 15rem;
+  grid-area: box-porque-leer-1;
 }
-.section-contenido-destacado-educación .mini-avatar {
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1 p {
+  margin: 0.5rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1 .text-resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1:hover {
+  animation: shake 1s;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2 {
+  display: grid;
+  max-width: 23rem;
+  max-height: 14rem;
+  margin: 1rem;
+  margin-top: 6.5rem;
+  border: 0.3rem solid #ffe69c;
+  grid-area: box-porque-leer-2;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2 p {
+  margin: 0.5rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2 .text-resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2:hover {
+  animation: shake 1s;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3 {
+  display: grid;
+  max-width: 23rem;
+  max-height: 14rem;
+  margin: 1rem;
+  margin-top: 6.5rem;
+  border: 0.3rem solid #ffe69c;
+  grid-area: box-porque-leer-3;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3 p {
+  margin: 0.5rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3 .text-resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3:hover {
+  animation: shake 1s;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4 {
+  display: grid;
+  max-width: 23rem;
+  max-height: 14rem;
+  margin: 1rem;
+  margin-top: 6.5rem;
+  border: 0.3rem solid #ffe69c;
+  grid-area: box-porque-leer-4;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4 p {
+  margin: 0.5rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4 .text-resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4:hover {
+  animation: shake 1s;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5 {
+  display: grid;
+  max-width: 23rem;
+  max-height: 14rem;
+  margin: 1rem;
+  margin-top: 6.5rem;
+  border: 0.3rem solid #ffe69c;
+  grid-area: box-porque-leer-5;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5 p {
+  margin: 0.5rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5 .text-resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5:hover {
+  animation: shake 1s;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6 {
+  display: grid;
+  max-width: 23rem;
+  max-height: 14rem;
+  margin: 1rem;
+  margin-top: 6.5rem;
+  border: 0.3rem solid #ffe69c;
+  grid-area: box-porque-leer-6;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6 p {
+  margin: 0.5rem;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6 .text-resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6:hover {
+  animation: shake 1s;
+}
+.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-tex-porque-leer {
+  margin-top: 0rem;
+  margin-left: 2rem;
+  max-width: 46rem;
+  position: absolute;
+  text-align: center;
+}
+.main-educacion .section-contenido-destacado-educación .mini-avatar {
+  position: absolute;
   width: 20rem;
-  margin-left: 12rem;
-  margin-top: -130rem;
+  margin-left: 43rem;
 }
 
 /*Main - suscribirse*/
 .section-contenido-destacado-suscribirse {
-  height: 80rem;
+  display: grid;
+  grid-template-areas: "box-dialog-suscribirse" "box-dialog-suscribirse-2" "box-form";
+  height: 100rem;
+  justify-items: center;
 }
 .section-contenido-destacado-suscribirse .box-form {
+  grid-area: box-form;
   border: 0.5rem solid #01565a;
   width: 50rem;
   height: 14rem;
-  margin-left: 15rem;
-  margin-top: 39rem;
+  margin-top: 6rem;
 }
 .section-contenido-destacado-suscribirse .box-dialog-suscribirse {
+  grid-area: box-dialog-suscribirse;
   background-color: white;
   border: 0.5rem solid #ffe69c;
   width: 30rem;
-  margin-left: 25rem;
+  height: 5rem;
+  margin-top: 24rem;
 }
 .section-contenido-destacado-suscribirse .box-dialog-suscribirse-2 {
+  grid-area: box-dialog-suscribirse-2;
   background-color: white;
   border: 0.5rem solid #ffe69c;
   width: 40rem;
-  margin-top: -50rem;
-  margin-left: 20rem;
+  margin-top: 1rem;
+  height: 35rem;
+}
+.section-contenido-destacado-suscribirse .box-dialog-suscribirse-2 .text-resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
 }
 
 form, label, input {
@@ -661,60 +913,76 @@ form, label, input {
 /* Media query index/inicio*/
 @media (min-width: 320px) and (max-width: 768px) {
   .main-index {
-    height: 320rem;
-    min-width: 20rem;
-    margin-right: -10rem;
+    margin-right: -6rem;
+    max-height: 177rem;
   }
   .main-index .encabezado {
     grid-template-columns: 1fr;
     max-width: 20rem;
-    margin-left: 3.5rem;
     max-height: 25rem;
   }
   .main-index .encabezado .dialog-box-1 {
     max-width: 18rem;
-    margin-left: -6rem;
+    margin-right: 0rem;
   }
   .main-index .encabezado .dialog-box-1 .img-inicio {
     position: absolute;
     width: 10rem;
-    margin-left: 11rem;
     margin-top: -6rem;
   }
   .main-index .encabezado .dialog-box-1 .img-inicio-2 {
     width: 20rem;
   }
   .main-index .encabezado .dialog-box-2 {
-    max-width: 25rem;
-    margin-right: -3rem;
+    max-width: 20rem;
     max-height: 20rem;
     margin-top: 15rem;
+    margin-right: -1rem;
   }
   .main-index .section-contenido-destacado {
     grid-template-areas: "dialog-box-5" "dialog-juego" "dialog-box-aprendizaje" "dialog-box-3" "grid-item" "grid-container" "button-mas-historias";
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
   }
-  .main-index .section-contenido-destacado .div-dato-curioso-1 {
-    background-image: url(../img/avatar-tales.jpg);
-    background-position-x: -3.8rem;
-    background-position-y: 8rem;
-    background-size: contain;
-    background-repeat: no-repeat;
+  .main-index .section-contenido-destacado .carousel {
+    max-width: 80%;
+    margin-top: 19rem;
+  }
+  .main-index .section-contenido-destacado .banner-1 {
+    max-width: 80%;
+  }
+  .main-index .section-contenido-destacado .banner-1 img {
+    max-width: 100%;
+  }
+  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje {
+    margin-top: 4rem;
+    margin-bottom: -13rem;
+    margin-left: 6rem;
+    max-width: 20rem;
+  }
+  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje .div-dato-curioso-1 {
+    height: 10rem;
+  }
+  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje p {
+    font-size: 0.6rem;
   }
   .main-index .section-contenido-destacado .dialog-box-3 {
-    max-width: 19rem;
-    margin-left: 3.8rem;
-    max-height: 5rem;
+    max-width: 18rem;
+    text-align: end;
     margin-top: 17rem;
     margin-bottom: -17rem;
+    margin-left: 7rem;
+  }
+  .main-index .section-contenido-destacado .dialog-box-3 h3 {
+    font-size: 0.8rem;
   }
   .main-index .section-contenido-destacado .dialog-box-5 {
     max-width: 20rem;
+    margin-left: 8rem;
   }
   .main-index .section-contenido-destacado .dialog-juego {
     max-width: 20rem;
     margin-top: 1rem;
-    margin-left: 5rem;
+    margin-left: 8rem;
   }
   .main-index .section-contenido-destacado .dialog-juego .div-juego-1 {
     max-width: 20rem;
@@ -722,56 +990,41 @@ form, label, input {
   .main-index .section-contenido-destacado .dialog-juego .div-juego-1 .respuesta {
     max-width: 12rem;
   }
-  .main-index .section-contenido-destacado .dialog-box-aprendizaje {
-    max-width: 17rem;
-    margin-top: 8rem;
-    margin-bottom: -13rem;
-    margin-left: 3.5rem;
-  }
-  .main-index .section-contenido-destacado .div-dato-curioso-1 .text-dato-curioso {
-    width: 11rem;
-    margin-left: 3rem;
+  .main-index .section-contenido-destacado .div-dato-curioso-1 {
+    min-width: 20rem;
     margin-top: 1rem;
     text-align: end;
   }
   .main-index .section-contenido-destacado .button-mas-historias {
-    margin-left: 6rem;
     margin-top: 1rem;
+    margin-left: 8.5rem;
   }
-  .main-index .section-contenido-destacado .grid-container {
-    grid-area: grid-container;
-    margin-left: -3.9rem;
-  }
-  .main-index .section-contenido-destacado .grid-container .grid-item-container {
+  .main-index .section-contenido-destacado .grid-item-container {
     max-width: 16rem;
-    max-height: 11.8rem;
-    margin-left: 5rem;
+    max-height: 11rem;
     margin-top: 14rem;
   }
-  .main-index .section-contenido-destacado .grid-container .grid-item {
-    display: block;
+  .main-index .section-contenido-destacado .grid-item-container .grid-item {
+    grid-template-columns: 60% 40%;
     max-width: 20rem;
+    max-height: 15rem;
+    margin-left: -26rem;
+    margin-top: -10rem;
   }
-  .main-index .section-contenido-destacado .grid-container .grid-item .img-cuento {
+  .main-index .section-contenido-destacado .grid-item-container .grid-item img {
     float: left;
-    max-width: 8rem;
-    height: 8rem;
-    margin-top: -8.2rem;
+    max-width: 90%;
+    height: 15.2rem;
+    margin-top: -0.2rem;
   }
-  .main-index .section-contenido-destacado .grid-container .grid-item .p-cuento {
+  .main-index .section-contenido-destacado .grid-item-container .grid-item p {
+    font-size: 0.8rem;
+    margin: 0.2rem;
     line-height: 1rem;
-    margin-left: 9rem;
   }
-  .main-index .section-contenido-destacado .grid-container .linea-divisora1, .main-index .section-contenido-destacado .grid-container .linea-divisora2,
-  .main-index .section-contenido-destacado .grid-container .linea-divisora3, .main-index .section-contenido-destacado .grid-container .linea-divisora4,
-  .main-index .section-contenido-destacado .grid-container .linea-divisora5, .main-index .section-contenido-destacado .grid-container .linea-divisora6 {
-    display: grid;
-    grid-template-areas: "h4 btn-modales";
-    position: sticky;
-    border-bottom: 1px solid #ccc;
-    max-width: 18rem;
-    margin-top: 2rem;
-    margin-left: 4rem;
+  .main-index .section-contenido-destacado .grid-item-container .grid-item h3 {
+    line-height: 1rem;
+    margin: 0.2rem;
   }
 }
 /*Media query géneros*/
@@ -834,6 +1087,132 @@ form, label, input {
     max-width: 20rem;
   }
 }
+@media (min-width: 320px) and (max-width: 768px) {
+  .main-nuestra-historia {
+    height: 130rem;
+    min-width: 20rem;
+    margin-right: -6rem;
+    display: grid;
+    grid-template-areas: "box-nuestra-historia" "video-nuestra-historia" "box-nuestra-historia-2" "box-nuestra-historia-3";
+    justify-items: center;
+  }
+  .main-nuestra-historia section {
+    width: 20rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia {
+    width: 20rem;
+    margin-left: 6rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .main-nuestra-historia section .video-nuestra-historia {
+    margin-left: 6rem;
+    width: 20rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia-2 {
+    width: 20rem;
+    margin-left: 6rem;
+    margin-top: 82rem;
+    height: 44rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia-2 .img-libros {
+    margin-left: 10rem;
+    margin-top: 30rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia-3 {
+    width: 20rem;
+    height: 25rem;
+    margin-left: 6rem;
+    margin-top: 55rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .main-educacion {
+    width: 20rem;
+    margin-top: -66rem;
+    height: 350rem;
+  }
+  .main-educacion .section-contenido-destacado-educación {
+    display: grid;
+    grid-template-areas: "box-educacion-2" "box-educacion-1" "box-educacion-3";
+    justify-content: center;
+    gap: 20px;
+  }
+  .main-educacion .section-contenido-destacado-educación div {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-2, .main-educacion .section-contenido-destacado-educación .box-educacion-3 {
+    margin-left: 1rem;
+    width: 50%;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-2 h2, .main-educacion .section-contenido-destacado-educación .box-educacion-2 p, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .text-caida, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .text-resaltado, .main-educacion .section-contenido-destacado-educación .box-educacion-3 h2, .main-educacion .section-contenido-destacado-educación .box-educacion-3 p, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .text-caida, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .text-resaltado {
+    text-align: center;
+    margin-left: 0;
+    width: auto;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-2 img, .main-educacion .section-contenido-destacado-educación .box-educacion-3 img {
+    display: block;
+    margin-left: 1rem;
+    max-width: 50%;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-1 {
+    max-width: 50%;
+    margin-top: 20px;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-2 {
+    max-width: 50%;
+    margin-top: 20px;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-3 {
+    max-width: 50%;
+    margin-top: 20px;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-4 {
+    max-width: 50%;
+    margin-top: 20px;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-porque-leer-1 {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-porque-leer-2 {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-porque-leer-3 {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-porque-leer-4 {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-porque-leer-5 {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-porque-leer-6 {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-educacion-3 {
+    grid-template-areas: "box-porque-leer-1" "box-porque-leer-2" "box-porque-leer-3" "box-porque-leer-4" "box-porque-leer-5" "box-porque-leer-6";
+  }
+  .main-educacion .section-contenido-destacado-educación .mini-avatar {
+    width: 50%;
+    margin-left: 1rem;
+    position: relative;
+  }
+  .main-educacion .section-contenido-destacado-educación .box-tex-porque-leer {
+    margin-left: 1rem;
+    position: relative;
+    width: 20rem;
+    text-align: center;
+  }
+}
 /* Media Querie mobile*/
 /* Media quierie Header y footer */
 @media (min-width: 320px) and (max-width: 768px) {
@@ -855,6 +1234,8 @@ form, label, input {
   }
   .navbar-custom .navbar-collapse {
     background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+    max-width: 103%;
+    margin: 0;
   }
   .container-fluid {
     flex-direction: column;
@@ -885,9 +1266,13 @@ form, label, input {
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
+  .navbar-nav .nav-link {
+    margin-left: -4rem;
+  }
   .nav-link {
     transition: color 0.3s ease-in-out;
     margin: 0.5rem;
+    margin-left: 1rem;
     background-color: #ffffff;
     border: 5px solid #ffe69c;
     border-radius: 10px;
@@ -905,7 +1290,6 @@ form, label, input {
   .logo-header {
     height: 10rem;
     margin-left: 1rem;
-    width: rem;
   }
   .navbar-scroll .logo-header {
     max-width: 9rem;
@@ -915,10 +1299,19 @@ form, label, input {
     min-width: 20rem;
     margin-right: -6rem;
   }
+  footer .footer-section .dialog-box-4 img {
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: auto;
+    width: 2.5rem;
+    z-index: 1;
+  }
 }
 /* Media querie fuentes*/
 @media (min-width: 320px) and (max-width: 768px) {
-  h2, h3, p {
+  h2, h1, h3, p {
     font-family: sans-serif;
     line-height: 2rem;
     margin: 0.5rem;
@@ -1031,6 +1424,16 @@ form, label, input {
   }
   20%, 40%, 60%, 80% {
     transform: translateY(-5px);
+  }
+}
+@keyframes caida {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

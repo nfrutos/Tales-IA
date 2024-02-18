@@ -1,0 +1,75 @@
+@media (min-width: 320px) and (max-width: 768px) {
+  .main-educacion {
+        width: 20rem;
+        margin-top: -66rem;
+        height: 350rem;
+    .section-contenido-destacado-educación {
+      display: grid;
+      grid-template-areas:
+        'box-educacion-2'
+        'box-educacion-1'
+        'box-educacion-3';
+      justify-content: center;
+      gap: 20px;
+
+      div {
+        width: 50%;
+        margin-left: 1rem;
+      }
+
+      .box-educacion-2, .box-educacion-3 {
+        margin-left: 1rem;
+        width: 50%;
+
+        h2, p, .text-caida, .text-resaltado {
+          text-align: center;
+          margin-left: 0;
+          width: auto;
+        }
+
+        img {
+          display: block;
+          margin-left: 1rem;
+          max-width: 50%;
+        }
+
+        @for $i from 1 through 4 {
+          .box-dialog-educacion-#{$i} {
+            max-width: 50%;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      @for $i from 1 through 6 {
+        .box-porque-leer-#{$i} {
+          width: 50%; 
+          margin-left: 1rem; 
+        }
+      }
+
+      .box-educacion-3 {
+        grid-template-areas: 
+          'box-porque-leer-1'
+          'box-porque-leer-2'
+          'box-porque-leer-3'
+          'box-porque-leer-4'
+          'box-porque-leer-5'
+          'box-porque-leer-6';
+      }
+
+      .mini-avatar {
+        width: 50%;
+        margin-left: 1rem;
+        position: relative; 
+      }
+
+      .box-tex-porque-leer {
+        margin-left: 1rem; 
+        position: relative; 
+        width: 20rem; 
+        text-align: center;
+      }
+    }
+  }
+}

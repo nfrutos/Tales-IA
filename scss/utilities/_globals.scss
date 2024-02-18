@@ -8,7 +8,7 @@ body {
 
 /* Main homogéneo para todos los HTML */
 main {
-    background-color: #fffafa;
+    background-color: #ffffff;
 }
 
 /* Fuentes para index/inicio */
@@ -17,10 +17,11 @@ main {
   font-family: sans-serif;
   line-height: 2rem;
   margin: 1rem;
-  color: #8b8b8b
+  color: #8b8b8b;
+  font-weight: 600;
 }
 
-h2{
+h2, h1{
     @extend %custom-font-index;
 }
 
@@ -59,6 +60,44 @@ p {
   @extend %custom-font-generos;
 }
 
+@mixin resaltado {
+  background-color: #ffe69c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+@mixin resaltado-2 {
+  text-decoration: underline;
+  font-size: 22px;
+}
+
+
+$border-color: #ffe69c;
+$highlight-border-color: #01565a;
+$highlight-shadow-color: rgba(255, 230, 156, 1);
+$dialog-max-width: 45rem;
+$dialog-height: 31rem;
+$dialog-margin-top: 10rem;
+$dialog-border-width: 0.3rem;
+$shadow-offset: -20px 20px 0px;
+
+// Mixins
+@mixin resaltado-2 {
+  // Define aquí las propiedades de resaltado
+}
+
+@mixin box-shadow-highlight {
+  box-shadow: $shadow-offset $highlight-shadow-color;
+}
+
+@mixin dialog-image-style($margin-top, $margin-left: 22rem) {
+  position: relative;
+  width: 25rem;
+  height: 28rem;
+  margin-top: $margin-top;
+  margin-left: $margin-left;
+  box-shadow: $highlight-shadow-color 0px 0px 20px 20px;
+}
 
 
 

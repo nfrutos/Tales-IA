@@ -1,0 +1,45 @@
+ @media (min-width: 320px) and (max-width: 768px){
+    .main-nuestra-historia{
+        height: 130rem;
+        min-width: 20rem;
+        margin-right: -6rem;
+        display: grid;
+        grid-template-areas: 
+        'box-nuestra-historia'
+        'video-nuestra-historia'
+        'box-nuestra-historia-2'
+        'box-nuestra-historia-3';
+        justify-items: center;
+        section{
+            width: 20rem;
+            .box-nuestra-historia{
+                width: 20rem;
+                margin-left: 6rem;
+                h2{
+                    font-size: 1.1rem;
+                    text-align: center;
+                }
+            }
+            .video-nuestra-historia{
+                margin-left: 6rem;
+                width: 20rem;
+            }
+            .box-nuestra-historia-2{
+                width: 20rem;
+                margin-left: 6rem;
+                margin-top: 82rem;
+                height: 44rem;
+                .img-libros{
+                margin-left: 10rem;
+                margin-top: 30rem;
+                }
+            }
+            .box-nuestra-historia-3{
+                width: 20rem;
+                height: 25rem;
+                margin-left: 6rem;
+                margin-top: 55rem;
+            }
+        }
+    }
+ }

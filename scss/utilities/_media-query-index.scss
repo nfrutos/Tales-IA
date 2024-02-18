@@ -1,21 +1,18 @@
   /* Media query index/inicio*/
  @media (min-width: 320px) and (max-width: 768px){
     .main-index{
-        height: 320rem;
-        min-width: 20rem;
-        margin-right: -10rem;
+        margin-right: -6rem;
+        max-height: 177rem;
     .encabezado{
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         max-width: 20rem ;
-        margin-left: 3.5rem;
         max-height: 25rem;
         .dialog-box-1{
             max-width: 18rem;
-            margin-left: -6rem;
+            margin-right: 0rem;
             .img-inicio {
             position: absolute;
             width: 10rem;
-            margin-left: 11rem;
             margin-top: -6rem;
             }
             .img-inicio-2{
@@ -23,10 +20,10 @@
             }
         }
         .dialog-box-2{
-            max-width: 25rem;
-            margin-right: -3rem;
+            max-width: 20rem;
             max-height: 20rem;
             margin-top: 15rem;
+            margin-right: -1rem;
         }
     }
         .section-contenido-destacado {
@@ -38,28 +35,48 @@
                 'grid-item'
                 'grid-container'
                 'button-mas-historias';
-            grid-template-columns: 2fr;
-            .div-dato-curioso-1{
-                background-image: url(../img/avatar-tales.jpg);
-                background-position-x: -3.8rem;
-                background-position-y: 8rem;
-                background-size: contain;
-                background-repeat: no-repeat;
+            grid-template-columns: 1fr;
+            .carousel{
+                max-width: 80%;
+                margin-top: 19rem;
             }
+            .banner-1{
+                max-width: 80%;
+                img{
+                    max-width: 100%;
+                }
+                .dialog-box-aprendizaje{
+                    margin-top: 4rem;
+                    margin-bottom: -13rem;
+                    margin-left: 6rem;
+                    max-width: 20rem;
+                    .div-dato-curioso-1{
+                        height: 10rem;
+                    }
+                    p{
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+
             .dialog-box-3{
-                max-width: 19rem;
-                margin-left: 3.8rem;
-                max-height: 5rem;
+                max-width: 18rem;
+                text-align: end;
                 margin-top: 17rem;
                 margin-bottom: -17rem;
+                margin-left: 7rem;
+                h3{
+                    font-size: 0.8rem;
+                }
             }
             .dialog-box-5{
                 max-width: 20rem;
+                margin-left: 8rem;
             }
             .dialog-juego{
                 max-width: 20rem;
                 margin-top: 1rem;
-                margin-left: 5rem;
+                margin-left: 8rem;
                 .div-juego-1{
                     max-width: 20rem;
                     .respuesta{
@@ -67,55 +84,41 @@
                     }
                 }
             }
-            .dialog-box-aprendizaje{
-                max-width: 17rem;
-                margin-top: 8rem;
-                margin-bottom: -13rem;
-                margin-left: 3.5rem;
-            }
-            .div-dato-curioso-1 .text-dato-curioso{
-                width: 11rem;
-                margin-left: 3rem;
+
+            .div-dato-curioso-1{
+                min-width: 20rem;
                 margin-top: 1rem;
                 text-align: end;
             }
             .button-mas-historias{
-                margin-left: 6rem;
                 margin-top: 1rem;
+                margin-left: 8.5rem;
             }
-            .grid-container{
-                grid-area:grid-container;
-                margin-left: -3.9rem; 
-                .grid-item-container{
-                    max-width: 16rem;
-                    max-height: 11.8rem;
-                    margin-left: 5rem;
-                    margin-top: 14rem;
-                }
+            .grid-item-container{
+                max-width: 16rem;
+                max-height: 11rem;
+                margin-top: 14rem;
                 .grid-item{
-                    display: block;
+                    grid-template-columns: 60% 40%;
                     max-width: 20rem;
-                    .img-cuento{
+                    max-height: 15rem ;
+                    margin-left: -26rem;
+                    margin-top: -10rem;
+                    img{
                         float: left;
-                        max-width: 8rem;
-                        height: 8rem;
-                        margin-top: -8.2rem;
+                        max-width: 90%;
+                        height: 15.2rem;
+                        margin-top: -0.2rem;
                     }
-                    .p-cuento{
+                    p{
+                        font-size: 0.8rem;
+                        margin: 0.2rem;
                         line-height: 1rem;
-                        margin-left: 9rem
                     }
-                }
-                .linea-divisora1, .linea-divisora2,
-                .linea-divisora3, .linea-divisora4,
-                .linea-divisora5, .linea-divisora6{
-                    display: grid;
-                    grid-template-areas: 'h4 btn-modales';
-                    position: sticky;
-                    border-bottom: 1px solid #ccc;
-                    max-width: 18rem;
-                    margin-top: 2rem;
-                    margin-left: 4rem;
+                    h3{
+                        line-height: 1rem;
+                        margin: 0.2rem;
+                    }
                 }
             }
         }

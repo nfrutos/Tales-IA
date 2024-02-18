@@ -13,6 +13,8 @@
 
 @import "utilities/media-query-index";
 @import "utilities/media-query-generos";
+@import "utilities/media-query-nuestra-historia";
+@import "utilities/media-query-educacion";
 
 /* Media Querie mobile*/
 /* Media quierie Header y footer */
@@ -38,6 +40,8 @@
     }
     .navbar-custom .navbar-collapse {
         background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
+        max-width: 103%;
+        margin: 0;
     }
     .container-fluid {
         flex-direction: column;
@@ -73,9 +77,13 @@
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
+    .navbar-nav .nav-link{
+        margin-left: -4rem;
+    }
     .nav-link {
         transition: color 0.3s ease-in-out;
         margin: 0.5rem;
+        margin-left: 1rem;
         background-color: #ffffff;
         border: 5px solid #ffe69c;
         border-radius: 10px;
@@ -94,7 +102,6 @@
     .logo-header {
         height: 10rem;
         margin-left: 1rem;
-        width: rem;
     }
     .navbar-scroll {        
         .logo-header{
@@ -105,6 +112,15 @@
     footer{
         min-width: 20rem;
         margin-right: -6rem;
+        .footer-section .dialog-box-4 img {
+            position: relative;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            height: auto;
+            width: 2.5rem;
+            z-index: 1;
+        }
     }
 }
 /* Media querie fuentes*/

@@ -1,46 +1,49 @@
 /* Footer homogéneo para todas los HTML */
-footer {
-  background-color: #ffe69c;
-
-  .footer-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "footer-item dialog-box-4";
+.footer-section {
+  background-color: #01565a;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "footer-item dialog-box-4";
+  h4 {
+    margin-left: 1rem;
+    font-size: 2rem;
+    margin-top: 4rem;
+    color: aliceblue;
   }
-
+  .dialog-box-4 {
+    display: flex;
+    grid-area: dialog-box-4;
+    padding: 0rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    img {
+      position: relative;
+      margin-top: 9rem;
+      margin-left: -25rem;
+      margin-right: 29rem;
+      height: auto;
+      width: 2.5rem;
+      z-index: 1;
+    }
+  }
   .footer-item {
     grid-area: footer-item;
     padding: 3rem;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    display: flow;
-
-    // Específico para .dialog-box-4
-    .dialog-box-4 & {
-      display: inline-block;
-      margin-right: 1.5rem;
+      a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: aliceblue;
+      margin-top: 0.5rem;
+      display: flow;
     }
   }
-
-  h2 {
-    font-size: 0.8rem;
-  }
-
-  img {
-    height: auto;
-    width: 1rem;
-  }
 }
 
-.dialog-box-4 {
-  grid-area: dialog-box-4;
-  padding: 3rem;
-}
+
+
+
+
+
+
+
+
