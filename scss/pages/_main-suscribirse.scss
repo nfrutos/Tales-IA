@@ -1,4 +1,4 @@
-/*Main - suscribirse*/
+/*Main: suscribirse*/
 .section-contenido-destacado-suscribirse {
   display: grid;
   grid-template-areas: 
@@ -13,6 +13,12 @@
     width: 50rem;
     height: 14rem;
     margin-top: 6rem;
+    button{
+      border: 4px solid #ffe69c;
+      border-radius: 10px;
+      width: 6rem;
+      background-color: white;
+    }
   }
   .box-dialog-suscribirse{
     grid-area: box-dialog-suscribirse; 
@@ -28,7 +34,7 @@
     border: 0.5rem solid #ffe69c;
     width: 40rem;
     margin-top: 1rem;
-    height: 35rem;
+    height: auto;
     .text-resaltado{
       @include resaltado;
     }

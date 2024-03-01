@@ -3,7 +3,7 @@
 /* Body homogéneo para todos los HTML */
 body {
     font-family: 'Roboto Slab','Times New Roman';
-    background-color:  #006f6d
+    background-color:  #ffffff
 }
 
 /* Main homogéneo para todos los HTML */
@@ -90,14 +90,22 @@ $shadow-offset: -20px 20px 0px;
   box-shadow: $shadow-offset $highlight-shadow-color;
 }
 
-@mixin dialog-image-style($margin-top, $margin-left: 22rem) {
-  position: relative;
-  width: 25rem;
+@mixin dialog-image-style-derecha($margin-top, $margin-left: -22rem) {
+  position: absolute;
+  width: 28rem;
   height: 28rem;
   margin-top: $margin-top;
   margin-left: $margin-left;
   box-shadow: $highlight-shadow-color 0px 0px 20px 20px;
 }
 
+@mixin dialog-image-style-izquierda($margin-top, $margin-left: 20rem) {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  margin-top: $margin-top;
+  margin-left: $margin-left;
+  box-shadow: $highlight-shadow-color 0px 0px 20px 20px;
+}
 
 

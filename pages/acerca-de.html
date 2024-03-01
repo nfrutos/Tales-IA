@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,300;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;0,6..12,800;1,6..12,500;1,6..12,900&family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./../css/style.css">
     <title>Acerca de | Tales IA</title>
 </head>  
 <body>
@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <!-- Sección: logo y botón de hamburguesa -->
                 <a class="navbar-brand font-size-titulo animated-title visible-title" href="./index.html">
-                    <img src="./../img/logo3.png" class="logo-header" alt="Logo de Tales IA">
+                    <img src="./../img/imgMainTres.png" class="logo-header" alt="Logo de Tales IA">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,30 +49,47 @@
         </nav>
     </header>
     <!-- Sección: contenido principal-->
-    <main>
-        <section class="section-contenido-destacado">
-            <h1>Contacto</h1>
+    <main class="main-acerca-de">
+        <section class="contenido-destacado-acerca-de">
+            <h1>Si tienes preguntas o sugerencias sobre nuestras Políticas de Privacidad, no dudes en contactarnos a través de:</h1>
                 <form action="..." method="POST"> <!--para ser procesado por el servidor-->
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
                     
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
-                    
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                    
-                    <input type="submit" value="Enviar">
+                    <label for="comment">Comentario:</label><br>
+                    <textarea id="comment" name="comment" rows="4" required></textarea><br>
+                    <button class="btn-modal">Enviar</button>
                 </form>
         </section>
 
         <!--Sección: Politicas de privacidad-->
-        <section>
-            <h1>Politicas de privacidad</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor pariatur mollitia harum reiciendis neque nisi sint qui accusamus ipsum, aliquam temporibus quisquam illo dolorem culpa velit, fugiat praesentium laudantium necessitatibus?</p>
+        <section class="box-politicas-privacidad">
+            <h1>Políticas de Privacidad de Tales IA</h1>
+            <p> La seguridad y la privacidad de nuestros usuarios son primordiales, especialmente debido a la sensibilidad de la edad de nuestro público objetivo. Por lo tanto, nos comprometemos a proteger la privacidad de nuestros usuarios y a proporcionar un entorno seguro para todos.</p>
+            <h3>1. Información que Recopilamos</h3>
+            <p>En Tales IA, recopilamos información mínima y esencial para mejorar la experiencia de nuestros usuarios. Esto incluye:
+            Datos proporcionados por el usuario: Podemos recopilar información personal que los usuarios voluntariamente proporcionan, como nombres (opcional) y edades (para asegurar contenido apropiado para su grupo de edad). No requerimos direcciones de correo electrónico para usuarios menores de 13 años.
+            Datos de uso: Recopilamos información no personal que indica cómo se utilizó nuestro sitio, como páginas visitadas y tiempo de permanencia en el sitio, para mejorar nuestros cuentos y la interfaz de usuario.</p>
+            <h3>2. Uso de la Información</h3>
+            <p>La información recopilada se utiliza para:
+            Proporcionar, operar y mantener Tales IA.
+            Mejorar, personalizar y expandir Tales IA.
+            Comprender y analizar cómo utilizas Tales IA.
+            Desarrollar nuevos productos, servicios, características y funcionalidades.</p>
+            <h3>3. Compartir tu Información</h3>
+            <p>Tales IA no comparte información personal de los usuarios con terceros, excepto en casos donde sea necesario para la prestación de nuestros servicios o cuando la ley lo requiera.</p>
+            <h3>4. Seguridad de la Información</h3>
+            <p>Nos esforzamos por proteger la seguridad de tu información. Sin embargo, ningún método de transmisión por Internet o de almacenamiento electrónico es 100% seguro. Por lo tanto, aunque nos esforzamos por usar medios comercialmente aceptables para proteger tu información personal, no podemos garantizar su seguridad absoluta.</p>
+            <h3>5. Acceso de los Padres</h3>
+            <p>Animamos a los padres o tutores a participar en las actividades en línea de sus hijos y a utilizar Tales IA como una herramienta para compartir intereses. Los padres tienen el derecho de revisar la información personal proporcionada por sus hijos y solicitar su eliminación.</p>
+            <h3>6. Cambios a esta Política de Privacidad</h3>
+            <p>Tales IA se reserva el derecho de modificar estas políticas de privacidad en cualquier momento. Se recomienda a los usuarios revisar periódicamente esta página para cualquier cambio. Los cambios entran en vigor inmediatamente después de su publicación en esta página.</p>
         </section>
-
-        <!--Sección: Ayuda-->
 
     </main>
 
@@ -94,7 +111,11 @@
     </footer>
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./../js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
     
 </body>
 </html>

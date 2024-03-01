@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
             i++;
-            setTimeout(() => typeWriter(element, text, i), 35); // Ajusta la velocidad de escritura aquí
+            setTimeout(() => typeWriter(element, text, i), 35); // velocidad de escritura
         }
     }
     startTyping('typed-text-1');
@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Respuestas correctas para cada juego
     const respuestasCorrectas = {
         "div-juego-1": "Miguel de Cervantes",
-        // ... Añadir las respuestas para los demás juegos
     };
 
     // El elemento de feedback global
@@ -81,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+// Submenu - Géneros
 document.querySelectorAll('.box-card').forEach(function(card) {
     card.addEventListener('click', function() {
         const genero = this.querySelector('.text-generos').textContent;
@@ -165,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!this.classList.contains('stopped-animation')) {
       this.classList.add('stopped-animation');
     } else {
-      this.classList.remove('stopped-animation'); // Opcional: Remover si deseas que la animación continúe después de cerrar
+      this.classList.remove('stopped-animation');
     }
   });
 });

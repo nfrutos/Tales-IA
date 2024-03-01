@@ -10,7 +10,7 @@
 /* Body homogéneo para todos los HTML */
 body {
   font-family: "Roboto Slab", "Times New Roman";
-  background-color: #006f6d;
+  background-color: #ffffff;
 }
 
 /* Main homogéneo para todos los HTML */
@@ -135,45 +135,136 @@ header {
 
 /* Footer homogéneo para todas los HTML */
 .footer-section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
   background-color: #01565a;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "footer-item dialog-box-4";
 }
 .footer-section h4 {
-  margin-left: 1rem;
-  font-size: 2rem;
-  margin-top: 4rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
   color: aliceblue;
 }
 .footer-section .dialog-box-4 {
-  display: flex;
-  grid-area: dialog-box-4;
-  padding: 0rem;
-  margin-bottom: 4rem;
-  flex-wrap: wrap;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 .footer-section .dialog-box-4 img {
   position: relative;
-  margin-top: 9rem;
-  margin-left: -25rem;
-  margin-right: 29rem;
   height: auto;
   width: 2.5rem;
+  margin: 0.5rem;
   z-index: 1;
 }
 .footer-section .footer-item {
-  grid-area: footer-item;
-  padding: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 .footer-section .footer-item a {
   text-decoration: none;
   font-size: 1.5rem;
   color: aliceblue;
-  margin-top: 0.5rem;
   display: flow;
+  margin: 0.5rem;
 }
 
+/* Animaciones */
+/* animación: "rebotar" */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+/* animación: se desliza desde la derecha hasta su ubicación final */
+@keyframes slideInFromRight {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+/* animación: se desliza desde la izquierda hasta su ubicación final */
+@keyframes slideInFromLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+/* animación: se "agitá" al activarse */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+@keyframes shakeRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+@keyframes shakeLeft {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes shakeUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(5px);
+  }
+}
+@keyframes shakeDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes caida {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* main: inicio/index */
 .main-index {
   height: 195rem;
@@ -381,7 +472,7 @@ header {
   background-color: white;
 }
 
-/* Sección géneros*/
+/* Main: géneros*/
 .main-generos {
   margin-top: 8rem;
   height: 140rem;
@@ -567,8 +658,8 @@ header {
   grid-area: box-nuestra-historia-2;
   border: 0.5rem solid #ffe69c;
   background-color: #ffffff;
-  width: 40rem;
-  height: 27rem;
+  width: 100%;
+  height: 21rem;
   margin-top: 66rem;
   margin-left: 5rem;
   margin-bottom: 5rem;
@@ -578,8 +669,8 @@ header {
   position: absolute;
   width: 10rem;
   height: auto;
-  margin-top: 12.5rem;
-  margin-left: 30rem;
+  margin-top: 6rem;
+  margin-left: 75rem;
   z-index: -1;
 }
 .main-nuestra-historia section .box-nuestra-historia-3 {
@@ -588,288 +679,261 @@ header {
   width: 38rem;
   height: 15rem;
   margin-top: 37.5rem;
-  margin-left: 52rem;
+  margin-left: 50rem;
 }
 
 /* Main: educación */
 .main-educacion {
-  height: 280rem;
-}
-.main-educacion .section-contenido-destacado-educación {
-  display: grid;
-  grid-template-areas: "box-educacion-2" "box-educacion-1" "box-educacion-3";
+  display: flex;
   justify-content: center;
+  height: auto;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 {
-  grid-area: box-educacion-2;
-  margin-top: 25rem;
-  margin-left: 10rem;
+.main-educacion .section-contenido-destacado-educacion {
+  display: grid;
+  grid-template-areas: "encabezado-educacion" "box-educacion-2" "box-educacion-1" "box-educacion-3";
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 div {
-  border: 0.2rem solid #ffe69c;
-  width: 40rem;
+.main-educacion .section-contenido-destacado-educacion .encabezado-educacion {
+  justify-items: center;
+  grid-area: encabezado-educacion;
+  margin-top: 4rem;
+  border: 0.5rem solid #ffe69c;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 div h2 {
+.main-educacion .section-contenido-destacado-educacion .encabezado-educacion h2 {
+  text-align: center;
   font-size: 2rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .text-caida {
+.main-educacion .section-contenido-destacado-educacion .encabezado-educacion .text-caida {
   display: inline-block;
   opacity: 0;
   animation: caida 0.5s forwards;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 {
+  margin-top: 10rem;
+  margin-left: 5rem;
+  grid-area: box-educacion-2;
+}
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 {
   margin-top: 10rem;
   max-width: 45rem;
   height: 31rem;
   border: 0.3rem solid #01565a;
   box-shadow: -20px 20px 0px rgb(255, 230, 156);
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 p {
   text-align: start;
   width: 18rem;
   margin: 1.1rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1 img {
-  position: relative;
-  width: 25rem;
-  height: 28rem;
-  margin-top: -40rem;
-  margin-left: 22rem;
-  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
-}
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 {
   margin-top: 10rem;
   max-width: 45rem;
   height: 31rem;
   border: 0.3rem solid #01565a;
   box-shadow: -20px 20px 0px rgb(255, 230, 156);
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 p {
   text-align: start;
   width: 18rem;
   margin: 1.1rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 img {
-  position: relative;
-  width: 25rem;
-  height: 28rem;
-  margin-top: -40rem;
-  margin-left: 22rem;
-  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
-}
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 {
   margin-top: 10rem;
   max-width: 45rem;
   height: 31rem;
   border: 0.3rem solid #01565a;
   box-shadow: -20px 20px 0px rgb(255, 230, 156);
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 p {
   text-align: start;
   width: 18rem;
   margin: 1.1rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 img {
-  position: relative;
-  width: 25rem;
-  height: 28rem;
-  margin-top: -40rem;
-  margin-left: 22rem;
-  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
-}
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 {
   margin-top: 10rem;
   max-width: 45rem;
   height: 31rem;
   border: 0.3rem solid #01565a;
   box-shadow: -20px 20px 0px rgb(255, 230, 156);
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 p {
   text-align: start;
   width: 18rem;
   margin: 1.1rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 img {
-  position: relative;
-  width: 25rem;
-  height: 28rem;
-  margin-top: -40rem;
-  margin-left: 22rem;
-  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 p {
+  text-align: left;
+  margin: 0.5rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 p, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 p {
-  text-align: end;
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 img {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  margin-top: -5rem;
   margin-left: 20rem;
-}
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2 img, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 img {
-  position: relative;
-  width: 25rem;
-  height: 28rem;
-  margin-top: -18rem;
-  margin-left: -7rem;
   box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3 img {
-  position: relative;
-  width: 25rem;
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 img {
+  position: absolute;
+  width: 28rem;
   height: 28rem;
-  margin-top: -21rem;
-  margin-left: 22rem;
+  margin-top: -5rem;
+  margin-left: 20rem;
   box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4 img {
-  position: relative;
-  width: 25rem;
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 img {
+  position: absolute;
+  width: 28rem;
   height: 28rem;
-  margin-top: -19rem;
-  margin-left: -7rem;
+  margin-top: -5rem;
+  margin-left: 20rem;
   box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 img {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  margin-top: -5rem;
+  margin-left: 20rem;
+  box-shadow: rgb(255, 230, 156) 0px 0px 20px 20px;
+}
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 {
   display: grid;
   grid-area: box-educacion-3;
   background-color: #ffffff;
   border: 0.5rem solid #01565a;
-  width: 52rem;
-  height: 58rem;
+  width: 51rem;
+  height: 65rem;
   margin-top: 15rem;
-  margin-left: 5rem;
-  grid-template-areas: "box-porque-leer-1 box-porque-leer-2" "box-porque-leer-3 box-porque-leer-4" "box-porque-leer-5 box-porque-leer-6";
+  margin-bottom: 5rem;
+  grid-template-areas: "box-tex-porque-leer box-tex-porque-leer" "box-porque-leer-1 box-porque-leer-2" "box-porque-leer-3 box-porque-leer-4" "box-porque-leer-5 box-porque-leer-6";
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 {
   display: grid;
   max-width: 23rem;
-  max-height: 14rem;
+  max-height: 11rem;
   margin: 1rem;
-  margin-top: 6.5rem;
+  margin-top: 9rem;
   border: 0.3rem solid #ffe69c;
   grid-area: box-porque-leer-1;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 p {
   margin: 0.5rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1 .text-resaltado {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 .text-resaltado {
   background-color: #ffe69c;
   text-decoration: underline;
   font-size: 18px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-1:hover {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1:hover {
   animation: shake 1s;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 {
   display: grid;
   max-width: 23rem;
-  max-height: 14rem;
+  max-height: 11rem;
   margin: 1rem;
-  margin-top: 6.5rem;
+  margin-top: 9rem;
   border: 0.3rem solid #ffe69c;
   grid-area: box-porque-leer-2;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 p {
   margin: 0.5rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2 .text-resaltado {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 .text-resaltado {
   background-color: #ffe69c;
   text-decoration: underline;
   font-size: 18px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-2:hover {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2:hover {
   animation: shake 1s;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 {
   display: grid;
   max-width: 23rem;
-  max-height: 14rem;
+  max-height: 11rem;
   margin: 1rem;
-  margin-top: 6.5rem;
+  margin-top: 9rem;
   border: 0.3rem solid #ffe69c;
   grid-area: box-porque-leer-3;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 p {
   margin: 0.5rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3 .text-resaltado {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 .text-resaltado {
   background-color: #ffe69c;
   text-decoration: underline;
   font-size: 18px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-3:hover {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3:hover {
   animation: shake 1s;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 {
   display: grid;
   max-width: 23rem;
-  max-height: 14rem;
+  max-height: 11rem;
   margin: 1rem;
-  margin-top: 6.5rem;
+  margin-top: 9rem;
   border: 0.3rem solid #ffe69c;
   grid-area: box-porque-leer-4;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 p {
   margin: 0.5rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4 .text-resaltado {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 .text-resaltado {
   background-color: #ffe69c;
   text-decoration: underline;
   font-size: 18px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-4:hover {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4:hover {
   animation: shake 1s;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 {
   display: grid;
   max-width: 23rem;
-  max-height: 14rem;
+  max-height: 11rem;
   margin: 1rem;
-  margin-top: 6.5rem;
+  margin-top: 9rem;
   border: 0.3rem solid #ffe69c;
   grid-area: box-porque-leer-5;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 p {
   margin: 0.5rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5 .text-resaltado {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 .text-resaltado {
   background-color: #ffe69c;
   text-decoration: underline;
   font-size: 18px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-5:hover {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5:hover {
   animation: shake 1s;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6 {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 {
   display: grid;
   max-width: 23rem;
-  max-height: 14rem;
+  max-height: 11rem;
   margin: 1rem;
-  margin-top: 6.5rem;
+  margin-top: 9rem;
   border: 0.3rem solid #ffe69c;
   grid-area: box-porque-leer-6;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6 p {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 p {
   margin: 0.5rem;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6 .text-resaltado {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 .text-resaltado {
   background-color: #ffe69c;
   text-decoration: underline;
   font-size: 18px;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-porque-leer-6:hover {
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6:hover {
   animation: shake 1s;
 }
-.main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-tex-porque-leer {
-  margin-top: 0rem;
-  margin-left: 2rem;
-  max-width: 46rem;
+.main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer {
+  margin-bottom: 5rem;
   position: absolute;
   text-align: center;
 }
-.main-educacion .section-contenido-destacado-educación .mini-avatar {
-  position: absolute;
-  width: 20rem;
-  margin-left: 43rem;
-}
 
-/*Main - suscribirse*/
+/*Main: suscribirse*/
 .section-contenido-destacado-suscribirse {
   display: grid;
   grid-template-areas: "box-dialog-suscribirse" "box-dialog-suscribirse-2" "box-form";
@@ -882,6 +946,12 @@ header {
   width: 50rem;
   height: 14rem;
   margin-top: 6rem;
+}
+.section-contenido-destacado-suscribirse .box-form button {
+  border: 4px solid #ffe69c;
+  border-radius: 10px;
+  width: 6rem;
+  background-color: white;
 }
 .section-contenido-destacado-suscribirse .box-dialog-suscribirse {
   grid-area: box-dialog-suscribirse;
@@ -897,7 +967,7 @@ header {
   border: 0.5rem solid #ffe69c;
   width: 40rem;
   margin-top: 1rem;
-  height: 35rem;
+  height: auto;
 }
 .section-contenido-destacado-suscribirse .box-dialog-suscribirse-2 .text-resaltado {
   background-color: #ffe69c;
@@ -910,10 +980,61 @@ form, label, input {
   text-align: center;
 }
 
-/* Media query index/inicio*/
+/*Main: acerca de*/
+.main-acerca-de {
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: center;
+}
+.main-acerca-de .contenido-destacado-acerca-de {
+  max-width: 20rem;
+  margin-bottom: 5rem;
+}
+.main-acerca-de .contenido-destacado-acerca-de h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+.main-acerca-de .contenido-destacado-acerca-de form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border: 0.5rem solid #01565a;
+  width: 20rem;
+  height: auto;
+  margin-top: 6rem;
+}
+.main-acerca-de .contenido-destacado-acerca-de form label, .main-acerca-de .contenido-destacado-acerca-de form input, .main-acerca-de .contenido-destacado-acerca-de form textarea {
+  width: 15rem;
+  margin-left: 2rem;
+}
+.main-acerca-de .contenido-destacado-acerca-de form button {
+  border: 4px solid #ffe69c;
+  border-radius: 10px;
+  width: 6rem;
+  margin-left: 3rem;
+  margin: 2rem;
+  background-color: white;
+}
+.main-acerca-de .box-politicas-privacidad {
+  border: 0.5rem solid #ffe69c;
+  max-width: 80%;
+  height: 60rem;
+  margin-bottom: 5rem;
+  margin-top: 24rem;
+}
+.main-acerca-de .box-politicas-privacidad h3 {
+  line-height: 3rem;
+}
+.main-acerca-de .box-politicas-privacidad h1 {
+  line-height: 4rem;
+}
+
+/* Media query index/inicio - Mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
   .main-index {
-    margin-right: -6rem;
+    max-width: 20rem;
     max-height: 177rem;
   }
   .main-index .encabezado {
@@ -929,26 +1050,29 @@ form, label, input {
     position: absolute;
     width: 10rem;
     margin-top: -6rem;
+    margin-left: -1rem;
   }
   .main-index .encabezado .dialog-box-1 .img-inicio-2 {
     width: 20rem;
+    margin-left: -7rem;
   }
   .main-index .encabezado .dialog-box-2 {
     max-width: 20rem;
     max-height: 20rem;
     margin-top: 15rem;
-    margin-right: -1rem;
+    margin-right: 0rem;
   }
   .main-index .section-contenido-destacado {
     grid-template-areas: "dialog-box-5" "dialog-juego" "dialog-box-aprendizaje" "dialog-box-3" "grid-item" "grid-container" "button-mas-historias";
     grid-template-columns: 1fr;
+    max-width: 20rem;
   }
   .main-index .section-contenido-destacado .carousel {
-    max-width: 80%;
+    max-width: 53%;
     margin-top: 19rem;
   }
   .main-index .section-contenido-destacado .banner-1 {
-    max-width: 80%;
+    max-width: 53%;
   }
   .main-index .section-contenido-destacado .banner-1 img {
     max-width: 100%;
@@ -956,7 +1080,7 @@ form, label, input {
   .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje {
     margin-top: 4rem;
     margin-bottom: -13rem;
-    margin-left: 6rem;
+    margin-left: 0rem;
     max-width: 20rem;
   }
   .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje .div-dato-curioso-1 {
@@ -966,23 +1090,23 @@ form, label, input {
     font-size: 0.6rem;
   }
   .main-index .section-contenido-destacado .dialog-box-3 {
-    max-width: 18rem;
+    max-width: 19rem;
     text-align: end;
     margin-top: 17rem;
     margin-bottom: -17rem;
-    margin-left: 7rem;
+    margin-left: 1rem;
   }
   .main-index .section-contenido-destacado .dialog-box-3 h3 {
     font-size: 0.8rem;
   }
   .main-index .section-contenido-destacado .dialog-box-5 {
     max-width: 20rem;
-    margin-left: 8rem;
+    margin-left: 0rem;
   }
   .main-index .section-contenido-destacado .dialog-juego {
     max-width: 20rem;
     margin-top: 1rem;
-    margin-left: 8rem;
+    margin-left: 0rem;
   }
   .main-index .section-contenido-destacado .dialog-juego .div-juego-1 {
     max-width: 20rem;
@@ -997,7 +1121,7 @@ form, label, input {
   }
   .main-index .section-contenido-destacado .button-mas-historias {
     margin-top: 1rem;
-    margin-left: 8.5rem;
+    margin-left: 3rem;
   }
   .main-index .section-contenido-destacado .grid-item-container {
     max-width: 16rem;
@@ -1006,39 +1130,161 @@ form, label, input {
   }
   .main-index .section-contenido-destacado .grid-item-container .grid-item {
     grid-template-columns: 60% 40%;
+    max-width: 12rem;
+    max-height: 12rem;
+    margin-left: -28rem;
+    margin-top: -10rem;
+  }
+  .main-index .section-contenido-destacado .grid-item-container .grid-item img {
+    float: left;
+    max-width: 90%;
+    height: 12rem;
+    margin-top: 0rem;
+  }
+  .main-index .section-contenido-destacado .grid-item-container .grid-item p {
+    font-size: 0.5rem;
+    margin: 0.2rem;
+    line-height: 0.7rem;
+  }
+  .main-index .section-contenido-destacado .grid-item-container .grid-item h3 {
+    line-height: 0.7rem;
+    margin: 0.2rem;
+    font-size: 0.5rem;
+    margin-bottom: -5rem;
+  }
+}
+/* Media query index/inicio - Tablet*/
+@media (min-width: 769px) and (max-width: 1280px) {
+  .main-index {
+    min-width: 48.0625rem;
+    height: auto;
+  }
+  .main-index .encabezado {
+    grid-template-columns: 1fr;
     max-width: 20rem;
-    max-height: 15rem;
-    margin-left: -26rem;
+    max-height: 25rem;
+  }
+  .main-index .encabezado .dialog-box-1 {
+    max-width: 18rem;
+    margin-left: -6rem;
+  }
+  .main-index .encabezado .dialog-box-1 .img-inicio {
+    position: absolute;
+    width: 10rem;
+    margin-top: -6rem;
+  }
+  .main-index .encabezado .dialog-box-1 .img-inicio-2 {
+    width: 20rem;
+  }
+  .main-index .encabezado .dialog-box-2 {
+    max-width: 28rem;
+    max-height: 20rem;
+    margin-top: -3rem;
+    margin-right: 1rem;
+  }
+  .main-index .section-contenido-destacado {
+    grid-template-areas: "dialog-box-5" "dialog-juego" "dialog-box-aprendizaje" "dialog-box-3" "grid-item" "grid-container" "button-mas-historias";
+    grid-template-columns: 1fr;
+  }
+  .main-index .section-contenido-destacado .carousel {
+    max-width: 100%;
+    margin-top: 19rem;
+  }
+  .main-index .section-contenido-destacado .banner-1 {
+    max-width: 100%;
+  }
+  .main-index .section-contenido-destacado .banner-1 img {
+    max-width: 100%;
+  }
+  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje {
+    margin-top: 4rem;
+    margin-bottom: -13rem;
+    margin-left: 15rem;
+    max-width: 20rem;
+  }
+  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje .div-dato-curioso-1 {
+    height: 10rem;
+  }
+  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje p {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+  .main-index .section-contenido-destacado .dialog-box-3 {
+    max-width: 19rem;
+    text-align: end;
+    margin-top: 17rem;
+    margin-bottom: -17rem;
+    margin-left: 16rem;
+  }
+  .main-index .section-contenido-destacado .dialog-box-3 h3 {
+    font-size: 0.8rem;
+  }
+  .main-index .section-contenido-destacado .dialog-box-5 {
+    max-width: 40rem;
+    margin-left: 4rem;
+    margin-top: 13rem;
+  }
+  .main-index .section-contenido-destacado .dialog-juego {
+    max-width: 20rem;
+    margin-top: 1rem;
+    margin-left: 13rem;
+  }
+  .main-index .section-contenido-destacado .dialog-juego .div-juego-1 {
+    max-width: 20rem;
+  }
+  .main-index .section-contenido-destacado .dialog-juego .div-juego-1 .respuesta {
+    max-width: 12rem;
+  }
+  .main-index .section-contenido-destacado .div-dato-curioso-1 {
+    min-width: 20rem;
+    margin-top: 1rem;
+    text-align: end;
+  }
+  .main-index .section-contenido-destacado .button-mas-historias {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 17.5rem;
+  }
+  .main-index .section-contenido-destacado .grid-item-container {
+    max-width: 16rem;
+    max-height: 11rem;
+    margin-top: 14rem;
+  }
+  .main-index .section-contenido-destacado .grid-item-container .grid-item {
+    grid-template-columns: 60% 40%;
+    max-width: 30rem;
+    max-height: 15.2rem;
+    margin-left: -15rem;
     margin-top: -10rem;
   }
   .main-index .section-contenido-destacado .grid-item-container .grid-item img {
     float: left;
     max-width: 90%;
     height: 15.2rem;
-    margin-top: -0.2rem;
+    margin-top: 0rem;
   }
   .main-index .section-contenido-destacado .grid-item-container .grid-item p {
     font-size: 0.8rem;
-    margin: 0.2rem;
-    line-height: 1rem;
+    margin: 1rem;
+    line-height: 1.5rem;
   }
   .main-index .section-contenido-destacado .grid-item-container .grid-item h3 {
     line-height: 1rem;
-    margin: 0.2rem;
+    margin: 1rem;
   }
 }
-/*Media query géneros*/
+/*Media query géneros - Mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
   .main-generos {
-    min-width: 20rem;
-    margin-right: -6rem;
+    max-width: 20rem;
+    margin-left: -1rem;
     margin-top: -66rem;
-    height: 150rem;
+    height: 235rem;
   }
   .main-generos .section-contenido-destacado-generos {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "box-historia-generos-2 box-historia-generos-2" "box-historia-generos-2 box-historia-generos-2" "box-historia-generos box-historia-generos" "box-historia-generos box-historia-generos" "box-encabezado-generos box-encabezado-generos" "box-generos-1 box-generos-2" "box-generos-3 box-generos-4" "box-generos-5 box-generos-6";
+    grid-template-areas: "box-historia-generos-2" "box-historia-generos-2" "box-historia-generos" "box-historia-generos" "box-encabezado-generos" "box-generos-1" "box-generos-2" "box-generos-3" "box-generos-4" "box-generos-5" "box-generos-6";
     gap: 1rem;
     min-width: 20rem;
     margin: 0 auto;
@@ -1048,12 +1294,26 @@ form, label, input {
   }
   .main-generos .section-contenido-destacado-generos .box-encabezado-generos {
     margin-left: 1rem;
+    max-width: 18rem;
+    margin-top: 60rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-encabezado-generos h2 {
+    font-size: 1rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-card {
+    margin-bottom: -36rem;
+    margin-left: 2rem;
+    margin-top: 41rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-card .img-generos {
+    margin-top: 1.9rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos {
     width: 90%;
     margin-left: 1rem;
     margin-top: 5rem;
-    height: 13rem;
+    margin-bottom: 8rem;
+    height: 16rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos h2 {
     font-size: 1rem;
@@ -1062,9 +1322,60 @@ form, label, input {
     font-size: 0.8rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos-2 {
-    width: 100%;
-    margin-left: 2.5rem;
-    margin-top: 21rem;
+    max-width: 18rem;
+    margin-left: 1rem;
+    margin-top: 25rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-historia-generos-2 .avatar-tales-2 {
+    width: 8rem;
+    margin-left: 2rem;
+    margin-top: -5rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-historia-generos-2 p {
+    font-size: 0.8rem;
+  }
+  .main-generos #menu-generos {
+    margin-left: 3rem;
+    max-width: 20rem;
+  }
+}
+/*Media query géneros - Tablet*/
+@media (min-width: 769px) and (max-width: 1280px) {
+  .main-generos {
+    min-width: 48.0625rem;
+    margin-right: 0rem;
+    height: 130rem;
+  }
+  .main-generos .section-contenido-destacado-generos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "box-historia-generos box-historia-generos-2" "box-encabezado-generos box-encabezado-generos" "box-generos-1 box-generos-2" "box-generos-3 box-generos-4" "box-generos-5 box-generos-6";
+    gap: 6rem;
+    min-width: 20rem;
+    margin: 0 auto;
+    margin-left: 0rem;
+    height: auto;
+  }
+  .main-generos .section-contenido-destacado-generos .box-encabezado-generos {
+    margin-left: 10rem;
+    margin-top: 42rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-historia-generos {
+    max-width: 50%;
+    margin-left: 1rem;
+    margin-top: 15rem;
+    height: 25rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-historia-generos h2 {
+    font-size: 1rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-historia-generos p {
+    font-size: 0.8rem;
+  }
+  .main-generos .section-contenido-destacado-generos .box-historia-generos-2 {
+    max-width: 50%;
+    margin-left: 19rem;
+    margin-top: 15rem;
   }
   .main-generos .section-contenido-destacado-generos .box-historia-generos-2 p {
     font-size: 0.8rem;
@@ -1076,155 +1387,484 @@ form, label, input {
   }
   .main-generos .section-contenido-destacado-generos .box-card {
     margin-bottom: -36rem;
-    margin-left: 0.1rem;
-    margin-top: 41rem;
+    margin-left: 1.5rem;
+    margin-bottom: 5rem;
+    margin-top: -4rem;
   }
   .main-generos .section-contenido-destacado-generos .box-card .img-generos {
-    margin-top: 2.9rem;
+    margin-top: 1.9rem;
   }
   .main-generos #menu-generos {
     margin-left: 3rem;
     max-width: 20rem;
   }
 }
+/* Media query Nuestra Historia - Mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
   .main-nuestra-historia {
-    height: 130rem;
+    height: auto;
     min-width: 20rem;
-    margin-right: -6rem;
+    max-width: 40rem;
     display: grid;
     grid-template-areas: "box-nuestra-historia" "video-nuestra-historia" "box-nuestra-historia-2" "box-nuestra-historia-3";
     justify-items: center;
   }
   .main-nuestra-historia section {
-    width: 20rem;
+    max-width: 18rem;
   }
   .main-nuestra-historia section .box-nuestra-historia {
-    width: 20rem;
-    margin-left: 6rem;
+    max-width: 18rem;
+    margin-left: 2rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia h2 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .main-nuestra-historia section .video-nuestra-historia {
+    margin-left: 2rem;
+    max-width: 18rem;
+    margin-top: 32rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia-2 {
+    max-width: 18rem;
+    margin-left: 2rem;
+    margin-top: 82rem;
+    height: 52rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia-2 .img-libros {
+    margin-left: 8rem;
+    margin-top: 38rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia-3 {
+    max-width: 18rem;
+    height: 25rem;
+    margin-left: 2rem;
+    margin-top: 50rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia-3 p {
+    font-size: 0.8rem;
+  }
+}
+/* Media query - Tablet*/
+@media (min-width: 769px) and (max-width: 1280px) {
+  .main-nuestra-historia {
+    height: 130rem;
+    min-width: 48.0625rem;
+    display: grid;
+    grid-template-areas: "box-nuestra-historia" "video-nuestra-historia" "box-nuestra-historia-2" "box-nuestra-historia-3";
+    justify-items: center;
+  }
+  .main-nuestra-historia section {
+    width: 40.0625rem;
+  }
+  .main-nuestra-historia section .box-nuestra-historia {
+    margin-top: 28rem;
+    width: 40.0625rem;
+    margin-left: 4rem;
   }
   .main-nuestra-historia section .box-nuestra-historia h2 {
     font-size: 1.1rem;
     text-align: center;
   }
   .main-nuestra-historia section .video-nuestra-historia {
-    margin-left: 6rem;
-    width: 20rem;
+    margin-left: 2rem;
+    width: 100%;
   }
   .main-nuestra-historia section .box-nuestra-historia-2 {
-    width: 20rem;
-    margin-left: 6rem;
-    margin-top: 82rem;
-    height: 44rem;
+    width: 100%;
+    margin-left: 2rem;
+    margin-top: 88rem;
+    height: 28rem;
   }
   .main-nuestra-historia section .box-nuestra-historia-2 .img-libros {
-    margin-left: 10rem;
-    margin-top: 30rem;
+    margin-left: 33rem;
+    margin-top: 13rem;
   }
   .main-nuestra-historia section .box-nuestra-historia-3 {
-    width: 20rem;
-    height: 25rem;
-    margin-left: 6rem;
-    margin-top: 55rem;
+    margin-left: 2rem;
+    width: 100%;
+    height: 15rem;
+    margin-top: 70rem;
   }
 }
+/* Media Query Educación - Mobile */
 @media (min-width: 320px) and (max-width: 768px) {
   .main-educacion {
-    width: 20rem;
-    margin-top: -66rem;
-    height: 350rem;
+    max-width: 20rem;
+    height: auto;
   }
-  .main-educacion .section-contenido-destacado-educación {
-    display: grid;
-    grid-template-areas: "box-educacion-2" "box-educacion-1" "box-educacion-3";
+  .main-educacion .section-contenido-destacado-educacion {
+    margin-top: 15rem;
+    max-width: 20rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .encabezado-educacion {
+    max-width: 19rem;
+    margin-left: 0.5rem;
+    height: 4rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .encabezado-educacion h2 {
+    font-size: 0.8rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 {
+    max-width: 20rem;
+    margin: 0%;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 {
+    max-width: 20rem;
+    margin-left: 0.5rem;
+    height: auto;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 img {
+    position: relative;
+    float: right;
+    max-width: 10rem;
+    max-height: 10rem;
+    margin: -3rem 1.4rem 10px 0rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 p {
+    font-size: 0.5rem;
+    margin: 5px;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 {
+    max-width: 20rem;
+    margin-left: 0.5rem;
+    height: auto;
+    box-shadow: 20px -20px 0px rgb(255, 230, 156);
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 img {
+    position: relative;
+    float: left;
+    max-width: 10rem;
+    max-height: 10rem;
+    margin: -3rem 1rem 8px 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 p {
+    font-size: 0.5rem;
+    margin: 5px;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 {
+    max-width: 20rem;
+    margin-left: 0.5rem;
+    height: auto;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 img {
+    position: relative;
+    float: right;
+    max-width: 10rem;
+    max-height: 10rem;
+    margin: -3rem 1rem 3px -2rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 p {
+    font-size: 0.5rem;
+    margin: 5px;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 {
+    max-width: 20rem;
+    margin-left: 0.5rem;
+    height: auto;
+    box-shadow: 20px -20px 0px rgb(255, 230, 156);
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 img {
+    position: relative;
+    float: left;
+    max-width: 10rem;
+    max-height: 10rem;
+    margin: -3rem 1.6rem 1rem 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 p {
+    font-size: 0.5rem;
+    margin: 5px;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 {
+    max-width: 20rem;
+    margin-left: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    height: 64rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 p {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer {
+    max-width: 20rem;
+    height: 5rem;
+    margin-top: -1rem;
+    margin-left: 0rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer h3, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer h2 {
+    font-size: 0.7rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 {
+    max-width: 10rem;
+    height: 25rem;
+    margin-left: 0rem;
+    margin: 0.5rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 .text-resaltado {
+    font-size: 0.59rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 {
+    max-width: 10rem;
+    height: 20rem;
+    margin-left: 0rem;
+    margin: 0.5rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 .text-resaltado {
+    font-size: 0.59rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 {
+    max-width: 10rem;
+    height: 20rem;
+    margin-left: 0rem;
+    margin: 0.5rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 .text-resaltado {
+    font-size: 0.59rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 {
+    max-width: 10rem;
+    height: 20rem;
+    margin: 0.5rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 .text-resaltado {
+    font-size: 0.59rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 {
+    max-width: 10rem;
+    height: 20rem;
+    margin-left: 0rem;
+    line-height: 1rem;
+    margin: 0.5rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 .text-resaltado {
+    font-size: 0.59rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 {
+    max-width: 10rem;
+    height: 20rem;
+    margin-left: 0rem;
+    margin: 0.5rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 .text-resaltado {
+    font-size: 0.59rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .mini-avatar {
+    display: none;
+  }
+}
+/* Media Query Educación - Tablet*/
+@media (min-width: 769px) and (max-width: 1280px) {
+  .main-educacion {
+    min-width: 48.0625rem;
+    height: auto;
+  }
+  .main-educacion .section-contenido-destacado-educacion {
+    margin-top: 15rem;
+    max-width: 20rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .encabezado-educacion {
+    max-width: 60%;
+    margin: 14rem 0rem -13rem 0rem;
+    height: 4rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .encabezado-educacion h2 {
+    font-size: 0.8rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 {
+    min-width: 48.0625rem;
+    margin-left: -18rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 {
+    max-width: 46.0625;
+    margin-left: 5rem;
+    height: auto;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 img {
+    position: relative;
+    float: right;
+    max-width: 20rem;
+    max-height: 20rem;
+    margin: -3rem -27rem 10px 0rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 p {
+    margin: 5px;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 {
+    max-width: 46.0625rem;
+    margin-left: 5rem;
+    height: 25rem;
+    box-shadow: 20px -20px 0px rgb(255, 230, 156);
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 img {
+    position: relative;
+    float: left;
+    max-width: 20rem;
+    max-height: 20rem;
+    margin: 8rem 1rem 0rem -2rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 p {
+    margin: 5px;
+    text-align: right;
+    width: 90%;
+    margin-left: 3rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 {
+    max-width: 46.0625rem;
+    margin-left: 5rem;
+    height: 25rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 img {
+    position: relative;
+    float: right;
+    max-width: 20rem;
+    max-height: 20rem;
+    margin: -3rem -26rem 10px 0rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 p {
+    margin: 5px;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 {
+    max-width: 46.0625rem;
+    margin-left: 5rem;
+    height: 25rem;
+    box-shadow: 20px -20px 0px rgb(255, 230, 156);
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 img {
+    position: relative;
+    float: left;
+    max-width: 20rem;
+    max-height: 20rem;
+    margin: 10rem -27rem 0rem -1rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 p {
+    margin: 5px;
+    text-align: right;
+    width: 90%;
+    margin-left: 3rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 {
+    max-width: 46.0625rem;
+    margin-left: -13rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    height: 65rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 p {
+    line-height: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer {
+    max-width: 34rem;
+    margin-left: 6rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 {
+    max-width: 20rem;
+    height: 15rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 {
+    max-width: 18rem;
+    height: 15rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 {
+    max-width: 18rem;
+    height: 15rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 {
+    max-width: 18rem;
+    height: 15rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 {
+    max-width: 18rem;
+    height: 15rem;
+    line-height: 1rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 {
+    max-width: 18rem;
+    height: 15rem;
+  }
+  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .mini-avatar {
+    display: none;
+  }
+}
+/* Media Query Suscribirse - Mobile*/
+@media (min-width: 320px) and (max-width: 768px) {
+  .main-suscribirse {
+    min-width: 20rem;
+    margin-right: 0rem;
+    height: auto;
+  }
+  .main-suscribirse .section-contenido-destacado-suscribirse {
+    flex-wrap: wrap;
+    margin-top: -4rem;
+    display: flex;
     justify-content: center;
-    gap: 20px;
+    max-width: 20rem;
+    height: auto;
+    margin-left: 2rem;
   }
-  .main-educacion .section-contenido-destacado-educación div {
-    width: 50%;
-    margin-left: 1rem;
+  .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse {
+    justify-items: center;
+    min-width: 20rem;
+    height: auto;
   }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-2, .main-educacion .section-contenido-destacado-educación .box-educacion-3 {
-    margin-left: 1rem;
-    width: 50%;
+  .main-suscribirse .section-contenido-destacado-suscribirse .box-form {
+    justify-items: center;
+    height: 30rem;
   }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-2 h2, .main-educacion .section-contenido-destacado-educación .box-educacion-2 p, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .text-caida, .main-educacion .section-contenido-destacado-educación .box-educacion-2 .text-resaltado, .main-educacion .section-contenido-destacado-educación .box-educacion-3 h2, .main-educacion .section-contenido-destacado-educación .box-educacion-3 p, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .text-caida, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .text-resaltado {
-    text-align: center;
-    margin-left: 0;
-    width: auto;
+  .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse-2 {
+    justify-items: center;
+    max-width: 20rem;
+    height: auto;
+    margin-bottom: 10rem;
   }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-2 img, .main-educacion .section-contenido-destacado-educación .box-educacion-3 img {
-    display: block;
-    margin-left: 1rem;
-    max-width: 50%;
+}
+/* Media Query Suscribirse - Tablet*/
+@media (min-width: 769px) and (max-width: 1280px) {
+  .main-suscribirse {
+    min-width: 40.0625;
+    height: auto;
   }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-1, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-1 {
-    max-width: 50%;
-    margin-top: 20px;
+  .main-suscribirse .section-contenido-destacado-suscribirse {
+    flex-wrap: wrap;
+    margin-top: -2rem;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0rem;
   }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-2, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-2 {
-    max-width: 50%;
-    margin-top: 20px;
+  .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse {
+    justify-items: center;
+    min-width: 20rem;
+    height: auto;
   }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-3, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-3 {
-    max-width: 50%;
-    margin-top: 20px;
+  .main-suscribirse .section-contenido-destacado-suscribirse .box-form {
+    justify-items: center;
+    height: auto;
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
   }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-2 .box-dialog-educacion-4, .main-educacion .section-contenido-destacado-educación .box-educacion-3 .box-dialog-educacion-4 {
-    max-width: 50%;
-    margin-top: 20px;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-porque-leer-1 {
-    width: 50%;
-    margin-left: 1rem;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-porque-leer-2 {
-    width: 50%;
-    margin-left: 1rem;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-porque-leer-3 {
-    width: 50%;
-    margin-left: 1rem;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-porque-leer-4 {
-    width: 50%;
-    margin-left: 1rem;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-porque-leer-5 {
-    width: 50%;
-    margin-left: 1rem;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-porque-leer-6 {
-    width: 50%;
-    margin-left: 1rem;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-educacion-3 {
-    grid-template-areas: "box-porque-leer-1" "box-porque-leer-2" "box-porque-leer-3" "box-porque-leer-4" "box-porque-leer-5" "box-porque-leer-6";
-  }
-  .main-educacion .section-contenido-destacado-educación .mini-avatar {
-    width: 50%;
-    margin-left: 1rem;
-    position: relative;
-  }
-  .main-educacion .section-contenido-destacado-educación .box-tex-porque-leer {
-    margin-left: 1rem;
-    position: relative;
-    width: 20rem;
-    text-align: center;
+  .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse-2 {
+    justify-items: center;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10rem;
   }
 }
 /* Media Querie mobile*/
 /* Media quierie Header y footer */
 @media (min-width: 320px) and (max-width: 768px) {
   header .container, nav .container {
-    width: 100%;
+    min-width: 20rem;
+    max-width: 40rem;
     padding: 0;
   }
   .navbar-nav {
     margin-top: 0;
     text-align: center;
-    min-width: 34rem !important;
-    margin-right: -4rem;
+    max-width: 20rem;
+    margin: 0rem;
   }
   .shakeUp {
     animation: shakeUp 1.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -1233,8 +1873,8 @@ form, label, input {
     animation: shakeDown 1.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   }
   .navbar-custom .navbar-collapse {
-    background-image: linear-gradient(to right, #ffe69c, var(--bs-light));
-    max-width: 103%;
+    background-image: linear-gradient(to right, rgba(255, 230, 156, 0.2117647059), var(--bs-light));
+    max-width: 20rem;
     margin: 0;
   }
   .container-fluid {
@@ -1267,12 +1907,12 @@ form, label, input {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
   .navbar-nav .nav-link {
-    margin-left: -4rem;
+    margin: 0.5rem;
   }
   .nav-link {
     transition: color 0.3s ease-in-out;
     margin: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
     background-color: #ffffff;
     border: 5px solid #ffe69c;
     border-radius: 10px;
@@ -1297,143 +1937,21 @@ form, label, input {
   }
   footer {
     min-width: 20rem;
-    margin-right: -6rem;
+    max-width: 48rem;
+    margin-right: -2rem;
   }
   footer .footer-section .dialog-box-4 img {
     position: relative;
     margin-top: 1rem;
-    margin-left: 1rem;
     margin-right: 1rem;
     height: auto;
-    width: 2.5rem;
+    width: 2rem;
     z-index: 1;
   }
 }
-/* Media querie fuentes*/
-@media (min-width: 320px) and (max-width: 768px) {
-  h2, h1, h3, p {
-    font-family: sans-serif;
-    line-height: 2rem;
-    margin: 0.5rem;
-  }
-  h3 {
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.663);
-  }
-  p {
-    font-size: 12px;
-    margin-top: 1rem;
-    padding: 0;
-  }
-  .p-dialog {
-    font-size: 0.9rem;
-    margin: 1rem;
-    color: #8b8b8b;
-  }
-  /* Fuentes para géneros */
-  .p-generos {
-    font-size: 16px;
-    line-height: 1.5rem;
-    margin: 0.4rem;
-    text-align: left;
-    color: rgb(139, 139, 139);
-  }
-}
-/* Animaciones */
-/* animación: "rebotar" */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-5px);
-  }
-  60% {
-    transform: translateY(-3px);
-  }
-}
-/* animación: se desliza desde la derecha hasta su ubicación final */
-@keyframes slideInFromRight {
-  from {
-    right: -100%;
-  }
-  to {
-    right: 0;
-  }
-}
-/* animación: se desliza desde la izquierda hasta su ubicación final */
-@keyframes slideInFromLeft {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
-/* animación: se "agitá" al activarse */
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateY(-10px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(10px);
-  }
-}
-@keyframes shakeRight {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(10px);
-  }
-}
-@keyframes shakeLeft {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(10px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(-10px);
-  }
-}
-@keyframes shakeUp {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateY(-5px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateY(5px);
-  }
-}
-@keyframes shakeDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateY(5px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes caida {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 769px) and (max-width: 1280px) {
+  footer {
+    min-width: 40.0625rem;
   }
 }
 

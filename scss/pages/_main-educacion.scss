@@ -1,92 +1,95 @@
 /* Main: educación */
 .main-educacion{
-  height: 280rem;
-  .section-contenido-destacado-educación {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  .section-contenido-destacado-educacion {
     display: grid;
     grid-template-areas:
+      'encabezado-educacion'
       'box-educacion-2'
       'box-educacion-1'
       'box-educacion-3';
-      justify-content: center;
-  .box-educacion-2 {
-    grid-area: box-educacion-2;
-    margin-top: 25rem;
-    margin-left: 10rem;
-    
-    div {
-      border: 0.2rem solid $border-color;
-      width: 40rem;
-      
+    .encabezado-educacion{
+      justify-items: center;
+      grid-area: encabezado-educacion;
+      margin-top: 4rem;
+      border: 0.5rem solid #ffe69c; 
       h2 {
+        text-align: center;
         font-size: 2rem;
       }
+        .text-caida {
+        display: inline-block;
+        opacity: 0;
+        animation: caida 0.5s forwards;
+      }
     }
-    
-    .text-caida {
-      display: inline-block;
-      opacity: 0;
-      animation: caida 0.5s forwards;
-    }
+    .box-educacion-2 {
+      margin-top: 10rem;
+      margin-left: 5rem;
+      grid-area: box-educacion-2;   
 
-    @for $i from 1 through 4 {
-      .box-dialog-educacion-#{$i} {
-        margin-top: $dialog-margin-top;
-        max-width: $dialog-max-width;
-        height: $dialog-height;
-        border: $dialog-border-width solid $highlight-border-color;
-        @include box-shadow-highlight;
-        
-        .text-resaltado {
-          @include resaltado-2;
-        }
-        
-        p {
-          text-align: start;
-          width: 18rem;
-          margin: 1.1rem;
-        }
-        
-        img {
-          @include dialog-image-style(-40rem);
+      @for $i from 1 through 4 {
+        .box-dialog-educacion-#{$i} {
+          margin-top: $dialog-margin-top;
+          max-width: $dialog-max-width;
+          height: $dialog-height;
+          border: $dialog-border-width solid $highlight-border-color;
+          @include box-shadow-highlight;
+          
+          .text-resaltado {
+            @include resaltado-2;
+          }
+          
+          p {
+            text-align: start;
+            width: 18rem;
+            margin: 1.1rem;
+          }
         }
       }
-    }
-    
-    .box-dialog-educacion-2, .box-dialog-educacion-4 {
-      p {
-        text-align: end;
-        margin-left: 20rem;
+      
+      .box-dialog-educacion-2, .box-dialog-educacion-4 {
+          p {
+            text-align: left;
+            margin: 0.5rem
+        }
       }
-      img {
-        @include dialog-image-style(-18rem, -7rem);
+
+      .box-dialog-educacion-1 img{
+        @include dialog-image-style-derecha(-5rem, 20rem);
+      }
+
+      .box-dialog-educacion-2 img{
+        @include dialog-image-style-izquierda(-5rem);
+      }
+      
+      .box-dialog-educacion-3 img {
+        @include dialog-image-style-derecha(-5rem, 20rem);
+      }
+      
+      .box-dialog-educacion-4 img {
+        @include dialog-image-style-izquierda(-5rem);
       }
     }
-    
-    .box-dialog-educacion-3 img {
-      @include dialog-image-style(-21rem);
-    }
-    
-    .box-dialog-educacion-4 img {
-      @include dialog-image-style(-19rem, -7rem);
-    }
-  }
     .box-educacion-3 {
     display: grid;
     grid-area: box-educacion-3;
     background-color: #ffffff;
     border: 0.5rem solid #01565a;
-    width: 52rem;
-    height: 58rem;
+    width: 51rem;
+    height: 65rem;
     margin-top: 15rem;
-    margin-left: 5rem;
+    margin-bottom: 5rem;
 
     @for $i from 1 through 6 {
       .box-porque-leer-#{$i} {
         display: grid;
         max-width: 23rem;
-        max-height: 14rem;
+        max-height: 11rem;
         margin: 1rem;
-        margin-top: 6.5rem;
+        margin-top: 9rem;
         border: 0.3rem solid #ffe69c;
         grid-area: box-porque-leer-#{$i};
         p {
@@ -98,25 +101,23 @@
         &:hover {
           animation: shake 1s;
         }
+        // .mini-avatar {
+        //   position: absolute;
+        //   width: 20rem;
+        //   margin-left: 43rem;
+        // }
       }
     }
-
-    grid-template-areas: 
+    grid-template-areas:
+      "box-tex-porque-leer box-tex-porque-leer" 
       "box-porque-leer-1 box-porque-leer-2"
       "box-porque-leer-3 box-porque-leer-4"
       "box-porque-leer-5 box-porque-leer-6";
     .box-tex-porque-leer{
-      margin-top: 0rem;
-      margin-left: 2rem;
-      max-width: 46rem;
+      margin-bottom: 5rem;
       position: absolute;
       text-align: center;
     }
-  }
-    .mini-avatar {
-      position: absolute;
-      width: 20rem;
-      margin-left: 43rem;
     }
   }
 }

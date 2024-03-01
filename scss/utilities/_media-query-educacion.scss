@@ -1,74 +1,300 @@
+/* Media Query Educación - Mobile */
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-educacion {
-        width: 20rem;
-        margin-top: -66rem;
-        height: 350rem;
-    .section-contenido-destacado-educación {
-      display: grid;
-      grid-template-areas:
-        'box-educacion-2'
-        'box-educacion-1'
-        'box-educacion-3';
-      justify-content: center;
-      gap: 20px;
-
-      div {
-        width: 50%;
-        margin-left: 1rem;
+  .main-educacion{
+    max-width: 20rem;
+    height: auto;
+    .section-contenido-destacado-educacion{
+      margin-top: 15rem;
+      max-width: 20rem;
+      .encabezado-educacion{
+        max-width: 19rem;
+        margin-left: 0.5rem;
+        height: 4rem;
+        h2{
+          font-size: 0.8rem;
+        }
       }
-
-      .box-educacion-2, .box-educacion-3 {
-        margin-left: 1rem;
-        width: 50%;
-
-        h2, p, .text-caida, .text-resaltado {
-          text-align: center;
-          margin-left: 0;
-          width: auto;
+      .box-educacion-2{
+        max-width: 20rem;
+        margin: 0%;
+        .box-dialog-educacion-1{
+          max-width: 20rem;
+          margin-left: 0.5rem;
+          height: auto;
+          img{
+            position: relative;
+            float: right;
+            max-width: 10rem;
+            max-height: 10rem;
+            margin: -3rem 1.4rem 10px 0rem;
+          }
+          p{
+            font-size: 0.5rem;
+            margin: 5px;
+          }
         }
-
-        img {
-          display: block;
-          margin-left: 1rem;
-          max-width: 50%;
+        .box-dialog-educacion-2{
+          max-width: 20rem;
+          margin-left: 0.5rem;
+          height: auto;
+          box-shadow: 20px -20px 0px rgb(255, 230, 156);
+          img{
+            position: relative;
+            float: left;
+            max-width: 10rem;
+            max-height: 10rem;
+            margin: -3rem 1rem 8px 1rem;
+          }
+          p{
+            font-size: 0.5rem;
+            margin: 5px;
+          }
         }
-
-        @for $i from 1 through 4 {
-          .box-dialog-educacion-#{$i} {
-            max-width: 50%;
-            margin-top: 20px;
+        .box-dialog-educacion-3{
+          max-width: 20rem;
+          margin-left: 0.5rem;
+          height: auto;
+          img{
+            position: relative;
+            float: right;
+            max-width: 10rem;
+            max-height: 10rem;
+            margin: -3rem 1rem 3px -2rem;
+          }
+          p{
+            font-size: 0.5rem;
+            margin: 5px;
+          }
+        }
+        .box-dialog-educacion-4{
+          max-width: 20rem;
+          margin-left: 0.5rem;
+          height: auto;
+          box-shadow: 20px -20px 0px rgb(255, 230, 156);
+          img{
+            position: relative;
+            float: left;
+            max-width: 10rem;
+            max-height: 10rem;
+            margin: -3rem 1.6rem 1rem 1rem;
+          }
+          p{
+            font-size: 0.5rem;
+            margin: 5px;
           }
         }
       }
+      .box-educacion-3{
+        max-width: 20rem;
+        margin-left: 0rem;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+        height: 64rem;
+        p{
+          font-size: 0.5rem;
+          line-height: 1rem;
+        }
 
-      @for $i from 1 through 6 {
-        .box-porque-leer-#{$i} {
-          width: 50%; 
-          margin-left: 1rem; 
+        .box-tex-porque-leer{
+          h3, h2{
+            font-size: 0.7rem;
+          }
+          max-width: 20rem;
+          height: 5rem;
+          margin-top: -1rem;
+          margin-left: 0rem;
+        }
+        .box-porque-leer-1{
+          max-width: 10rem;
+          height: 25rem;
+          margin-left: 0rem;
+          margin: 0.5rem;
+          p, .text-resaltado{
+            font-size: 0.59rem;
+          }              
+        }
+        .box-porque-leer-2{
+          max-width: 10rem;
+          height: 20rem;
+          margin-left: 0rem;
+          margin: 0.5rem;
+          p, .text-resaltado{
+            font-size: 0.59rem;
+          }
+        }
+        .box-porque-leer-3{
+          max-width: 10rem;
+          height: 20rem;
+          margin-left: 0rem;
+          margin: 0.5rem;
+          p, .text-resaltado{
+            font-size: 0.59rem;
+          }
+        }
+        .box-porque-leer-4{
+          max-width: 10rem;
+          height: 20rem;
+          margin: 0.5rem;
+          p, .text-resaltado{
+            font-size: 0.59rem;
+          }
+        }
+        .box-porque-leer-5{
+          max-width: 10rem;
+          height: 20rem;
+          margin-left: 0rem;
+          line-height: 1rem;
+          margin: 0.5rem;
+          p, .text-resaltado{
+            font-size: 0.59rem;
+          }
+        }
+        .box-porque-leer-6{
+          max-width: 10rem;
+          height: 20rem;
+          margin-left: 0rem;
+          margin: 0.5rem;
+          p, .text-resaltado{
+            font-size: 0.59rem;
+          }
+        }
+        .mini-avatar{
+          display: none;
         }
       }
-
-      .box-educacion-3 {
-        grid-template-areas: 
-          'box-porque-leer-1'
-          'box-porque-leer-2'
-          'box-porque-leer-3'
-          'box-porque-leer-4'
-          'box-porque-leer-5'
-          'box-porque-leer-6';
+    }
+  }
+}
+/* Media Query Educación - Tablet*/
+@media (min-width: 769px) and (max-width: 1280px){
+    .main-educacion{
+    min-width: 48.0625rem;
+    height: auto;
+    .section-contenido-destacado-educacion{
+      margin-top: 15rem;
+      max-width: 20rem;
+      .encabezado-educacion{
+        max-width: 60%;
+        margin: 14rem 0rem -13rem 0rem;
+        height: 4rem;
+        h2{
+          font-size: 0.8rem;
+        }
       }
-
-      .mini-avatar {
-        width: 50%;
-        margin-left: 1rem;
-        position: relative; 
+      .box-educacion-2{
+        min-width: 48.0625rem ;
+        margin-left: -18rem;
+        .box-dialog-educacion-1{
+          max-width: 46.0625;
+          margin-left: 5rem;
+          height: auto;
+          img{
+            position: relative;
+            float: right;
+            max-width: 20rem;
+            max-height: 20rem;
+            margin: -3rem -27rem 10px 0rem;
+          }
+          p{
+            margin: 5px;
+          }
+        }
+        .box-dialog-educacion-2{
+          max-width: 46.0625rem;
+          margin-left: 5rem;
+          height: 25rem;
+          box-shadow: 20px -20px 0px rgb(255, 230, 156);
+          img{
+            position: relative;
+            float: left;
+            max-width: 20rem;
+            max-height: 20rem;
+            margin: 8rem 1rem 0rem -2rem;
+          }
+          p{
+            margin: 5px;
+            text-align: right;
+            width: 90%;
+            margin-left: 3rem;
+          }
+        }
+        .box-dialog-educacion-3{
+          max-width: 46.0625rem;
+          margin-left: 5rem;
+          height: 25rem;
+          img{
+            position: relative;
+            float: right;
+            max-width: 20rem;
+            max-height: 20rem;
+            margin: -3rem -26rem 10px 0rem;
+          }
+          p{
+            margin: 5px;
+          }
+        }
+        .box-dialog-educacion-4{
+          max-width: 46.0625rem;
+          margin-left: 5rem;
+          height: 25rem;
+          box-shadow: 20px -20px 0px rgb(255, 230, 156);
+          img{
+            position: relative;
+            float: left;
+            max-width: 20rem;
+            max-height: 20rem;
+            margin: 10rem -27rem 0rem -1rem;
+          }
+          p{
+            margin: 5px;
+            text-align: right;
+            width: 90%;
+            margin-left: 3rem;
+          }
+        }
       }
+      .box-educacion-3{
+        max-width: 46.0625rem;
+        margin-left: -13rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        height: 65rem;
+        p{
+          line-height: 1rem;
+        }
 
-      .box-tex-porque-leer {
-        margin-left: 1rem; 
-        position: relative; 
-        width: 20rem; 
-        text-align: center;
+        .box-tex-porque-leer{
+          max-width: 34rem;
+          margin-left: 6rem;
+        }
+        .box-porque-leer-1{
+          max-width: 20rem;
+          height: 15rem;                              
+        }
+        .box-porque-leer-2{
+          max-width: 18rem;
+          height: 15rem;
+        }
+        .box-porque-leer-3{
+          max-width: 18rem;
+          height: 15rem;
+        }
+        .box-porque-leer-4{
+          max-width: 18rem;
+          height: 15rem;
+        }
+        .box-porque-leer-5{
+          max-width: 18rem;
+          height: 15rem;
+          line-height: 1rem;
+        }
+        .box-porque-leer-6{
+          max-width: 18rem;
+          height: 15rem;
+        }
+        .mini-avatar{
+          display: none;
+        }
       }
     }
   }
