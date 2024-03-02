@@ -134,37 +134,24 @@ header {
 }
 
 /* Footer homogéneo para todas los HTML */
-.footer-section {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row-reverse;
+footer {
+  height: auto;
   background-color: #01565a;
 }
-.footer-section h4 {
+footer h4 {
   margin: 0.5rem;
   font-size: 1.5rem;
   color: aliceblue;
 }
-.footer-section .dialog-box-4 {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-.footer-section .dialog-box-4 img {
-  position: relative;
-  height: auto;
+footer img {
   width: 2.5rem;
   margin: 0.5rem;
-  z-index: 1;
+  position: relative;
 }
-.footer-section .footer-item {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-.footer-section .footer-item a {
+footer a {
   text-decoration: none;
   font-size: 1.5rem;
   color: aliceblue;
-  display: flow;
   margin: 0.5rem;
 }
 
@@ -267,7 +254,7 @@ header {
 }
 /* main: inicio/index */
 .main-index {
-  height: 195rem;
+  height: auto;
 }
 .main-index .encabezado {
   display: grid;
@@ -286,7 +273,6 @@ header {
   animation: slideInFromLeft 1.3s ease-in-out forwards;
 }
 .main-index .encabezado .dialog-box-1 .img-inicio {
-  position: absolute;
   width: 16rem;
   margin-left: 5rem;
   margin-top: -9rem;
@@ -296,12 +282,10 @@ header {
   margin-top: -2rem;
 }
 .main-index .encabezado .dialog-box-2 {
-  position: absolute;
-  top: 24rem;
+  margin-top: 16rem;
+  height: 25rem;
   width: 47rem;
-  min-height: 10rem;
-  padding: -1rem;
-  margin-right: 5rem;
+  margin-left: -1rem;
   border: 0.5rem solid #ffe69c;
   background-color: #ffffff;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -944,7 +928,7 @@ header {
   grid-area: box-form;
   border: 0.5rem solid #01565a;
   width: 50rem;
-  height: 14rem;
+  height: auto;
   margin-top: 6rem;
 }
 .section-contenido-destacado-suscribirse .box-form button {
@@ -1033,120 +1017,124 @@ form, label, input {
 
 /* Media query index/inicio - Mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-index {
-    max-width: 20rem;
-    max-height: 177rem;
+  body {
+    width: 40rem;
   }
-  .main-index .encabezado {
+  body .main-index {
+    max-width: 40rem;
+    height: auto;
+  }
+  body .main-index .encabezado {
     grid-template-columns: 1fr;
-    max-width: 20rem;
-    max-height: 25rem;
+    max-width: 100%;
+    height: auto;
   }
-  .main-index .encabezado .dialog-box-1 {
-    max-width: 18rem;
-    margin-right: 0rem;
+  body .main-index .encabezado .dialog-box-1 {
+    max-width: 100%;
+    margin-left: 6rem;
   }
-  .main-index .encabezado .dialog-box-1 .img-inicio {
-    position: absolute;
+  body .main-index .encabezado .dialog-box-1 .img-inicio {
     width: 10rem;
-    margin-top: -6rem;
-    margin-left: -1rem;
+    margin-top: 3rem;
+    margin-left: -6rem;
   }
-  .main-index .encabezado .dialog-box-1 .img-inicio-2 {
+  body .main-index .encabezado .dialog-box-1 .img-inicio-2 {
     width: 20rem;
+    margin-top: -10rem;
     margin-left: -7rem;
   }
-  .main-index .encabezado .dialog-box-2 {
-    max-width: 20rem;
-    max-height: 20rem;
+  body .main-index .encabezado .dialog-box-2 {
+    max-width: 40rem !important;
+    height: auto;
     margin-top: 15rem;
-    margin-right: 0rem;
+    margin-left: -1rem;
   }
-  .main-index .section-contenido-destacado {
+  body .main-index .section-contenido-destacado {
     grid-template-areas: "dialog-box-5" "dialog-juego" "dialog-box-aprendizaje" "dialog-box-3" "grid-item" "grid-container" "button-mas-historias";
     grid-template-columns: 1fr;
-    max-width: 20rem;
+    min-width: 40rem;
   }
-  .main-index .section-contenido-destacado .carousel {
-    max-width: 53%;
+  body .main-index .section-contenido-destacado .carousel {
+    max-width: 100%;
     margin-top: 19rem;
   }
-  .main-index .section-contenido-destacado .banner-1 {
-    max-width: 53%;
-  }
-  .main-index .section-contenido-destacado .banner-1 img {
+  body .main-index .section-contenido-destacado .banner-1 {
     max-width: 100%;
   }
-  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje {
+  body .main-index .section-contenido-destacado .banner-1 img {
+    max-width: 100%;
+  }
+  body .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje {
     margin-top: 4rem;
     margin-bottom: -13rem;
     margin-left: 0rem;
-    max-width: 20rem;
+    max-width: 100%;
   }
-  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje .div-dato-curioso-1 {
-    height: 10rem;
+  body .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje .div-dato-curioso-1 {
+    height: 6rem;
   }
-  .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje p {
+  body .main-index .section-contenido-destacado .banner-1 .dialog-box-aprendizaje p {
     font-size: 0.6rem;
   }
-  .main-index .section-contenido-destacado .dialog-box-3 {
+  body .main-index .section-contenido-destacado .dialog-box-3 {
     max-width: 19rem;
     text-align: end;
     margin-top: 17rem;
     margin-bottom: -17rem;
-    margin-left: 1rem;
+    margin-left: 10rem;
   }
-  .main-index .section-contenido-destacado .dialog-box-3 h3 {
+  body .main-index .section-contenido-destacado .dialog-box-3 h3 {
     font-size: 0.8rem;
   }
-  .main-index .section-contenido-destacado .dialog-box-5 {
-    max-width: 20rem;
-    margin-left: 0rem;
+  body .main-index .section-contenido-destacado .dialog-box-5 {
+    max-width: 40rem;
+    margin: 0rem;
   }
-  .main-index .section-contenido-destacado .dialog-juego {
+  body .main-index .section-contenido-destacado .dialog-juego {
     max-width: 20rem;
     margin-top: 1rem;
-    margin-left: 0rem;
+    margin-left: 10rem;
   }
-  .main-index .section-contenido-destacado .dialog-juego .div-juego-1 {
-    max-width: 20rem;
+  body .main-index .section-contenido-destacado .dialog-juego .div-juego-1 {
+    max-width: 100%;
   }
-  .main-index .section-contenido-destacado .dialog-juego .div-juego-1 .respuesta {
+  body .main-index .section-contenido-destacado .dialog-juego .div-juego-1 .respuesta {
     max-width: 12rem;
   }
-  .main-index .section-contenido-destacado .div-dato-curioso-1 {
+  body .main-index .section-contenido-destacado .div-dato-curioso-1 {
     min-width: 20rem;
+    height: 6rem;
     margin-top: 1rem;
     text-align: end;
   }
-  .main-index .section-contenido-destacado .button-mas-historias {
+  body .main-index .section-contenido-destacado .button-mas-historias {
     margin-top: 1rem;
-    margin-left: 3rem;
+    margin-left: 12rem;
   }
-  .main-index .section-contenido-destacado .grid-item-container {
+  body .main-index .section-contenido-destacado .grid-item-container {
     max-width: 16rem;
     max-height: 11rem;
     margin-top: 14rem;
   }
-  .main-index .section-contenido-destacado .grid-item-container .grid-item {
+  body .main-index .section-contenido-destacado .grid-item-container .grid-item {
     grid-template-columns: 60% 40%;
-    max-width: 12rem;
+    max-width: 100%;
     max-height: 12rem;
-    margin-left: -28rem;
+    margin-left: -12rem;
     margin-top: -10rem;
   }
-  .main-index .section-contenido-destacado .grid-item-container .grid-item img {
+  body .main-index .section-contenido-destacado .grid-item-container .grid-item img {
     float: left;
     max-width: 90%;
     height: 12rem;
     margin-top: 0rem;
   }
-  .main-index .section-contenido-destacado .grid-item-container .grid-item p {
+  body .main-index .section-contenido-destacado .grid-item-container .grid-item p {
     font-size: 0.5rem;
     margin: 0.2rem;
     line-height: 0.7rem;
   }
-  .main-index .section-contenido-destacado .grid-item-container .grid-item h3 {
+  body .main-index .section-contenido-destacado .grid-item-container .grid-item h3 {
     line-height: 0.7rem;
     margin: 0.2rem;
     font-size: 0.5rem;
@@ -1275,66 +1263,69 @@ form, label, input {
 }
 /*Media query géneros - Mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-generos {
-    max-width: 20rem;
+  body {
+    width: 40rem;
+  }
+  body .main-generos {
+    max-width: 40rem;
     margin-left: -1rem;
     margin-top: -66rem;
-    height: 235rem;
+    height: 230rem;
   }
-  .main-generos .section-contenido-destacado-generos {
+  body .main-generos .section-contenido-destacado-generos {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "box-historia-generos-2" "box-historia-generos-2" "box-historia-generos" "box-historia-generos" "box-encabezado-generos" "box-generos-1" "box-generos-2" "box-generos-3" "box-generos-4" "box-generos-5" "box-generos-6";
     gap: 1rem;
-    min-width: 20rem;
+    max-width: 100%;
     margin: 0 auto;
     margin-left: 0rem;
     height: auto;
     margin-top: 80rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-encabezado-generos {
-    margin-left: 1rem;
-    max-width: 18rem;
+  body .main-generos .section-contenido-destacado-generos .box-encabezado-generos {
+    margin-left: 10rem;
+    max-width: 100%;
     margin-top: 60rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-encabezado-generos h2 {
+  body .main-generos .section-contenido-destacado-generos .box-encabezado-generos h2 {
     font-size: 1rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-card {
+  body .main-generos .section-contenido-destacado-generos .box-card {
     margin-bottom: -36rem;
-    margin-left: 2rem;
+    margin-left: 13rem;
     margin-top: 41rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-card .img-generos {
+  body .main-generos .section-contenido-destacado-generos .box-card .img-generos {
     margin-top: 1.9rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-historia-generos {
-    width: 90%;
+  body .main-generos .section-contenido-destacado-generos .box-historia-generos {
+    width: 100%;
     margin-left: 1rem;
     margin-top: 5rem;
     margin-bottom: 8rem;
     height: 16rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-historia-generos h2 {
+  body .main-generos .section-contenido-destacado-generos .box-historia-generos h2 {
     font-size: 1rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-historia-generos p {
+  body .main-generos .section-contenido-destacado-generos .box-historia-generos p {
     font-size: 0.8rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-historia-generos-2 {
-    max-width: 18rem;
-    margin-left: 1rem;
+  body .main-generos .section-contenido-destacado-generos .box-historia-generos-2 {
+    max-width: 100%;
+    margin-left: 10rem;
     margin-top: 25rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-historia-generos-2 .avatar-tales-2 {
+  body .main-generos .section-contenido-destacado-generos .box-historia-generos-2 .avatar-tales-2 {
     width: 8rem;
-    margin-left: 2rem;
+    margin-left: 15rem;
     margin-top: -5rem;
   }
-  .main-generos .section-contenido-destacado-generos .box-historia-generos-2 p {
+  body .main-generos .section-contenido-destacado-generos .box-historia-generos-2 p {
     font-size: 0.8rem;
   }
-  .main-generos #menu-generos {
+  body .main-generos #menu-generos {
     margin-left: 3rem;
     max-width: 20rem;
   }
@@ -1401,47 +1392,48 @@ form, label, input {
 }
 /* Media query Nuestra Historia - Mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-nuestra-historia {
+  body {
+    width: 40rem;
+  }
+  body .main-nuestra-historia {
+    max-width: 100%;
     height: auto;
-    min-width: 20rem;
-    max-width: 40rem;
     display: grid;
     grid-template-areas: "box-nuestra-historia" "video-nuestra-historia" "box-nuestra-historia-2" "box-nuestra-historia-3";
-    justify-items: center;
   }
-  .main-nuestra-historia section {
-    max-width: 18rem;
+  body .main-nuestra-historia section {
+    max-width: 40rem;
   }
-  .main-nuestra-historia section .box-nuestra-historia {
-    max-width: 18rem;
-    margin-left: 2rem;
+  body .main-nuestra-historia section .box-nuestra-historia {
+    max-width: 90%;
+    margin-left: 0.5rem;
   }
-  .main-nuestra-historia section .box-nuestra-historia h2 {
-    font-size: 0.8rem;
+  body .main-nuestra-historia section .box-nuestra-historia h1 {
+    font-size: 1rem;
     text-align: center;
   }
-  .main-nuestra-historia section .video-nuestra-historia {
-    margin-left: 2rem;
-    max-width: 18rem;
+  body .main-nuestra-historia section .video-nuestra-historia {
+    margin-left: 0.5rem;
+    max-width: 90%;
     margin-top: 32rem;
   }
-  .main-nuestra-historia section .box-nuestra-historia-2 {
-    max-width: 18rem;
-    margin-left: 2rem;
+  body .main-nuestra-historia section .box-nuestra-historia-2 {
+    max-width: 90%;
+    margin-left: 0.5rem;
     margin-top: 82rem;
-    height: 52rem;
+    height: 30rem;
   }
-  .main-nuestra-historia section .box-nuestra-historia-2 .img-libros {
-    margin-left: 8rem;
-    margin-top: 38rem;
+  body .main-nuestra-historia section .box-nuestra-historia-2 .img-libros {
+    margin-left: 28rem;
+    margin-top: 15.5rem;
   }
-  .main-nuestra-historia section .box-nuestra-historia-3 {
-    max-width: 18rem;
-    height: 25rem;
-    margin-left: 2rem;
-    margin-top: 50rem;
+  body .main-nuestra-historia section .box-nuestra-historia-3 {
+    max-width: 90%;
+    height: 15rem;
+    margin-left: 0.5rem;
+    margin-top: 60rem;
   }
-  .main-nuestra-historia section .box-nuestra-historia-3 p {
+  body .main-nuestra-historia section .box-nuestra-historia-3 p {
     font-size: 0.8rem;
   }
 }
@@ -1489,167 +1481,169 @@ form, label, input {
 }
 /* Media Query Educación - Mobile */
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-educacion {
-    max-width: 20rem;
+  body .main-educacion {
+    max-width: 100%;
     height: auto;
   }
-  .main-educacion .section-contenido-destacado-educacion {
+  body .main-educacion .section-contenido-destacado-educacion {
     margin-top: 15rem;
-    max-width: 20rem;
+    max-width: 100%;
   }
-  .main-educacion .section-contenido-destacado-educacion .encabezado-educacion {
-    max-width: 19rem;
+  body .main-educacion .section-contenido-destacado-educacion .encabezado-educacion {
+    max-width: 100%;
     margin-left: 0.5rem;
     height: 4rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .encabezado-educacion h2 {
+  body .main-educacion .section-contenido-destacado-educacion .encabezado-educacion h2 {
     font-size: 0.8rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 {
-    max-width: 20rem;
-    margin: 0%;
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 {
+    max-width: 100%;
+    margin-left: 8rem;
+    margin-top: 0rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 {
     max-width: 20rem;
     margin-left: 0.5rem;
     height: auto;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 img {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 img {
     position: relative;
     float: right;
     max-width: 10rem;
     max-height: 10rem;
     margin: -3rem 1.4rem 10px 0rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 p {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-1 p {
     font-size: 0.5rem;
     margin: 5px;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 {
     max-width: 20rem;
     margin-left: 0.5rem;
     height: auto;
     box-shadow: 20px -20px 0px rgb(255, 230, 156);
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 img {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 img {
     position: relative;
     float: left;
     max-width: 10rem;
     max-height: 10rem;
     margin: -3rem 1rem 8px 1rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 p {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-2 p {
     font-size: 0.5rem;
     margin: 5px;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 {
     max-width: 20rem;
     margin-left: 0.5rem;
     height: auto;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 img {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 img {
     position: relative;
     float: right;
     max-width: 10rem;
     max-height: 10rem;
     margin: -3rem 1rem 3px -2rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 p {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-3 p {
     font-size: 0.5rem;
     margin: 5px;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 {
     max-width: 20rem;
     margin-left: 0.5rem;
     height: auto;
     box-shadow: 20px -20px 0px rgb(255, 230, 156);
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 img {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 img {
     position: relative;
     float: left;
     max-width: 10rem;
     max-height: 10rem;
     margin: -3rem 1.6rem 1rem 1rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 p {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-2 .box-dialog-educacion-4 p {
     font-size: 0.5rem;
     margin: 5px;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 {
     max-width: 20rem;
-    margin-left: 0rem;
+    margin-left: 8.5rem;
     margin-top: 2rem;
     margin-bottom: 6rem;
     height: 64rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 p {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 p {
     font-size: 0.5rem;
     line-height: 1rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer {
+    width: 100%;
     max-width: 20rem;
     height: 5rem;
     margin-top: -1rem;
     margin-left: 0rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer h3, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer h2 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer h3, body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-tex-porque-leer h2 {
     font-size: 0.7rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 {
     max-width: 10rem;
     height: 25rem;
     margin-left: 0rem;
     margin: 0.5rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 .text-resaltado {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 p, body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-1 .text-resaltado {
     font-size: 0.59rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 {
     max-width: 10rem;
     height: 20rem;
     margin-left: 0rem;
     margin: 0.5rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 .text-resaltado {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 p, body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-2 .text-resaltado {
     font-size: 0.59rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 {
     max-width: 10rem;
     height: 20rem;
     margin-left: 0rem;
     margin: 0.5rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 .text-resaltado {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 p, body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-3 .text-resaltado {
     font-size: 0.59rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 {
     max-width: 10rem;
     height: 20rem;
     margin: 0.5rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 .text-resaltado {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 p, body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-4 .text-resaltado {
     font-size: 0.59rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 {
     max-width: 10rem;
     height: 20rem;
     margin-left: 0rem;
     line-height: 1rem;
     margin: 0.5rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 .text-resaltado {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 p, body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-5 .text-resaltado {
     font-size: 0.59rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 {
     max-width: 10rem;
     height: 20rem;
     margin-left: 0rem;
     margin: 0.5rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 p, .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 .text-resaltado {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 p, body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .box-porque-leer-6 .text-resaltado {
     font-size: 0.59rem;
   }
-  .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .mini-avatar {
+  body .main-educacion .section-contenido-destacado-educacion .box-educacion-3 .mini-avatar {
     display: none;
   }
 }
@@ -1788,32 +1782,37 @@ form, label, input {
 }
 /* Media Query Suscribirse - Mobile*/
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-suscribirse {
-    min-width: 20rem;
-    margin-right: 0rem;
+  body .main-suscribirse {
+    max-width: 100%;
+    margin-left: 0rem;
     height: auto;
   }
-  .main-suscribirse .section-contenido-destacado-suscribirse {
+  body .main-suscribirse .section-contenido-destacado-suscribirse {
     flex-wrap: wrap;
     margin-top: -4rem;
     display: flex;
     justify-content: center;
-    max-width: 20rem;
+    max-width: 100%;
     height: auto;
-    margin-left: 2rem;
+    margin-left: 0rem;
   }
-  .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse {
+  body .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse {
     justify-items: center;
-    min-width: 20rem;
+    max-width: 100%;
     height: auto;
   }
-  .main-suscribirse .section-contenido-destacado-suscribirse .box-form {
-    justify-items: center;
-    height: 30rem;
+  body .main-suscribirse .section-contenido-destacado-suscribirse .box-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border: 0.5rem solid #01565a;
+    width: 20rem;
+    height: auto;
+    margin-top: 6rem;
   }
-  .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse-2 {
+  body .main-suscribirse .section-contenido-destacado-suscribirse .box-dialog-suscribirse-2 {
     justify-items: center;
-    max-width: 20rem;
+    max-width: 100%;
     height: auto;
     margin-bottom: 10rem;
   }
@@ -1856,8 +1855,7 @@ form, label, input {
 /* Media quierie Header y footer */
 @media (min-width: 320px) and (max-width: 768px) {
   header .container, nav .container {
-    min-width: 20rem;
-    max-width: 40rem;
+    max-width: 100%;
     padding: 0;
   }
   .navbar-nav {
@@ -1935,18 +1933,21 @@ form, label, input {
     max-width: 9rem;
     height: auto;
   }
-  footer {
-    min-width: 20rem;
-    max-width: 48rem;
-    margin-right: -2rem;
-  }
-  footer .footer-section .dialog-box-4 img {
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  footer img {
     position: relative;
     margin-top: 1rem;
     margin-right: 1rem;
     height: auto;
     width: 2rem;
     z-index: 1;
+  }
+  footer .dialog-box-4 {
+    max-width: 100%;
+  }
+  footer .footer-item {
+    max-width: 100%;
   }
 }
 @media (min-width: 769px) and (max-width: 1280px) {

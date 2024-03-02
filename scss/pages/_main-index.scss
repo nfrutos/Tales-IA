@@ -1,6 +1,6 @@
 /* main: inicio/index */
 .main-index{
-  height: 195rem;
+  height: auto;
   .encabezado {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -16,7 +16,6 @@
       text-align: center;
       animation: slideInFromLeft 1.3s ease-in-out forwards;
       .img-inicio {
-        position: absolute;
         width: 16rem;
         margin-left: 5rem;
         margin-top: -9rem;
@@ -28,12 +27,10 @@
     }
 
     .dialog-box-2 {
-      position: absolute;
-      top: 24rem;
+      margin-top: 16rem;
+      height: 25rem;
       width: 47rem;
-      min-height: 10rem;
-      padding: -1rem;
-      margin-right: 5rem;
+      margin-left: -1rem;
       border: 0.5rem solid #ffe69c;
       background-color: #ffffff;
       box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);

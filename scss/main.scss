@@ -24,8 +24,7 @@
 /* Media quierie Header y footer */
 @media (min-width: 320px) and (max-width: 768px){
     header .container, nav .container {
-        min-width: 20rem;
-        max-width: 40rem;
+        max-width: 100%;
         padding: 0;
     }
 
@@ -114,18 +113,23 @@
             height: auto;
         }
     }
+}
+@media (min-width: 320px) and (max-width: 768px){
     footer{
-        min-width: 20rem;
-        max-width: 48rem;
-        margin-right: -2rem;
-        .footer-section .dialog-box-4 img {
-            position: relative;
-            margin-top: 1rem;
-            margin-right: 1rem;
-            height: auto;
-            width: 2rem;
-            z-index: 1;
+        img {
+        position: relative;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        height: auto;
+        width: 2rem;
+        z-index: 1;
         }
+        .dialog-box-4{
+            max-width: 100%;
+        }
+        .footer-item{
+            max-width: 100%;
+        }  
     }
 }
 @media (min-width: 769px) and (max-width: 1280px){

@@ -1,51 +1,53 @@
  /* Media query Nuestra Historia - Mobile*/
  @media (min-width: 320px) and (max-width: 768px){
-    .main-nuestra-historia{
-        height: auto;
-        min-width: 20rem;
-        max-width: 40rem;
-        display: grid;
-        grid-template-areas: 
-        'box-nuestra-historia'
-        'video-nuestra-historia'
-        'box-nuestra-historia-2'
-        'box-nuestra-historia-3';
-        justify-items: center;
-        section{
-            max-width: 18rem;
-            .box-nuestra-historia{
-                max-width: 18rem;
-                margin-left: 2rem;
-                h2{
-                    font-size: 0.8rem;
-                    text-align: center;
+    body{
+        width: 40rem;
+        .main-nuestra-historia{
+            max-width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-areas: 
+            'box-nuestra-historia'
+            'video-nuestra-historia'
+            'box-nuestra-historia-2'
+            'box-nuestra-historia-3';
+            section{
+                max-width: 40rem;
+                .box-nuestra-historia{
+                    max-width: 90%;
+                    margin-left: 0.5rem;
+                    h1{
+                        font-size: 1rem;
+                        text-align: center;
+                    }
                 }
-            }
-            .video-nuestra-historia{
-                margin-left: 2rem;
-                max-width: 18rem;
-                margin-top: 32rem;
-            }
-            .box-nuestra-historia-2{
-                max-width: 18rem;
-                margin-left: 2rem;
-                margin-top: 82rem;
-                height: 52rem;
-                .img-libros{
-                margin-left: 8rem;
-                margin-top: 38rem;
+                .video-nuestra-historia{
+                    margin-left: 0.5rem;
+                    max-width: 90%;
+                    margin-top: 32rem;
                 }
-            }
-            .box-nuestra-historia-3{
-                max-width: 18rem;
-                height: 25rem;
-                margin-left: 2rem;
-                margin-top: 50rem;
-                p{
-                    font-size: 0.8rem;
+                .box-nuestra-historia-2{
+                    max-width: 90%;
+                    margin-left: 0.5rem;
+                    margin-top: 82rem;
+                    height: 30rem;
+                    .img-libros{
+                    margin-left: 28rem;
+                    margin-top: 15.5rem;
+                    }
+                }
+                .box-nuestra-historia-3{
+                    max-width: 90%;
+                    height: 15rem;
+                    margin-left: 0.5rem;
+                    margin-top: 60rem;
+                    p{
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }
+    
     }
 }
 

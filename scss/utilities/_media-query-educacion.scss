@@ -1,165 +1,169 @@
 /* Media Query Educación - Mobile */
 @media (min-width: 320px) and (max-width: 768px) {
-  .main-educacion{
-    max-width: 20rem;
-    height: auto;
-    .section-contenido-destacado-educacion{
-      margin-top: 15rem;
-      max-width: 20rem;
-      .encabezado-educacion{
-        max-width: 19rem;
-        margin-left: 0.5rem;
-        height: 4rem;
-        h2{
-          font-size: 0.8rem;
-        }
-      }
-      .box-educacion-2{
-        max-width: 20rem;
-        margin: 0%;
-        .box-dialog-educacion-1{
-          max-width: 20rem;
+  body{
+    .main-educacion{
+      max-width: 100%;
+      height: auto;
+      .section-contenido-destacado-educacion{
+        margin-top: 15rem;
+        max-width: 100%;
+        .encabezado-educacion{
+          max-width: 100%;
           margin-left: 0.5rem;
-          height: auto;
-          img{
-            position: relative;
-            float: right;
-            max-width: 10rem;
-            max-height: 10rem;
-            margin: -3rem 1.4rem 10px 0rem;
+          height: 4rem;
+          h2{
+            font-size: 0.8rem;
           }
+        }
+        .box-educacion-2{
+          max-width: 100%;
+          margin-left: 8rem;
+          margin-top: 0rem;
+          .box-dialog-educacion-1{
+            max-width: 20rem;
+            margin-left: 0.5rem;
+            height: auto;
+            img{
+              position: relative;
+              float: right;
+              max-width: 10rem;
+              max-height: 10rem;
+              margin: -3rem 1.4rem 10px 0rem;
+            }
+            p{
+              font-size: 0.5rem;
+              margin: 5px;
+            }
+          }
+          .box-dialog-educacion-2{
+            max-width: 20rem;
+            margin-left: 0.5rem;
+            height: auto;
+            box-shadow: 20px -20px 0px rgb(255, 230, 156);
+            img{
+              position: relative;
+              float: left;
+              max-width: 10rem;
+              max-height: 10rem;
+              margin: -3rem 1rem 8px 1rem;
+            }
+            p{
+              font-size: 0.5rem;
+              margin: 5px;
+            }
+          }
+          .box-dialog-educacion-3{
+            max-width: 20rem;
+            margin-left: 0.5rem;
+            height: auto;
+            img{
+              position: relative;
+              float: right;
+              max-width: 10rem;
+              max-height: 10rem;
+              margin: -3rem 1rem 3px -2rem;
+            }
+            p{
+              font-size: 0.5rem;
+              margin: 5px;
+            }
+          }
+          .box-dialog-educacion-4{
+            max-width: 20rem;
+            margin-left: 0.5rem;
+            height: auto;
+            box-shadow: 20px -20px 0px rgb(255, 230, 156);
+            img{
+              position: relative;
+              float: left;
+              max-width: 10rem;
+              max-height: 10rem;
+              margin: -3rem 1.6rem 1rem 1rem;
+            }
+            p{
+              font-size: 0.5rem;
+              margin: 5px;
+            }
+          }
+        }
+        .box-educacion-3{
+          max-width: 20rem;
+          margin-left: 8.5rem;
+          margin-top: 2rem;
+          margin-bottom: 6rem;
+          height: 64rem;
           p{
             font-size: 0.5rem;
-            margin: 5px;
+            line-height: 1rem;
           }
-        }
-        .box-dialog-educacion-2{
-          max-width: 20rem;
-          margin-left: 0.5rem;
-          height: auto;
-          box-shadow: 20px -20px 0px rgb(255, 230, 156);
-          img{
-            position: relative;
-            float: left;
-            max-width: 10rem;
-            max-height: 10rem;
-            margin: -3rem 1rem 8px 1rem;
-          }
-          p{
-            font-size: 0.5rem;
-            margin: 5px;
-          }
-        }
-        .box-dialog-educacion-3{
-          max-width: 20rem;
-          margin-left: 0.5rem;
-          height: auto;
-          img{
-            position: relative;
-            float: right;
-            max-width: 10rem;
-            max-height: 10rem;
-            margin: -3rem 1rem 3px -2rem;
-          }
-          p{
-            font-size: 0.5rem;
-            margin: 5px;
-          }
-        }
-        .box-dialog-educacion-4{
-          max-width: 20rem;
-          margin-left: 0.5rem;
-          height: auto;
-          box-shadow: 20px -20px 0px rgb(255, 230, 156);
-          img{
-            position: relative;
-            float: left;
-            max-width: 10rem;
-            max-height: 10rem;
-            margin: -3rem 1.6rem 1rem 1rem;
-          }
-          p{
-            font-size: 0.5rem;
-            margin: 5px;
-          }
-        }
-      }
-      .box-educacion-3{
-        max-width: 20rem;
-        margin-left: 0rem;
-        margin-top: 2rem;
-        margin-bottom: 6rem;
-        height: 64rem;
-        p{
-          font-size: 0.5rem;
-          line-height: 1rem;
-        }
 
-        .box-tex-porque-leer{
-          h3, h2{
-            font-size: 0.7rem;
+          .box-tex-porque-leer{
+            width: 100%;
+            h3, h2{
+              font-size: 0.7rem;
+            }
+            max-width: 20rem;
+            height: 5rem;
+            margin-top: -1rem;
+            margin-left: 0rem;
           }
-          max-width: 20rem;
-          height: 5rem;
-          margin-top: -1rem;
-          margin-left: 0rem;
-        }
-        .box-porque-leer-1{
-          max-width: 10rem;
-          height: 25rem;
-          margin-left: 0rem;
-          margin: 0.5rem;
-          p, .text-resaltado{
-            font-size: 0.59rem;
-          }              
-        }
-        .box-porque-leer-2{
-          max-width: 10rem;
-          height: 20rem;
-          margin-left: 0rem;
-          margin: 0.5rem;
-          p, .text-resaltado{
-            font-size: 0.59rem;
+          .box-porque-leer-1{
+            max-width: 10rem;
+            height: 25rem;
+            margin-left: 0rem;
+            margin: 0.5rem;
+            p, .text-resaltado{
+              font-size: 0.59rem;
+            }              
           }
-        }
-        .box-porque-leer-3{
-          max-width: 10rem;
-          height: 20rem;
-          margin-left: 0rem;
-          margin: 0.5rem;
-          p, .text-resaltado{
-            font-size: 0.59rem;
+          .box-porque-leer-2{
+            max-width: 10rem;
+            height: 20rem;
+            margin-left: 0rem;
+            margin: 0.5rem;
+            p, .text-resaltado{
+              font-size: 0.59rem;
+            }
           }
-        }
-        .box-porque-leer-4{
-          max-width: 10rem;
-          height: 20rem;
-          margin: 0.5rem;
-          p, .text-resaltado{
-            font-size: 0.59rem;
+          .box-porque-leer-3{
+            max-width: 10rem;
+            height: 20rem;
+            margin-left: 0rem;
+            margin: 0.5rem;
+            p, .text-resaltado{
+              font-size: 0.59rem;
+            }
           }
-        }
-        .box-porque-leer-5{
-          max-width: 10rem;
-          height: 20rem;
-          margin-left: 0rem;
-          line-height: 1rem;
-          margin: 0.5rem;
-          p, .text-resaltado{
-            font-size: 0.59rem;
+          .box-porque-leer-4{
+            max-width: 10rem;
+            height: 20rem;
+            margin: 0.5rem;
+            p, .text-resaltado{
+              font-size: 0.59rem;
+            }
           }
-        }
-        .box-porque-leer-6{
-          max-width: 10rem;
-          height: 20rem;
-          margin-left: 0rem;
-          margin: 0.5rem;
-          p, .text-resaltado{
-            font-size: 0.59rem;
+          .box-porque-leer-5{
+            max-width: 10rem;
+            height: 20rem;
+            margin-left: 0rem;
+            line-height: 1rem;
+            margin: 0.5rem;
+            p, .text-resaltado{
+              font-size: 0.59rem;
+            }
           }
-        }
-        .mini-avatar{
-          display: none;
+          .box-porque-leer-6{
+            max-width: 10rem;
+            height: 20rem;
+            margin-left: 0rem;
+            margin: 0.5rem;
+            p, .text-resaltado{
+              font-size: 0.59rem;
+            }
+          }
+          .mini-avatar{
+            display: none;
+          }
         }
       }
     }

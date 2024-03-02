@@ -1,38 +1,24 @@
 /* Footer homogéneo para todas los HTML */
-.footer-section {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row-reverse;
+footer{
+  height: auto;
   background-color: #01565a;
   h4 {
     margin: 0.5rem;
     font-size: 1.5rem;
     color: aliceblue;
   }
-  .dialog-box-4 {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    img {
-      position: relative;
-      height: auto;
-      width: 2.5rem;
-      margin: 0.5rem;
-      z-index: 1;
-    }
+  img{
+    width: 2.5rem;
+    margin: 0.5rem;
+    position: relative;
   }
-  .footer-item {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-      a {
-      text-decoration: none;
-      font-size: 1.5rem;
-      color: aliceblue;
-      display: flow;
-      margin: 0.5rem;
-    }
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin: 0.5rem;
   }
 }
-
 
 
 

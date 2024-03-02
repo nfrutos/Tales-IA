@@ -1,79 +1,82 @@
 /*Media query géneros - Mobile*/
 @media (min-width: 320px) and (max-width: 768px){
-    .main-generos{
-        max-width: 20rem;
-        margin-left: -1rem;
-        margin-top: -66rem;
-        height: 235rem;
-    .section-contenido-destacado-generos {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        'box-historia-generos-2'
-        'box-historia-generos-2'
-        'box-historia-generos'
-        'box-historia-generos'
-        'box-encabezado-generos'
-        'box-generos-1'
-        'box-generos-2'
-        'box-generos-3'
-        'box-generos-4'
-        'box-generos-5'
-        'box-generos-6';
-      gap: 1rem;
-      min-width: 20rem;
-      margin: 0 auto;
-      margin-left: 0rem;
-      height: auto;
-      margin-top: 80rem;
-      .box-encabezado-generos {
-            margin-left: 1rem;
-            max-width: 18rem;
-            margin-top: 60rem;
-            h2{
-                font-size: 1rem;
+    body{
+        width: 40rem;
+        .main-generos{
+            max-width: 40rem;
+            margin-left: -1rem;
+            margin-top: -66rem;
+            height: 230rem;
+        .section-contenido-destacado-generos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'box-historia-generos-2'
+            'box-historia-generos-2'
+            'box-historia-generos'
+            'box-historia-generos'
+            'box-encabezado-generos'
+            'box-generos-1'
+            'box-generos-2'
+            'box-generos-3'
+            'box-generos-4'
+            'box-generos-5'
+            'box-generos-6';
+        gap: 1rem;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-left: 0rem;
+        height: auto;
+        margin-top: 80rem;
+        .box-encabezado-generos {
+                margin-left: 10rem;
+                max-width: 100%;
+                margin-top: 60rem;
+                h2{
+                    font-size: 1rem;
+                }
             }
-        }
-        .box-card {
-            margin-bottom: -36rem;
-            margin-left: 2rem;
-            margin-top: 41rem;
-            .img-generos{
-                margin-top: 1.9rem
+            .box-card {
+                margin-bottom: -36rem;
+                margin-left: 13rem;
+                margin-top: 41rem;
+                .img-generos{
+                    margin-top: 1.9rem
+                }
             }
-        }
-        .box-historia-generos {
-            width: 90%;
-            margin-left: 1rem;
-            margin-top: 5rem;
-            margin-bottom: 8rem;
-            height: 16rem;
-            h2{
-                font-size: 1rem;
+            .box-historia-generos {
+                width: 100%;
+                margin-left: 1rem;
+                margin-top: 5rem;
+                margin-bottom: 8rem;
+                height: 16rem;
+                h2{
+                    font-size: 1rem;
+                }
+                p{
+                    font-size: 0.8rem;
+                }
             }
-            p{
-                font-size: 0.8rem;
-            }
-        }
 
-        .box-historia-generos-2 {
-            max-width: 18rem;
-            margin-left: 1rem;
-            margin-top: 25rem;
-            .avatar-tales-2 {
-                width: 8rem;
-                margin-left: 2rem;
-                margin-top: -5rem;
-            }
-           
-            p{
-                font-size: 0.8rem;
+            .box-historia-generos-2 {
+                max-width: 100%;
+                margin-left: 10rem;
+                margin-top: 25rem;
+                .avatar-tales-2 {
+                    width: 8rem;
+                    margin-left: 15rem;
+                    margin-top: -5rem;
+                }
+            
+                p{
+                    font-size: 0.8rem;
+                }
             }
         }
-    }
-        #menu-generos {
-            margin-left: 3rem;
-            max-width: 20rem;
+            #menu-generos {
+                margin-left: 3rem;
+                max-width: 20rem;
+            }
         }
     }
 }
